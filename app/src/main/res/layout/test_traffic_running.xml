@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/backgroundGrey">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/test_item_genenal_exponent"/>
+            <!--这一大块可以用上面的include-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:layout_marginBottom="@dimen/medium_margin">
+                <TextView style="@style/text"
+                    android:layout_marginTop="@dimen/medium_big_margin"
+                    android:layout_marginBottom="30dp" android:layout_marginLeft="@dimen/medium_big_margin"
+                    android:text="综合指数" />
+                <LinearLayout
+                    android:orientation="horizontal" android:layout_marginBottom="@dimen/bigger_margin"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:showDividers="middle" android:divider="@drawable/shape_divider_v_space_8">
+                    <LinearLayout
+                        android:orientation="vertical" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:layout_width="0dp"
+                        android:gravity="center">
+                        <TextView style="@style/text" android:textColor="@color/red"
+                            android:layout_marginBottom="@dimen/medium_margin" android:text="7.9%"/>
+                        <TextView style="@style/text" android:textColor="#a0a0a0" android:text="指数波动"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:layout_width="0dp"
+                        android:gravity="center">
+                        <TextView style="@style/text" android:layout_marginBottom="@dimen/medium_margin" android:text="7.9%"/>
+                        <TextView style="@style/text" android:textColor="#a0a0a0" android:text="指数波动"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:layout_width="0dp"
+                        android:gravity="center">
+                        <TextView style="@style/text" android:layout_marginBottom="@dimen/medium_margin" android:text="7.9%"/>
+                        <TextView style="@style/text" android:textColor="#a0a0a0" android:text="指数波动"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:layout_width="0dp"
+                        android:gravity="center">
+                        <TextView style="@style/text" android:layout_marginBottom="@dimen/medium_margin" android:text="7.9%"/>
+                        <TextView style="@style/text" android:textColor="#a0a0a0" android:text="指数波动"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <!--include end-->
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

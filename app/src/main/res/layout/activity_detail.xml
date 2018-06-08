@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/backgroundGrey">
+
+    <include
+        android:id="@+id/layout_toolbar_normal"
+        layout="@layout/layout_toolbar_normal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"></include>
+    <com.seaboxdata.portal.common.RecyclerScrollview
+        android:layout_below="@+id/layout_toolbar_normal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <include layout="@layout/item_genenal_exponent"/>
+                <!--这一大块可以用上面的include-->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:layout_marginBottom="@dimen/medium_margin">
+                    <TextView style="@style/text"
+                        android:layout_marginTop="@dimen/medium_big_margin"
+                        android:layout_marginBottom="30dp" android:layout_marginLeft="@dimen/medium_big_margin"
+                        android:text="近30日核心数据" />
+                    <LinearLayout
+                        android:orientation="horizontal" android:layout_marginBottom="@dimen/bigger_margin"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:showDividers="middle" android:divider="@drawable/shape_divider_v_space_8">
+                        <LinearLayout
+                            android:orientation="vertical" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:layout_width="0dp"
+                            android:gravity="center">
+                            <TextView style="@style/text" android:textColor="@color/red"
+                                android:layout_marginBottom="@dimen/medium_margin" android:text="7.9%"/>
+                            <TextView style="@style/text" android:textColor="#a0a0a0" android:text="指数波动"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:layout_width="0dp"
+                            android:gravity="center">
+                            <TextView style="@style/text" android:layout_marginBottom="@dimen/medium_margin" android:text="7.9%"/>
+                            <TextView style="@style/text" android:textColor="#a0a0a0" android:text="评价波动指数"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:layout_width="0dp"
+                            android:gravity="center">
+                            <TextView style="@style/text" android:layout_marginBottom="@dimen/medium_margin" android:text="7.9%"/>
+                            <TextView style="@style/text" android:textColor="#a0a0a0" android:text="总体指数"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <!--include end-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.seaboxdata.portal.common.charts.PanelRoseChart
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/medium_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingLeft="@dimen/medium_margin"
+                android:paddingTop="@dimen/medium_margin"
+                android:paddingBottom="@dimen/medium_margin"
+                android:orientation="vertical">
+
+                <TextView style="@style/text.normalSmaller"
+                    android:text="实时指数"
+                    android:textColor="@color/textDark"/>
+
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/lineChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    ></com.github.mikephil.charting.charts.LineChart>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingLeft="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:paddingTop="@dimen/medium_margin"
+                android:paddingBottom="@dimen/medium_margin"
+                android:orientation="vertical">
+
+                <TextView style="@style/text.normalSmaller"
+                    android:text="实时指数"
+                    android:textColor="@color/textDark"/>
+
+                <com.seaboxdata.portal.module.home.DataScrollablePanel
+                    android:paddingTop="@dimen/normal_margin"
+                    android:id="@+id/scrollable_panel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </com.seaboxdata.portal.common.RecyclerScrollview>
+    
+    <LinearLayout
+        android:id="@+id/backgroud_view"
+        android:visibility="gone"
+        android:layout_below="@+id/layout_toolbar_normal"
+        android:background="@color/black_opacity50"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"></LinearLayout>
+    
+</RelativeLayout>

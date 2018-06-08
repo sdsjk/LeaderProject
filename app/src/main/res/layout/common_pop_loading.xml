@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_box_loading_radius_3dp">
+        <!--loading图标设置循环动画 anim/rotation
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="wrap_content"
+            android:layout_height="87dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/img_g_loading"
+            android:background="@color/transparent"
+            />
+        -->
+
+        <ImageView
+            android:id="@+id/auction_rule_loading"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:adjustViewBounds="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/img_loading_shape"/>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/loading_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:gravity="center"
+            android:text="正在加载"
+            android:textColor="#999999"
+            android:textSize="12sp" />
+    </RelativeLayout>
+</RelativeLayout>

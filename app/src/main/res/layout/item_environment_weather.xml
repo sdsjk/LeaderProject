@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fonticontext="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:background="@color/backgroundGrey"
+    android:id="@+id/content_view">
+
+    <ImageView
+        style="@style/img"
+        android:src="@drawable/img_environment_weather_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/medium_margin"
+        android:paddingRight="@dimen/medium_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/medium_big_margin"
+            android:paddingRight="@dimen/medium_big_margin">
+
+            <TextView
+                style="@style/text.normalSmaller"
+                android:text="Beijing"
+                android:textColor="@color/colorWhite" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                style="@style/text.normalSmaller"
+                android:text="多云"
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/temperature_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="30℃"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="35dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/text"
+                    android:text="28~32"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+
+            <com.linewell.core.view.FontIconText
+                style="@style/text.small"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:layout_toRightOf="@+id/temperature_ll"
+                android:text="@string/icon_arrow_right"
+                android:textColor="@color/colorWhite"
+                fonticontext:typefacename="icon_font.ttf" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/medium_big_margin"
+            android:layout_marginRight="@dimen/medium_big_margin"
+            android:layout_marginTop="36dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/text.small"
+                    android:text="空气质量"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    style="@style/text"
+                    android:layout_marginTop="@dimen/normal_margin"
+                    android:text="优"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/text.small"
+                    android:text="温度湿度"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    style="@style/text"
+                    android:layout_marginTop="@dimen/normal_margin"
+                    android:text="172"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/text.small"
+                    android:text="雾霾等级"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    style="@style/text"
+                    android:layout_marginTop="@dimen/normal_margin"
+                    android:text="1级"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

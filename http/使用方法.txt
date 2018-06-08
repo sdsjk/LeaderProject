@@ -1,0 +1,4 @@
+        manifestPlaceholders = [
+                APP_ID    : 'XXXXX',
+                SITE_ID    : 'XXXX'
+        ]

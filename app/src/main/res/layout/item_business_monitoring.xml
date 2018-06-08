@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_monitoring_root_view" android:clickable="true"
+    android:layout_width="match_parent" android:layout_height="105dp"
+    android:background="@drawable/selector_bussiniss_monitoring_bg"
+    android:layout_marginLeft="@dimen/medium_margin" android:layout_marginRight="@dimen/medium_margin"
+    android:layout_marginTop="@dimen/medium_big_margin">
+    <!--对根元素设置selected为整个选中状态-->
+    <TextView
+        android:id="@+id/search_service_name"
+        style="@style/text.medium" android:layout_marginRight="58dp"
+        android:maxLines="1" android:ellipsize="end"
+        android:layout_marginLeft="19dp" android:layout_marginTop="@dimen/medium_big_margin"
+        android:textColor="@drawable/selector_business_monitoring_text"
+        android:text="义务教育" />
+    <TextView
+        style="@style/text.medium" android:layout_marginRight="58dp"
+        android:maxLines="1" android:ellipsize="end"
+        android:layout_marginLeft="19dp" android:layout_marginTop="57dp"
+        android:textColor="@drawable/selector_business_monitoring_text"
+        android:text="义务教育人数" />
+    <ImageView
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/medium_big_margin"
+        android:layout_width="28dp" android:layout_height="28dp"
+        android:src="@drawable/selector_business_monitoring_check"/>
+</RelativeLayout>

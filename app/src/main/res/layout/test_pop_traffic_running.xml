@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/black_opacity50">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+        <com.linewell.core.view.AutoFixViewGroup
+            android:layout_marginLeft="@dimen/normal_margin" android:layout_marginRight="@dimen/normal_margin"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp" android:layout_marginTop="@dimen/medium_margin">
+            <!--内容要三等分，宽度计算或者使用gridlayout
+                选中状态设置setSelected=true
+            -->
+            <TextView style="@style/text.normalSmaller"
+                android:paddingLeft="@dimen/medium_margin" android:paddingRight="@dimen/medium_margin"
+                android:layout_height="40dp" android:gravity="center"
+                android:textColor="@drawable/selector_toolbar_pull_down_label_text"
+                android:background="@drawable/selector_toolbar_pull_down_label"
+                android:layout_margin="@dimen/normal_margin"
+                android:text="交通评价" />
+            <TextView style="@style/text.normalSmaller"
+                android:paddingLeft="@dimen/medium_margin" android:paddingRight="@dimen/medium_margin"
+                android:layout_height="40dp" android:gravity="center"
+                android:textColor="@drawable/selector_toolbar_pull_down_label_text"
+                android:background="@drawable/selector_toolbar_pull_down_label"
+                android:layout_margin="@dimen/normal_margin"
+                android:text="交通评价" />
+            <TextView style="@style/text.normalSmaller"
+                android:paddingLeft="@dimen/medium_margin" android:paddingRight="@dimen/medium_margin"
+                android:layout_height="40dp" android:gravity="center"
+                android:textColor="@drawable/selector_toolbar_pull_down_label_text"
+                android:background="@drawable/selector_toolbar_pull_down_label"
+                android:layout_margin="@dimen/normal_margin"
+                android:text="交通评价" />
+        </com.linewell.core.view.AutoFixViewGroup>
+
+    </RelativeLayout>
+
+</RelativeLayout>

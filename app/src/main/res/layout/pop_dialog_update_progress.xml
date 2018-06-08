@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/shape_pop_box">
+    <TextView
+        android:id="@+id/pop_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="25dp"
+        android:paddingBottom="@dimen/medium_margin"
+        android:paddingLeft="@dimen/medium_big_margin"
+        android:paddingRight="@dimen/medium_big_margin"
+        android:textSize="@dimen/big_text"
+        android:textColor="@color/textDark"
+        android:gravity="center"
+        android:text="版本升级"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/normal_margin"
+        android:paddingLeft="@dimen/normal_margin"
+        android:paddingBottom="@dimen/normal_margin"
+        android:paddingTop="@dimen/normal_margin"
+        android:layout_marginLeft="@dimen/medium_margin"
+        android:layout_marginRight="@dimen/medium_margin"
+        android:lineSpacingMultiplier="1.3"
+        android:textSize="@dimen/normal_text"
+        android:textColor="@color/textLightGrey"
+        android:padding="0dp">
+        <TextView
+            style="@style/text.small"
+            android:id="@+id/pop_dialog_download_text"
+            android:textColor="@color/textDark"
+            android:text="已完成："/>
+        <TextView
+            style="@style/text.small"
+            android:id="@+id/pop_dialog_process_text"
+            android:textColor="@color/textDark"
+            android:text="0%"/>
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/update_apk_propressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/medium_margin"
+        android:layout_height="7dp"
+        android:progress="0"
+        android:progressDrawable="@drawable/progress_bar_brand_color"/>
+    <View style="@style/horizontalLine" android:layout_marginTop="18dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp" android:gravity="center">
+        <Button
+            style="@style/button.small"
+            android:id="@+id/pop_dialog_ok"
+            android:text="取消更新"
+            android:textColor="@color/colorWhite"/>
+    </LinearLayout>
+
+</LinearLayout>

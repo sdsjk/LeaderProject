@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/search_root_view"
+    xmlns:fonticontext="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundGrey">
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/ll_bar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="@drawable/shape_header_bg"-->
+        <!--android:orientation="vertical">-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_below="@+id/ll_bar"-->
+        <!--android:id="@+id/fragment_search_bar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+        <!--<include-->
+            <!--layout="@layout/fragment_search_bar"-->
+            <!--&gt;</include>-->
+    <!--</LinearLayout>-->
+
+    <!--搜索提示-->
+    <ScrollView
+        android:id="@+id/layout_search_tips"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--热门搜索-->
+            <LinearLayout
+                android:id="@+id/layout_hot_keyword"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+                <LinearLayout style="@style/subTitle"
+                    android:background="@color/transparent"
+                    android:layout_marginTop="0dp">
+                    <TextView style="@style/subTitleText" android:text="热门搜索" />
+                </LinearLayout>
+
+                <com.linewell.core.view.AutoFixViewGroup
+                    android:id="@+id/viewgroup_keywor_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/medium_margin">
+
+                </com.linewell.core.view.AutoFixViewGroup>
+            </LinearLayout>
+
+            <!--历史记录-->
+            <LinearLayout
+                android:id="@+id/layout_search_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:orientation="vertical">
+                <LinearLayout style="@style/subTitle"
+                    android:background="@drawable/shape_border_bottom_margin_white"
+                    android:layout_marginTop="0dp">
+                    <TextView style="@style/subTitleText" android:text="历史记录" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/list_search_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/button_clear_history"
+                    style="@style/listViewItem.clickable" android:gravity="center">
+                    <com.linewell.core.view.FontIconText
+                        fonticontext:typefacename="icon_font.ttf"
+                        android:textColor="@drawable/selector_link_text_grey"
+                        style="@style/text.big" android:text="@string/icon_del"/>
+                    <TextView style="@style/text.medium" android:layout_marginLeft="10dp"
+                        android:gravity="center" android:textColor="@drawable/selector_link_text_light_grey"
+                        android:text="清空搜索记录" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!--搜索结果-->
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/layout_search_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <FrameLayout
+            android:id="@+id/search_list_fl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></FrameLayout>
+
+    </LinearLayout>
+
+
+
+    <ScrollView
+        android:id="@+id/search_rele_sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <!--联想的内容，匹配的文本需要高亮显示，颜色为@color/brandColor-->
+        <LinearLayout
+            android:id="@+id/prefix_result_ll"
+            style="@style/listViewWrapper"
+            android:elevation="4dp"></LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
+
+
+

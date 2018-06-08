@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/shape_dialog_bg">
+        <!--如果需要加图标前缀，则使用drawableLeft
+            如：android:drawableLeft="@drawable/shape_dialog_title_pre_tip"
+            提示图标：@drawable/shape_dialog_title_pre_tip
+            其他提示图标待补充；
+            -->
+        <TextView
+            style="@style/dialogTitle"
+            android:id="@+id/pop_dialog_title"
+            android:text="弹框标题"/>
+        <TextView
+            android:visibility="gone"
+            style="@style/dialogSubTitle"
+            android:id="@+id/pop_dialog_sub_title"
+            android:text="弹框副标题"/>
+
+        <LinearLayout
+            android:id="@+id/pop_dialog_content_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+
+                android:id="@+id/pop_dialog_content"
+                style="@style/dialogContent"
+                android:text="弹窗文字弹窗文字弹窗文字弹窗文字弹窗文字弹窗文字弹窗文字弹窗文字弹窗文字弹窗文字弹窗文字"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/pop_dialog_cancle"
+                style="@style/button.smallGhost"
+                android:layout_margin="@dimen/normal_margin"
+                android:text="取消" />
+
+            <Button
+                android:id="@+id/pop_dialog_ok"
+                style="@style/button.small"
+                android:layout_margin="@dimen/normal_margin"
+                android:text="确定"
+                 />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <include
+        layout="@layout/layout_toolbar_normal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"></include>
+
+
+    <com.haibin.calendarview.CalendarLayout
+        android:id="@+id/calendarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:calendar_content_view_id="@+id/nestedScrollView"
+        app:default_status="expand">
+
+        <com.haibin.calendarview.CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            app:current_day_lunar_text_color="#ff0000"
+            app:current_day_text_color="#ff0000"
+            app:current_month_lunar_text_color="#CFCFCF"
+            app:current_month_text_color="#333333"
+            app:lunar_text_size="10sp"
+            app:max_year="2022"
+            app:max_year_month="12"
+            app:min_year="2016"
+            app:min_year_month="9"
+            app:month_view_show_mode="mode_only_current"
+            app:other_month_lunar_text_color="#e1e1e1"
+            app:other_month_text_color="#e1e1e1"
+            app:scheme_lunar_text_color="#CFCFCF"
+            app:scheme_text="假"
+            app:scheme_text_color="#333"
+            app:scheme_theme_color="#128c4b"
+            app:selected_lunar_text_color="#128c4b"
+            app:selected_text_color="#128c4b"
+            app:selected_theme_color="#80cfcfcf"
+            app:week_background="#fff"
+            app:week_bar_height="46dp"
+            app:week_start_with="mon"
+            app:month_view="com.seaboxdata.portal.module.work.CustomMonthView"
+            app:week_view="com.seaboxdata.portal.module.work.CustomWeekView"
+            app:week_line_background="#00000000"
+            app:year_view_background="#f6f6f6"
+            app:year_view_day_text_color="#333333"
+            app:year_view_day_text_size="9sp"
+            app:year_view_month_text_color="#ff0000"
+            app:year_view_month_text_size="20sp"
+            app:year_view_scheme_color="#f17706" />
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/backgroundGrey">
+
+            <LinearLayout
+                android:id="@+id/linearView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/backgroundGrey"
+                android:clickable="true"
+                android:orientation="vertical"
+                tools:ignore="KeyboardInaccessibleWidget">
+
+                <LinearLayout
+                    android:layout_marginTop="13dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/work_detail_time"
+                        android:layout_width="317dp"
+                        android:layout_height="wrap_content"
+                        android:text="2018年5月15号"
+                        android:textColor="#a0a0a0"
+                        android:textSize="11dp"
+                        android:layout_marginLeft="@dimen/medium_margin"/>
+
+                    <LinearLayout
+                        android:id="@+id/work_detail_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </com.haibin.calendarview.CalendarLayout>
+
+
+</LinearLayout>

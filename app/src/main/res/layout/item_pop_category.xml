@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/text.normalSmaller"
+    android:id="@+id/item_pop_category_name"
+    android:paddingLeft="@dimen/medium_margin" android:paddingRight="@dimen/medium_margin"
+    android:layout_height="40dp" android:gravity="center"
+    android:textColor="@drawable/selector_toolbar_pull_down_label_text"
+    android:background="@drawable/selector_toolbar_pull_down_label"
+    android:layout_margin="@dimen/normal_margin"
+    android:text="交通评价" />

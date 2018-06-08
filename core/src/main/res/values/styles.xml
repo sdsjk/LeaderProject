@@ -1,0 +1,82 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="subtitleTextColor">@color/textDark</item>
+        <item name="titleTextColor">@color/textDark</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- 默认的style -->
+    <style name="common_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!--列表页-->
+    <style name="Icon_big">
+        <item name="android:layout_width">128dp</item>
+        <item name="android:layout_height">128dp</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:cropToPadding">false</item>
+    </style>
+
+    <style name="Icon_big_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#888</item>
+    </style>
+    <!--列表页-->
+
+
+    <!--dialog 去掉标题-->
+    <style name="curDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="headerTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingLeft">@dimen/normal_margin</item>
+        <item name="android:paddingRight">@dimen/normal_margin</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/bigger_text</item>
+        <item name="android:textColor">@color/textDark</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--header-->
+    <style name="headerBtn">
+        <item name="android:layout_width">44dp</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">@color/brandColor</item>
+    </style>
+
+    <style name="headerBtn.back">
+        <item name="android:layout_marginLeft">@dimen/small_margin</item>
+        <item name="android:textColor">@color/brandColor</item>
+    </style>
+</resources>

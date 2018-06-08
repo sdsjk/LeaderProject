@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:paddingTop="4dp" android:paddingBottom="4dp"
+    android:gravity="center">
+    <!--菊花图标应用动画 @anim/rotation_loading-->
+    <ImageView
+        android:id="@+id/list_load_more_iv"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/img_loading_shape"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:textSize="12sp" android:textColor="#999" android:text="加载中"/>
+</LinearLayout>

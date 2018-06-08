@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fonticontext="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:contentInsetStart="0dp"
+        app:contentInsetEnd="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:background="@drawable/shape_header_bg"
+        android:titleTextColor="@color/textDark"
+        android:subtitleTextColor="@color/textGrey">
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.linewell.core.view.FontIconText
+                android:id="@+id/backBtn"
+                fonticontext:typefacename="icon_font.ttf"
+                style="@style/headerBtn.back"
+                android:layout_marginLeft="0dp"/>
+            <!--右侧有文字按钮时使用withTextBtn-->
+
+            <LinearLayout
+                android:id="@+id/toobal_title"
+                android:orientation="horizontal"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="64dp"
+                android:layout_marginRight="64dp"
+                android:gravity="center_vertical"
+                android:layout_height="44dp">
+                <TextView style="@style/headerTitle.withTextBtn"
+                    android:id="@+id/centerTitle"
+                    android:maxLines="1" android:ellipsize="end"
+                    android:layout_marginLeft="0dp"
+                    android:text="标题" />
+                <!--小三角形-->
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/centerTitle_iv"
+                    android:layout_width="7dp"
+                    android:layout_height="5dp"
+                    android:scaleType="centerInside"
+                    />
+            </LinearLayout>
+
+            <Button style="@style/headerBtn.textBtn"
+                android:id="@+id/right_menu"
+                android:layout_alignParentRight="true"
+                android:maxLines="1"
+                android:visibility="gone"
+                android:text="下一步" />
+            <com.linewell.core.view.FontIconText
+                android:id="@+id/right_fit"
+                android:visibility="gone"
+                android:layout_alignParentRight="true"
+                fonticontext:typefacename="icon_font.ttf"
+                style="@style/headerBtn"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/borderColor"></LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--头部背景色-->
+    <color name="headerBackground">#fbfbfb</color>
+    <!--边框色-->
+    <color name="borderColor">#d8d8d8</color>
+    <!--文本最暗色-->
+    <color name="textDark">#141414</color>
+    <color name="transparent">#00000000</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorWhite_50">#88ffffff</color>
+    <!--品牌色-->
+    <color name="brandColor">#5299ea</color>
+
+    <color name="textGrey">#787878</color>
+    <color name="textLightGrey">#999</color>
+</resources>

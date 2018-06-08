@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="backgroundGrey">#f2f5f5</color>
+
+    <!--常用色-->
+    <color name="colorWhite">#fff</color>
+    <color name="fillColorGrey">#f8f8f8</color>
+    <color name="fillColorLightGrey">#fafafa</color>
+    <color name="red">#f8353f</color>
+    <!--边框色-->
+    <color name="borderColor">#e0e0e0</color>
+    <!--文本字色-->
+    <color name="textDark">#333</color>
+    <color name="textGrey">#8f8e8e</color>
+    <color name="textLightGrey">#a0a0a0</color>
+    <color name="textLighestGrey">#bbb</color>
+
+    <!--黑色层级-->
+    <color name="black_opacity30">#48000000</color>
+    <color name="black_opacity50">#88000000</color>
+    <color name="black_opacity65">#a4000000</color>
+    <color name="black_opacity80">#a3000000</color>
+    <color name="black_opacity100">#000000</color>
+    <!--白色层级-->
+    <color name="white_opacity20">#32ffffff</color>
+    <color name="white_opacity30">#48ffffff</color>
+    <color name="white_opacity50">#88ffffff</color>
+    <color name="white_opacity80">#a3ffffff</color>
+
+    <color name="textHintColor">#bbb</color>
+
+    <!--按钮颜色-->
+    <color name="buttonColor">#bb0000</color>
+    <color name="buttonColor_active">#bb0000</color>
+    <color name="buttonColor_unabled">#c0c0c0</color>
+    <!--主色调-->
+    <color name="brandColor">#5174f0</color>
+    <color name="brandColor_light">#7390f8</color>
+    <color name="brandColor_dark">#466be7</color>
+    <color name="brandColor_unabled">#b7cbfd</color>
+
+
+
+
+
+</resources>

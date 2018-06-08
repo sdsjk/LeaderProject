@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fonticontext="http://schemas.android.com/apk/res-auto"
+    xmlns:uinput="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/search_bar_ll"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:background="@drawable/shape_linear_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/layout_search_input"
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+        android:layout_marginLeft="@dimen/medium_big_margin"
+        android:layout_weight="1"
+        android:background="@drawable/shape_search_bar_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.linewell.core.view.FontIconText
+            android:id="@+id/search_bar_left_btn"
+            style="@style/text"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/medium_big_margin"
+            android:paddingRight="6dp"
+            android:text="@string/icon_search"
+            android:textColor="@color/colorWhite"
+            fonticontext:typefacename="icon_font.ttf" />
+
+        <com.seaboxdata.portal.common.input.BaseInputLinearLayout
+            android:id="@+id/search_input_ll"
+            style="@style/text.small"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/medium_margin"
+            android:layout_weight="1"
+            android:gravity="center_vertical|left"
+            uinput:hint="搜索"
+            uinput:textColor="@color/colorWhite"
+            uinput:textColorHint="@color/colorWhite"
+            uinput:textSize="@dimen/small_text" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/fragment_fit_right"
+        style="@style/text.small"
+        android:layout_width="58dp"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@drawable/selector_link_white" />
+
+</LinearLayout>
+

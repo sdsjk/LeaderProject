@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:fonticontext="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundGrey"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_bar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/shape_header_bg"
+        android:orientation="vertical"
+        android:visibility="gone"></LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+
+        <ImageView
+            android:id="@+id/search_fit"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:paddingLeft="@dimen/normal_margin"
+            android:paddingRight="@dimen/normal_margin"
+            android:layout_centerVertical="true"
+            android:src="@drawable/home_search"/>
+
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:layout_toRightOf="@id/search_fit"
+            android:id="@+id/m_tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_border_bottom_white"
+            android:layout_marginRight="36dp"
+            tl:tl_tab_padding="5dp"
+            tl:tl_indicator_color="#337ceb"
+            tl:tl_indicator_corner_radius="2.5dp"
+            tl:tl_indicator_height="2.5dp"
+            tl:tl_textSelectColor="@color/textDark"
+            tl:tl_indicator_width="15dp"
+            tl:tl_textUnselectColor="@color/textGrey"
+            tl:tl_tab_space_equal="false"
+            tl:tl_textsize="@dimen/medium_text"></com.flyco.tablayout.SlidingTabLayout>
+
+
+        <ImageView
+            android:id="@+id/category_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:paddingRight="@dimen/medium_margin"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/home_category_all"/>
+
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/m_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></android.support.v4.view.ViewPager>
+
+</LinearLayout>

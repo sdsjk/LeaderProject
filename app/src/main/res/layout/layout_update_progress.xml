@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:gravity="center"
+    android:background="@color/black_opacity50">
+    <ImageView
+        android:layout_width="50dp" android:layout_height="50dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginLeft="@dimen/medium_margin"
+        android:layout_marginRight="@dimen/medium_margin"/>
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/medium_margin"
+        android:layout_weight="1">
+        <!--APP文件名-->
+        <TextView
+            android:id="@+id/update_version_title"
+            style="@style/text.small" android:text="unber_V2.2.apk"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:textColor="@color/colorWhite"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/small_margin">
+            <TextView style="@style/text.small"
+                android:text="已完成："
+                android:textColor="@color/textLighestGrey" />
+            <!--進度-->
+            <TextView style="@style/text.small"
+                android:id="@+id/update_progressBar_text"
+                android:text="0%"
+                android:textColor="@color/textLighestGrey" />
+            <!--<TextView style="@style/text.small"-->
+                <!--android:text="   |   "-->
+                <!--android:textColor="@color/textLighestGrey" />-->
+            <!--&lt;!&ndash;文件尺寸信息&ndash;&gt;-->
+            <!--<TextView style="@style/text.small"-->
+                <!--android:text="0M"-->
+                <!--android:textColor="@color/colorWhite" />-->
+            <!--<TextView style="@style/text.small"-->
+                <!--android:text=" / "-->
+                <!--android:textColor="@color/textLighestGrey" />-->
+            <!--<TextView style="@style/text.small"-->
+                <!--android:text="0M"-->
+                <!--android:textColor="@color/textLighestGrey" />-->
+        </LinearLayout>
+        <ProgressBar
+            android:id="@+id/update_detail_progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:progress="0"
+            android:progressDrawable="@drawable/progress_bar_brand_color"/>
+    </LinearLayout>
+</LinearLayout>

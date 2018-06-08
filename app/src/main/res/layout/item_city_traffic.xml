@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fonticontext="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroundGrey">
+
+    <ImageView
+        style="@style/img"
+        android:src="@drawable/banner" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/text.normalSmaller"
+            android:layout_gravity="center_horizontal"
+            android:text="拥堵指数"
+            android:textColor="@color/colorWhite" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="22dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/bigger_margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="5.0"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="27dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/shape_ghost_white_bg"
+                    android:gravity="center"
+                    android:text="拥挤"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/small_text" />
+            </LinearLayout>
+
+            <com.linewell.core.view.FontIconText
+                style="@style/text.small"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/medium_big_margin"
+                android:text="@string/icon_arrow_right"
+                android:textColor="@color/colorWhite"
+                fonticontext:typefacename="icon_font.ttf" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/medium_margin"
+            android:layout_marginRight="@dimen/medium_margin"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/text.small"
+                    android:text="时间"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    style="@style/text.medium"
+                    android:layout_marginTop="@dimen/normal_margin"
+                    android:text="8:30"
+                    android:textColor="@color/colorWhite" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/text.small"
+                    android:text="拥堵路段数目"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    style="@style/text.medium"
+                    android:layout_marginTop="@dimen/normal_margin"
+                    android:text="10"
+                    android:textColor="@color/colorWhite" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/text.small"
+                    android:text="路网覆盖率"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    style="@style/text.medium"
+                    android:layout_marginTop="@dimen/normal_margin"
+                    android:text="90%"
+                    android:textColor="@color/colorWhite" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
+
+

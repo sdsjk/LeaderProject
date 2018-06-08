@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fonticontext="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:paddingLeft="@dimen/medium_big_margin"
+    android:layout_height="48dp" android:gravity="center_vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_bottom_transparent">
+        <TextView
+            android:id="@+id/text_search_item"
+            android:layout_marginRight="36dp"
+            style="@style/text.medium" android:layout_centerVertical="true"
+            android:textColor="@drawable/selector_link_text_grey"
+            android:lines="1" android:ellipsize="end"
+            android:text=""/>
+
+        <com.linewell.core.view.FontIconText
+            android:visibility="gone"
+            android:id="@+id/button_delete"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            fonticontext:typefacename="icon_font.ttf"
+            style="@style/icon.size32" android:textSize="@dimen/medium_text"
+            android:textColor="@drawable/selector_link_text_lightest_grey"
+            android:text="@string/icon_close"/>
+    </RelativeLayout>
+</LinearLayout>

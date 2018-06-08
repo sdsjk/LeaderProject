@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/loading_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp"
+    android:gravity="center"
+    android:orientation="horizontal">
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1px"
+        android:background="#e0e0e0"
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/text_not_loading"
+        android:textColor="#999"
+        android:gravity="center"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="已经见底了"/>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1px"
+        android:background="#e0e0e0"
+        android:layout_weight="1"/>
+</LinearLayout>

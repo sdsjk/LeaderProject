@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">http</string>
+
+    <!--系统提示信息-->
+    <string name="system_error">系统异常</string>
+    <string name="session_expired">会话过期</string>
+    <string name="network_error">网络不太给力，请重试</string>
+</resources>

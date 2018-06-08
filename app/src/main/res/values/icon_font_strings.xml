@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="icon_arrow_left">\ue900</string>
+    <string name="icon_search">\ue901</string>
+    <string name="icon_show_password">\ue902</string>
+    <string name="icon_hide_password">\ue903</string>
+    <string name="icon_add">\ue904</string>
+    <string name="icon_close_solid">\ue905</string>
+    <string name="icon_setting">\uE906</string>
+    <string name="icon_pen">\ue907</string>
+    <string name="icon_arrow_right">\ue908</string>
+    <string name="icon_success_tip">\ue909</string>
+    <string name="icon_del">\ue90a</string>
+    <string name="icon_close">\ue90b</string>
+    <string name="icon_edit">\ue90c</string>
+    <string name="icon_voice">\ue90d</string>
+    <string name="icon_msg">\ue90e</string>
+    <string name="icon_orders">\ue910</string>
+    <string name="icon_todo">\ue911</string>
+    <string name="icon_favourite">\ue912</string>
+    <string name="icon_wallet">\ue913</string>
+    <string name="icon_verify">\ue914</string>
+    <string name="icon_address">\ue915</string>
+    <string name="icon_refresh">\ue916</string>
+    <string name="icon_arrow_up">\ue917</string>
+    <string name="icon_arrow_down">\ue918</string>
+    <string name="icon_help">\ue919</string>
+    <string name="icon_agent">\ue91a</string>
+    <string name="icon_company">\ue91b</string>
+    <string name="icon_file">\ue91c</string>
+    <string name="icon_qq">\ue91d</string>
+    <string name="icon_weixin">\ue91e</string>
+    <string name="icon_weibo">\ue91f</string>
+    <string name="icon_pengyouquan">\ue920</string>
+    <string name="icon_link">\ue921</string>
+    <string name="icon_share">\ue922</string>
+</resources>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">pulllistview</string>
+    <string name="search_list_empty">没有找到相关的服务或者人才~</string>
+</resources>

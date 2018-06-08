@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fonticontext="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundGrey"
+    android:orientation="vertical">
+    <!--一套分类-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/medium_margin"
+        android:gravity="center_vertical">
+        <!--这里的图标使用图片，先放个默认图标-->
+        <FrameLayout
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:layout_gravity="top|center">
+
+            <ImageView
+                android:id="@+id/category_civ"
+                android:layout_width="19dp"
+                android:layout_height="38dp"
+                android:src="@drawable/transparent" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/category_name"
+            style="@style/text.medium"
+            android:layout_marginLeft="6dp"
+            android:text="互联网+"
+            android:textColor="@color/textDark" />
+    </LinearLayout>
+    <!--标签需要自动换行，参考http://blog.csdn.net/alvinhuai/article/details/52180494-->
+    <com.linewell.core.view.AutoFixViewGroup
+        android:id="@+id/tags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/medium_margin"
+        android:orientation="horizontal">
+        <!--标签设置selected为选中状态-->
+    </com.linewell.core.view.AutoFixViewGroup>
+
+    <!--一套分类 end-->
+</LinearLayout>

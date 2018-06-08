@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fonticontext="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backgroundGrey">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView style="@style/img"
+                    android:src="@drawable/img_economics_bg"/>
+                <LinearLayout
+                    android:layout_centerVertical="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/medium_margin"
+                    android:paddingRight="@dimen/medium_margin"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/bigger_margin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+                            <TextView style="@style/text"
+                                android:textSize="24dp"
+                                android:textColor="@color/colorWhite"
+                                android:textStyle="bold"
+                                android:text="399,999"/>
+
+                            <TextView
+                                android:layout_marginTop="@dimen/normal_margin"
+                                style="@style/text.normalSmaller"
+                                android:textColor="@color/colorWhite"
+                                android:text="现金收支增速（元）"/>
+                        </LinearLayout>
+
+                        <com.linewell.core.view.FontIconText
+                            fonticontext:typefacename="icon_font.ttf"
+                            style="@style/text.small"
+                            android:layout_marginRight="@dimen/medium_big_margin"
+                            android:textColor="@color/colorWhite"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/icon_arrow_right"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="44dp"
+                        android:layout_marginLeft="@dimen/medium_big_margin"
+                        android:layout_marginRight="@dimen/medium_big_margin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:orientation="vertical">
+                            <TextView
+                                android:layout_marginBottom="@dimen/normal_margin"
+                                style="@style/text"
+                                android:textColor="@color/colorWhite"
+                                android:text="18%"/>
+
+                            <TextView style="@style/text.small"
+                                android:textColor="@color/colorWhite"
+                                android:text="同比经济增长"/>
+                        </LinearLayout>
+                        <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:orientation="vertical">
+                            <TextView
+                                android:layout_marginBottom="@dimen/normal_margin"
+                                style="@style/text"
+                                android:textColor="@color/colorWhite"
+                                android:text="10"/>
+                            <TextView style="@style/text.small"
+                                android:textColor="@color/colorWhite"
+                                android:text="拥堵路段数目"/>
+                        </LinearLayout>
+                        <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+                        <LinearLayout
+                            android:layout_width="0dp" android:layout_weight="1"
+                            android:layout_height="wrap_content" android:orientation="vertical">
+                            <TextView
+                                android:layout_marginBottom="@dimen/normal_margin"
+                                style="@style/text"
+                                android:textColor="@color/colorWhite"
+                                android:text="90%"/>
+                            <TextView style="@style/text.small"
+                                android:textColor="@color/colorWhite"
+                                android:text="路网覆盖率"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -8,6 +8,7 @@ import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
+import com.github.mikephil.charting.formatter.PercentFormatter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,15 +28,16 @@ public class PieChartManager {
     }
 
     private void initChart() {
-        pieChart.setHoleRadius(60f);//半径
-        pieChart.setTransparentCircleRadius(40f);// 半透明圈
+        pieChart.setHoleRadius(70f);//半径
+        pieChart.setTransparentCircleRadius(60f);// 半透明圈
         pieChart.setDrawCenterText(true);//饼状图中间可以添加文字
         //  是否显示中间的洞
-        pieChart.setDrawHoleEnabled(false);
+        pieChart.setDrawHoleEnabled(true);
         pieChart.setRotationAngle(90);// 初始旋转角度
         pieChart.setRotationEnabled(false);// 可以手动旋转
         pieChart.setUsePercentValues(true);//显示成百分比
-
+        pieChart.setDrawEntryLabels(false);
+        pieChart.setExtraOffsets(0, 0, 40, 5);
         Legend legend = pieChart.getLegend();
         legend.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
         legend.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
@@ -63,12 +65,23 @@ public class PieChartManager {
         }
         PieDataSet set = new PieDataSet(yValue, "");
         set.setDrawValues(true);
-        set.setValueTextSize(12);
+        set.setValueTextSize(6);
         set.setColors(colors);
         set.setValueTextColor(Color.WHITE);
+        set.setValueLinePart1Length(0.43f);
+        set.setValueLinePart1OffsetPercentage(80f);//数据连接线距图形片内部边界的距离，为百分数
+        set.setValueLinePart1Length(0.3f);
+        set.setValueLinePart2Length(0.4f);
+        set.setValueLineColor(Color.parseColor("#a1a1a1"));//设置连接线的颜色
+        set.setYValuePosition(PieDataSet.ValuePosition.OUTSIDE_SLICE);
+        PieData pieData = new PieData(set);
+        pieData.setValueFormatter(new PercentFormatter());
+        pieData.setValueTextSize(11f);
+        pieData.setValueTextColor(Color.DKGRAY);
 
-        PieData data = new PieData(set);
-        pieChart.setData(data);
+
+//        PieData data = new PieData(set);
+        pieChart.setData(pieData);
         pieChart.invalidate(); // refresh
     }
 
@@ -96,8 +109,17 @@ public class PieChartManager {
         set.setColors(colors);
 
         set.setValueTextColor(Color.WHITE);
-        PieData data = new PieData(set);
-        pieChart.setData(data);
+        set.setValueLinePart1OffsetPercentage(80f);//数据连接线距图形片内部边界的距离，为百分数
+        set.setValueLinePart1Length(0.3f);
+        set.setValueLinePart2Length(0.4f);
+        set.setValueLineColor(Color.parseColor("#a1a1a1"));//设置连接线的颜色
+        set.setYValuePosition(PieDataSet.ValuePosition.OUTSIDE_SLICE);
+        PieData pieData = new PieData(set);
+        pieData.setValueFormatter(new PercentFormatter());
+        pieData.setValueTextSize(11f);
+        pieData.setValueTextColor(Color.DKGRAY);
+
+        pieChart.setData(pieData);
         pieChart.invalidate(); // refresh
     }
 

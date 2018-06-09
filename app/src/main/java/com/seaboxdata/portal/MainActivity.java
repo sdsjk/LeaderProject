@@ -66,16 +66,14 @@ public class MainActivity extends CommonActivity implements View.OnClickListener
     private Fragment mCurrentFragment;
     //页签
     private View mHomeView;
-    private View mInfoView; 
-    private View mSentimentView;
-    private View mWorkView;
+    private View mRcView;
+    private View mTxView;
     private View mMyView;
     //页签顺序
     public static final int HOME_INDEX = 0;
-    public static final int INFO_INDEX = 1;
-    public static final int SENTIMENT_INDEX = 2;
-    public static final int WORK_INDEX = 3;
-    public static final int MY_INDEX = 4;
+    public static final int Rc_INDEX = 1;
+    public static final int Tx_INDEX = 2;
+    public static final int MY_INDEX = 3;
 
 
     @Override
@@ -83,10 +81,6 @@ public class MainActivity extends CommonActivity implements View.OnClickListener
         super.onCreate(savedInstanceState);
 
         setEnableToolbar(false);
-
-//        if (!AppSessionUtils.getInstance().isLogin(this)) {
-//            LoginActivity.startAction(this, 11);
-//        }
 
         setContentView(R.layout.activity_main);
 
@@ -126,19 +120,14 @@ public class MainActivity extends CommonActivity implements View.OnClickListener
                     mHomeView.performClick();
                 }
                 break;
-            case INFO_INDEX:
-                if (null != mInfoView) {
-                    mInfoView.performClick();
+            case Rc_INDEX:
+                if (null != mRcView) {
+                    mRcView.performClick();
                 }
                 break;
-            case SENTIMENT_INDEX:
-                if (null != mSentimentView) {
-                    mSentimentView.performClick();
-                }
-                break;
-            case WORK_INDEX:
-                if (null != mWorkView) {
-                    mWorkView.performClick();
+            case Tx_INDEX:
+                if (null != mTxView) {
+                    mTxView.performClick();
                 }
                 break;
             case MY_INDEX:
@@ -167,24 +156,20 @@ public class MainActivity extends CommonActivity implements View.OnClickListener
      * 控件绑定
      */
     private void bindViews() {
-        //
+        //首页
         mHomeView = findViewById(R.id.home);
         mHomeView.setTag(HOME_INDEX);
         mHomeView.setOnClickListener(this);
 
-        // 分类
-        mInfoView = findViewById(R.id.market);
-        mInfoView.setTag(INFO_INDEX);
-        mInfoView.setOnClickListener(this);
+        // 日程
+        mRcView = findViewById(R.id.market);
+        mRcView.setTag(Rc_INDEX);
+        mRcView.setOnClickListener(this);
 
         // 发现
-        mSentimentView = findViewById(R.id.discovery);
-        mSentimentView.setTag(SENTIMENT_INDEX);
-        mSentimentView.setOnClickListener(this);
-
-        mWorkView = findViewById(R.id.message);
-        mWorkView.setTag(WORK_INDEX);
-        mWorkView.setOnClickListener(this);
+        mTxView = findViewById(R.id.message);
+        mTxView.setTag(Tx_INDEX);
+        mTxView.setOnClickListener(this);
 
         //我的
         mMyView = findViewById(R.id.my);
@@ -203,7 +188,6 @@ public class MainActivity extends CommonActivity implements View.OnClickListener
 
     @Override
     public void onClick(View v) {
-
         currentTab = v;
         if (changeFragment((Integer)v.getTag())) {
             changeTabMenu();
@@ -241,9 +225,9 @@ public class MainActivity extends CommonActivity implements View.OnClickListener
                 switchFragment(mHomeFragment);
                 mCurIndex = HOME_INDEX;
                 break;
-            case INFO_INDEX:
+            case Rc_INDEX:
 
-                if (selectIndex == INFO_INDEX) {
+                if (selectIndex == Rc_INDEX) {
                     return true;
                 }
 
@@ -253,15 +237,15 @@ public class MainActivity extends CommonActivity implements View.OnClickListener
 //                    ((DiscoveryFragment)mWarningFragment).reload();
                 }
                 switchFragment(mInfoFragment);
-                mCurIndex = INFO_INDEX;
+                mCurIndex = Rc_INDEX;
 //                //关闭键盘
 //                SystemUtils.hideSoftInput(MainActivity.this, 0);
                 break;
 
 
-            case SENTIMENT_INDEX:
+            case Tx_INDEX:
 
-                if (selectIndex == SENTIMENT_INDEX) {
+                if (selectIndex == Tx_INDEX) {
                     return true;
                 }
 
@@ -280,28 +264,14 @@ public class MainActivity extends CommonActivity implements View.OnClickListener
 //                    return false;
 //                }
 
-                if (mSentimentFragment == null) {
-                    mSentimentFragment = new SentimentFragment();
-                }
-
-                switchFragment(mSentimentFragment);
-                mCurIndex = SENTIMENT_INDEX;
-                break;
-            case WORK_INDEX:
-
-                if (selectIndex == WORK_INDEX) {
-                    return true;
-                }
-
-
                 if (mWorkFragment == null) {
                     mWorkFragment = new WorkFragment();
                 }
 
                 switchFragment(mWorkFragment);
-                mCurIndex = WORK_INDEX;
-
+                mCurIndex = Tx_INDEX;
                 break;
+
             case MY_INDEX:
 
                 if (selectIndex == MY_INDEX) {
@@ -407,19 +377,16 @@ public class MainActivity extends CommonActivity implements View.OnClickListener
         boolean selected = v.isSelected();
         switch (index) {
             case HOME_INDEX:
-                img.setImageResource(selected ? R.drawable.icon_home_active : R.drawable.icon_home);
+                img.setImageResource(selected ? R.drawable.home_icon_shouye : R.drawable.unhome_icon_shouye);
                 break;
-            case INFO_INDEX:
-                img.setImageResource(selected ? R.drawable.icon_home_service_active : R.drawable.icon_home_message);
+            case Rc_INDEX:
+                img.setImageResource(selected ? R.drawable.home_icon_richeng : R.drawable.unhome_icon_richeng);
                 break;
-            case SENTIMENT_INDEX:
-                img.setImageResource(selected ? R.drawable.icon_home_discovery_active : R.drawable.icon_home_discovery);
-                break;
-            case WORK_INDEX:
-                img.setImageResource(selected ? R.drawable.icon_home_office_active : R.drawable.icon_home_office);
+            case Tx_INDEX:
+                img.setImageResource(selected ? R.drawable.home_icon_tixing : R.drawable.unhome_icon_tixing);
                 break;
             case MY_INDEX:
-                img.setImageResource(selected ? R.drawable.icon_home_my_active : R.drawable.icon_home_my);
+                img.setImageResource(selected ? R.drawable.home_icon_mine : R.drawable.unhome_icon_mine);
                 break;
             default:
                 break;
@@ -493,27 +460,22 @@ public class MainActivity extends CommonActivity implements View.OnClickListener
         if (null != intent) {
             int index = intent.getIntExtra(KEY_INDEX, -1);
             switch (index) {
-                case 0://首页
+                case HOME_INDEX://首页
                     if (null != mHomeView) {
                         mHomeView.performClick();
                     }
                     break;
-                case 1://服务分类
-                    if (null != mInfoView) {
-                        mInfoView.performClick();
+                case Rc_INDEX://日程
+                    if (null != mRcView) {
+                        mRcView.performClick();
                     }
                     break;
-                case 2://发现
-                    if (null != mSentimentView) {
-                        mSentimentView.performClick();
+                case Tx_INDEX://提醒
+                    if (null != mTxView) {
+                        mTxView.performClick();
                     }
                     break;
-                case 3: // 消息
-                    if (null != mWorkView) {
-                        mWorkView.performClick();
-                    }
-                    break;
-                case 4://我的
+                case 3: // 我的
                     if (null != mMyView) {
                         mMyView.performClick();
                     }

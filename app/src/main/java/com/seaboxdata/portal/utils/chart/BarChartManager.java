@@ -48,7 +48,7 @@ public class BarChartManager {
         mBarChart.setHighlightFullBarEnabled(false);
 
         mBarChart.setTouchEnabled(false); // 所有触摸事件,默认true
-        mBarChart.setDragEnabled(false);    // 可拖动,默认true
+        mBarChart.setDragEnabled(true);    // 可拖动,默认true
         mBarChart.setScaleEnabled(false);   // 两个轴上的缩放,X,Y分别默认为true
         mBarChart.setScaleXEnabled(false);  // X轴上的缩放,默认true
         mBarChart.setScaleYEnabled(false);  // Y轴上的缩放,默认true

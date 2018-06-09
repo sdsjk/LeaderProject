@@ -7,66 +7,84 @@
     android:background="@drawable/shape_border_top_white"
     android:gravity="center|bottom"
     android:orientation="horizontal">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
+        android:layout_alignParentBottom="true"
         android:layout_centerVertical="true"
-        android:layout_alignParentBottom="true">
+        android:gravity="center">
+
         <LinearLayout
             android:id="@+id/home"
             style="@style/footerItem"
             android:orientation="vertical">
             <!--选中状态，src替换为@drawable/icon_home_active-->
-            <ImageView android:id="@+id/foot_img" style="@style/footerIconTop"
-                android:src="@drawable/icon_home" />
+            <ImageView
+                android:id="@+id/foot_img"
+                style="@style/footerIconTop"
+                android:src="@drawable/unhome_icon_shouye" />
+
             <TextView
                 style="@style/footerText"
                 android:text="首页" />
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/market"
             style="@style/footerItem"
             android:orientation="vertical">
             <!--选中状态，src替换为@drawable/icon_home_active-->
             <ImageView
-                android:id="@id/foot_img" style="@style/footerIconTop"
-                android:src="@drawable/icon_home_message" />
-            <TextView style="@style/footerText" android:text="重要信息" />
+                android:id="@id/foot_img"
+                style="@style/footerIconTop"
+                android:src="@drawable/unhome_icon_richeng" />
+
+            <TextView
+                style="@style/footerText"
+                android:text="日程" />
         </LinearLayout>
-        <LinearLayout
-            android:id="@+id/discovery"
-            style="@style/footerItem"
-            android:orientation="vertical">
-            <!--选中状态，src替换为@drawable/icon_home_active-->
-            <ImageView
-                android:id="@id/foot_img" style="@style/footerIconTop"
-                android:src="@drawable/icon_home_discovery" />
-            <TextView style="@style/footerText" android:text="舆情" />
-        </LinearLayout>
+
         <LinearLayout
             android:id="@+id/message"
             style="@style/footerItem"
             android:orientation="vertical">
             <!--选中状态，src替换为@drawable/icon_home_message_active-->
             <ImageView
-                android:id="@id/foot_img" style="@style/footerIconTop"
-                android:src="@drawable/icon_home_office" />
-            <TextView style="@style/footerText" android:text="办公" />
+                android:id="@id/foot_img"
+                style="@style/footerIconTop"
+                android:src="@drawable/unhome_icon_tixing" />
+
             <TextView
-                android:id="@+id/messageCountTV" android:visibility="gone"
-                style="@style/footerPin" android:text=""/>
+                style="@style/footerText"
+                android:text="提醒" />
+
+            <TextView
+                android:id="@+id/messageCountTV"
+                style="@style/footerPin"
+                android:text=""
+                android:visibility="gone" />
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/my"
             style="@style/footerItem"
             android:orientation="vertical">
             <!--选中状态，src替换为@drawable/icon_home_active-->
-            <ImageView android:id="@id/foot_img" style="@style/footerIconTop"
-                android:src="@drawable/icon_home_my" />
-            <TextView style="@style/footerText" android:text="我的" />
-            <TextView android:id="@+id/my_red_tv" android:visibility="gone"
-                style="@style/footerPin" android:text="" />
+            <ImageView
+                android:id="@id/foot_img"
+                style="@style/footerIconTop"
+                android:src="@drawable/unhome_icon_mine" />
+
+            <TextView
+                style="@style/footerText"
+                android:text="我的" />
+
+            <TextView
+                android:id="@+id/my_red_tv"
+                style="@style/footerPin"
+                android:text=""
+                android:visibility="gone" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

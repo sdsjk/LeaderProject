@@ -5,6 +5,8 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="backgroundGrey">#f2f5f5</color>
+    <color name="chanye6785f2">#6785f2</color>
+    <color name="chanye8c77f5">#8c77f5</color>
 
     <!--常用色-->
     <color name="colorWhite">#fff</color>
@@ -42,9 +44,11 @@
     <color name="brandColor_light">#7390f8</color>
     <color name="brandColor_dark">#466be7</color>
     <color name="brandColor_unabled">#b7cbfd</color>
-
-
-
+    <color name="chanyec363fa">#c363fa</color>
+    <color name="chartf5a658">#f5a658</color>
+    <color name="chart755af2">#755af2</color>
+    <color name="chart496cef">#496cef</color>
+    <color name="charteecc44">#eecc44</color>
 
 
 </resources>

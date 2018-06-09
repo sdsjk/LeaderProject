@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f6f6"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/ll_bar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/shape_header_bg"
+        android:orientation="vertical"
+        android:visibility="gone"></LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/home_icon_sercher" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="领导驾驶仓"
+            android:textColor="#1c1c1c"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/home_fragment_new"
+        />
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<com.android.internal.widget.ViewPager-->
+                <!--android:id="@+id/home_viewpage"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="155dp"-->
+                <!--android:background="#f0f"-->
+                <!--/>-->
+            <!--&lt;!&ndash;业务检测模块&ndash;&gt;-->
+            <!--<include layout="@layout/home_fragment_ywjc"/>-->
+            <!--&lt;!&ndash;产业分布&ndash;&gt;-->
+            <!--<include layout="@layout/home_fragment_cyfb"/>-->
+            <!--&lt;!&ndash;产值构成&ndash;&gt;-->
+            <!--<include layout="@layout/home_fragment_czgc"/>-->
+            <!--&lt;!&ndash;重要信息&ndash;&gt;-->
+            <!--<include layout="@layout/home_fragment_info"/>-->
+            <!--&lt;!&ndash;工作信息&ndash;&gt;-->
+            <!--<include layout="@layout/home_fragment_work"/>-->
+            <!--<include layout="@layout/home_fragment_yqinfo"/>-->
+        <!--</LinearLayout>-->
+    <!--</ScrollView>-->
+</LinearLayout>

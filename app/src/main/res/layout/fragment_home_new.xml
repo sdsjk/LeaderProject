@@ -17,6 +17,7 @@
         android:background="#ffffff"
         android:orientation="horizontal">
         <ImageView
+            android:id="@+id/home_search"
             android:layout_width="16dp"
             android:layout_height="16dp"
             android:layout_centerVertical="true"
@@ -37,32 +38,4 @@
         android:layout_height="match_parent"
         android:id="@+id/home_fragment_new"
         />
-    <!--<ScrollView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent">-->
-
-        <!--<LinearLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:orientation="vertical">-->
-
-            <!--<com.android.internal.widget.ViewPager-->
-                <!--android:id="@+id/home_viewpage"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="155dp"-->
-                <!--android:background="#f0f"-->
-                <!--/>-->
-            <!--&lt;!&ndash;业务检测模块&ndash;&gt;-->
-            <!--<include layout="@layout/home_fragment_ywjc"/>-->
-            <!--&lt;!&ndash;产业分布&ndash;&gt;-->
-            <!--<include layout="@layout/home_fragment_cyfb"/>-->
-            <!--&lt;!&ndash;产值构成&ndash;&gt;-->
-            <!--<include layout="@layout/home_fragment_czgc"/>-->
-            <!--&lt;!&ndash;重要信息&ndash;&gt;-->
-            <!--<include layout="@layout/home_fragment_info"/>-->
-            <!--&lt;!&ndash;工作信息&ndash;&gt;-->
-            <!--<include layout="@layout/home_fragment_work"/>-->
-            <!--<include layout="@layout/home_fragment_yqinfo"/>-->
-        <!--</LinearLayout>-->
-    <!--</ScrollView>-->
 </LinearLayout>

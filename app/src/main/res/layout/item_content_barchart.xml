@@ -8,9 +8,28 @@
     android:paddingTop="@dimen/medium_margin"
     android:orientation="vertical">
 
-    <TextView style="@style/text.normalSmaller"
-        android:text="实时指数"
-        android:textColor="@color/textDark"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <View
+            android:layout_width="5dp"
+            android:layout_height="13dp"
+            android:background="#496cef"
+            android:layout_marginTop="2dp"
+            ></View>
+        <TextView style="@style/text.normalSmaller"
+            android:layout_marginLeft="11dp"
+            android:text="城市通讯覆盖率"
+            android:textColor="@color/textDark"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="0.4dp"
+        android:background="#aaaaaa" />
 
 
     <com.github.mikephil.charting.charts.BarChart

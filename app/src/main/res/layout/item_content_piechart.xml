@@ -7,17 +7,137 @@
     android:paddingLeft="@dimen/medium_margin"
     android:paddingTop="@dimen/medium_margin"
     android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <View
+            android:layout_width="5dp"
+            android:layout_height="13dp"
+            android:background="#496cef"
+            android:layout_marginTop="2dp"
+            ></View>
+        <TextView style="@style/text.normalSmaller"
+            android:layout_marginLeft="11dp"
+            android:text="线路类型"
+            android:textColor="@color/textDark"/>
+    </LinearLayout>
 
-    <TextView style="@style/text.normalSmaller"
-        android:text="实时指数"
-        android:textColor="@color/textDark"/>
-
-
-    <com.github.mikephil.charting.charts.PieChart
-        android:id="@+id/pieChart"
+    <View
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        ></com.github.mikephil.charting.charts.PieChart>
+        android:layout_margin="10dp"
+        android:layout_height="0.4dp"
+        android:background="#aaaaaa" />
+    
+
+
+    <!--<com.github.mikephil.charting.charts.PieChart-->
+        <!--android:id="@+id/pieChart"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="300dp"-->
+        <!--&gt;</com.github.mikephil.charting.charts.PieChart>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        >
+    <com.seaboxdata.portal.common.charts.PanelRoseChart
+        android:layout_width="250dp"
+        android:layout_height="200dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <View
+                    android:layout_marginTop="2dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="#755cf2"
+                    />
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#a1a1a1"
+                    android:text="通讯网"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <View
+                    android:layout_marginTop="2dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="#eecc44"
+                    />
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#a1a1a1"
+                    android:text="供电线路"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <View
+                    android:layout_marginTop="2dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="#6785f2"
+                    />
+                <TextView
+                    android:textColor="#a1a1a1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="公路"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <View
+                    android:layout_marginTop="2dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="#f5a658"
+                    />
+                <TextView
+                    android:textColor="#a1a1a1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="供水电路"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
 
 
 </LinearLayout>

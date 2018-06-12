@@ -22,24 +22,24 @@ public class PanelRoseChart extends View  {
     private int ScrWidth,ScrHeight;
 
     //演示用的百分比例,实际使用中，即为外部传入的比例参数
-    private final float arrPer[] = new float[]{40f,50f,60f,35f,70f,80f,95f};
+    private final float arrPer[] = new float[]{35f,70f,80f,95f};
     //演示用标签
-    private final String arrPerLabel[] = new String[]{"PostgreSQL","Sybase","DB2","国产及其它","MySQL","Ms Sql","Oracle"};
+    private final String arrPerLabel[] = new String[]{"通讯网","供电线路","公路","供水电路"};
     //RGB颜色数组
-    private final int arrColorRgb[][] = { {77, 83, 97},
-            {148, 159, 181},
-            {253, 180, 90},
-            {52, 194, 188},
-            {39, 51, 72},
-            {255, 135, 195},
-            {215, 124, 124}} ;
-
+//    private final int arrColorRgb[][] = { {77, 83, 97},
+//            {148, 159, 181},
+//            {253, 180, 90},
+//            {52, 194, 188},
+//            {39, 51, 72},
+//            {255, 135, 195},
+//            {215, 124, 124}} ;
+    private final int arrColorRgb[]= {Color.parseColor("#755cf2"),Color.parseColor("#eecc44"),Color.parseColor("#6785f2"),Color.parseColor("#f5a658")};
 
     public PanelRoseChart(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         DisplayMetrics dm = getResources().getDisplayMetrics();
         ScrHeight = SystemUtils.dip2px(context, 300);
-        ScrWidth = dm.widthPixels;
+        ScrWidth = SystemUtils.dip2px(context, 300);
     }
     public PanelRoseChart(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
@@ -97,7 +97,7 @@ public class PanelRoseChart extends View  {
             RectF NewarcRF = new RectF(NewarcLeft ,NewarcTop,NewarcRight,NewarcBottom);
 
             //分配颜色
-            PaintArc.setARGB(255,arrColorRgb[i][0], arrColorRgb[i][1], arrColorRgb[i][2]);
+            PaintArc.setColor(arrColorRgb[i]);
 
             //在饼图中显示所占比例
             canvas.drawArc(NewarcRF, currPer, percentage, true, PaintArc);

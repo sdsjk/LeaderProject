@@ -1,6 +1,7 @@
 package com.seaboxdata.portal.utils.chart;
 
 import android.content.Context;
+import android.graphics.Color;
 
 import com.github.mikephil.charting.charts.RadarChart;
 import com.github.mikephil.charting.components.AxisBase;
@@ -44,14 +45,16 @@ public class RadarChartManager {
         mRadarChart.setWebLineWidthInner(1.0f);
         // 所有线条WebLine透明度
         mRadarChart.setWebAlpha(100);
+        //取消图标右下角的描述
+        mRadarChart.getDescription().setEnabled(false);
         //点击点弹出的标签
-        RadarMarkerView mv = new RadarMarkerView(mContext, R.layout.radar_marker_view);
-        mRadarChart.setMarkerView(mv);
-
+//        RadarMarkerView mv = new RadarMarkerView(mContext, R.layout.radar_marker_view);
+//        mRadarChart.setMarkerView(mv);
         XAxis xAxis = mRadarChart.getXAxis();
         // X坐标值字体大小
-        xAxis.setTextSize(12f);
+        xAxis.setTextSize(8f);
         // Y坐标值字体样式
+
         // Y坐标值标签个数
         yAxis.setLabelCount(6, false);
         // Y坐标值字体大小
@@ -59,13 +62,20 @@ public class RadarChartManager {
         // Y坐标值是否从0开始
         yAxis.setStartAtZero(true);
         yAxis.setEnabled(false);
+        yAxis.setDrawLabels(false);
+        yAxis.setDrawTopYLabelEntry(false);
+        xAxis.setDrawLimitLinesBehindData(false);
+        //设置X上的显示labal
+        xAxis.setDrawLabels(true);
         Legend l = mRadarChart.getLegend();
         // 图例位置
-        l.setPosition(Legend.LegendPosition.LEFT_OF_CHART);
+        l.setPosition(Legend.LegendPosition.RIGHT_OF_CHART);
         // 图例X间距
-        l.setXEntrySpace(2f);
+        l.setXEntrySpace(1f);
         // 图例Y间距
-        l.setYEntrySpace(1f);
+        l.setTextSize(12f);
+        l.setTextColor(Color.parseColor("#a1a1a1"));
+        l.setYEntrySpace(4f);
     }
 
     public void showRadarChart(final List<String> xData, List<List<Float>> yDatas, List<String> names, List<Integer> colors) {
@@ -77,6 +87,8 @@ public class RadarChartManager {
             }
         });
 
+        yAxis.setTextColor(Color.parseColor("#a1a1a1"));
+        yAxis.setDrawLabels(false);
         List<IRadarDataSet> sets = new ArrayList<>();
         for (int i = 0; i < yDatas.size(); i++) {
             ArrayList<RadarEntry> yValues = new ArrayList<>();
@@ -85,7 +97,12 @@ public class RadarChartManager {
             }
             RadarDataSet radarDataSet = new RadarDataSet(yValues, names.get(i));
             radarDataSet.setColor(colors.get(i));
+            //设置是否填充区域
             radarDataSet.setDrawFilled(true);
+            //填充区域的颜色
+            radarDataSet.setFillColor(colors.get(i));
+            //填充区域同颜色的alpha值
+            radarDataSet.setFillAlpha(255);
             // 数据线条宽度
             radarDataSet.setLineWidth(2f);
             sets.add(radarDataSet);
@@ -95,7 +112,7 @@ public class RadarChartManager {
         // 数据字体大小
         data.setValueTextSize(8f);
         // 是否绘制Y值到图表
-        data.setDrawValues(true);
+        data.setDrawValues(false);
         mRadarChart.setData(data);
         mRadarChart.invalidate();
     }

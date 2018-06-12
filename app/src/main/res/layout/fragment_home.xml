@@ -6,7 +6,13 @@
     android:layout_height="match_parent"
     android:background="@color/backgroundGrey"
     android:orientation="vertical">
-
+    <LinearLayout
+        android:id="@+id/ll_bar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/shape_header_bg"
+        android:orientation="vertical"
+        android:visibility="gone"></LinearLayout>
     <LinearLayout
         android:id="@+id/ll_bar"
         android:layout_width="match_parent"
@@ -23,19 +29,20 @@
 
         <ImageView
             android:id="@+id/search_fit"
-            android:layout_width="wrap_content"
+            android:layout_width="30dp"
             android:layout_height="30dp"
+            android:layout_marginLeft="9dp"
             android:paddingLeft="@dimen/normal_margin"
             android:paddingRight="@dimen/normal_margin"
             android:layout_centerVertical="true"
-            android:src="@drawable/home_search"/>
+            android:src="@drawable/home_icon_sercher"/>
 
 
         <com.flyco.tablayout.SlidingTabLayout
             android:layout_toRightOf="@id/search_fit"
             android:id="@+id/m_tablayout"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="53dp"
             android:background="@drawable/shape_border_bottom_white"
             android:layout_marginRight="36dp"
             tl:tl_tab_padding="5dp"
@@ -51,11 +58,11 @@
 
         <ImageView
             android:id="@+id/category_sub"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:paddingRight="@dimen/medium_margin"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
+            android:layout_marginRight="9dp"
             android:src="@drawable/home_category_all"/>
 
     </RelativeLayout>
@@ -63,6 +70,8 @@
     <android.support.v4.view.ViewPager
         android:id="@+id/m_viewpager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></android.support.v4.view.ViewPager>
+        android:layout_height="wrap_content">
+
+    </android.support.v4.view.ViewPager>
 
 </LinearLayout>

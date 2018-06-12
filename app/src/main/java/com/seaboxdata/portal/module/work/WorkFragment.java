@@ -68,7 +68,6 @@ public class WorkFragment extends CommonFragment {
         TextView textView = (TextView) view.findViewById(R.id.centerTitle);
         textView.setText("办公");
 
-
         FragmentManager fragmentManage = getChildFragmentManager();
         if (fragmentManage.getFragments() == null || fragmentManage.getFragments().size() == 0) {
             FragmentTransaction fTransaction = getChildFragmentManager().beginTransaction();

@@ -6,17 +6,19 @@
     android:layout_height="wrap_content"
     android:background="@color/backgroundGrey">
 
-    <ImageView
-        style="@style/img"
-        android:src="@drawable/banner" />
+    <!--<ImageView-->
+        <!--style="@style/img"-->
+        <!--android:background="@drawable/banner" />-->
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="190dp"
         android:layout_centerVertical="true"
+        android:background="@drawable/banner"
         android:orientation="vertical">
 
         <TextView
+            android:layout_marginTop="12dp"
             style="@style/text.normalSmaller"
             android:layout_gravity="center_horizontal"
             android:text="拥堵指数"
@@ -26,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="22dp"
+            android:layout_marginTop="18dp"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -41,14 +43,14 @@
                     android:layout_gravity="center"
                     android:text="5.0"
                     android:textColor="@color/colorWhite"
-                    android:textSize="27dp"
+                    android:textSize="29dp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="48dp"
                     android:layout_height="18dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="7dp"
+                    android:layout_marginTop="13dp"
                     android:background="@drawable/shape_ghost_white_bg"
                     android:gravity="center"
                     android:text="拥挤"
@@ -71,8 +73,10 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/medium_margin"
             android:layout_marginRight="@dimen/medium_margin"
-            android:layout_marginTop="32dp"
-            android:orientation="horizontal">
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            >
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -88,7 +92,7 @@
 
                 <TextView
                     style="@style/text.medium"
-                    android:layout_marginTop="@dimen/normal_margin"
+                    android:layout_marginTop="6dp"
                     android:text="8:30"
                     android:textColor="@color/colorWhite" />
 
@@ -109,7 +113,7 @@
 
                 <TextView
                     style="@style/text.medium"
-                    android:layout_marginTop="@dimen/normal_margin"
+                    android:layout_marginTop="6dp"
                     android:text="10"
                     android:textColor="@color/colorWhite" />
 
@@ -130,7 +134,7 @@
 
                 <TextView
                     style="@style/text.medium"
-                    android:layout_marginTop="@dimen/normal_margin"
+                    android:layout_marginTop="6dp"
                     android:text="90%"
                     android:textColor="@color/colorWhite" />
 

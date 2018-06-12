@@ -36,6 +36,7 @@ public class PieChartManager {
         pieChart.setRotationAngle(90);// 初始旋转角度
         pieChart.setRotationEnabled(false);// 可以手动旋转
         pieChart.setUsePercentValues(true);//显示成百分比
+        pieChart.getDescription().setEnabled(false);
         pieChart.setDrawEntryLabels(false);
         pieChart.setExtraOffsets(0, 0, 40, 5);
         Legend legend = pieChart.getLegend();

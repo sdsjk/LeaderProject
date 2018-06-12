@@ -1,5 +1,6 @@
 package com.seaboxdata.portal.module.home;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -10,10 +11,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.seaboxdata.portal.R;
 import com.seaboxdata.portal.common.CommonFragment;
+import com.seaboxdata.portal.module.search.SearchActivityNew;
 import com.seaboxdata.portal.utils.StatusBarUtil;
 import com.seaboxdata.portal.utils.SystemBarTintManager;
 
@@ -54,6 +57,13 @@ public class HomeFragment extends CommonFragment {
         homeRecylerAdapter=new HomeRecylerAdapter(getActivity());
         recyclerView.setAdapter(homeRecylerAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        ImageView imageView= (ImageView) view.findViewById(R.id.home_search);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().startActivity(new Intent(getActivity(), SearchActivityNew.class));
+            }
+        });
 
     }
 

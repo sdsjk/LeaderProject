@@ -41,10 +41,9 @@
                     android:text="标题" />
                 <!--小三角形-->
                 <ImageView
-                    android:visibility="gone"
                     android:id="@+id/centerTitle_iv"
-                    android:layout_width="7dp"
-                    android:layout_height="5dp"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
                     android:scaleType="centerInside"
                     />
             </LinearLayout>

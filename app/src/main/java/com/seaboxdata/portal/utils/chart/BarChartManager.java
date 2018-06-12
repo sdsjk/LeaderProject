@@ -1,9 +1,12 @@
 package com.seaboxdata.portal.utils.chart;
 
 import android.graphics.Color;
+import android.graphics.Typeface;
+import android.util.Log;
 
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.components.AxisBase;
 import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.components.LimitLine;
@@ -12,6 +15,7 @@ import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
 
 import java.util.ArrayList;
@@ -78,7 +82,8 @@ public class BarChartManager {
         xAxis.setGranularity(1f);
         // 不绘制网格线
         xAxis.setDrawGridLines(false);
-
+        xAxis.setTypeface(Typeface.DEFAULT);
+        xAxis.setCenterAxisLabels(true);
         //保证Y轴从0开始，不然会上移一点
         leftAxis.setAxisMinimum(0f);
         rightAxis.setAxisMinimum(0f);
@@ -105,15 +110,36 @@ public class BarChartManager {
 
         barDataSet.setColor(color);
         barDataSet.setValueTextSize(9f);
-        barDataSet.setFormLineWidth(1f);
-        barDataSet.setFormSize(15.f);
-
+        barDataSet.setFormLineWidth(0.1f);
+        barDataSet.setFormSize(15.0f);
         ArrayList<IBarDataSet> dataSets = new ArrayList<>();
         dataSets.add(barDataSet);
         BarData data = new BarData(dataSets);
+        data.setBarWidth(0.5f);
         //设置X轴的刻度数
-        xAxis.setLabelCount(xAxisValues.size() - 1, false);
+
+        String[] xValues = {"东城", "西城", "朝阳", "丰台", "石景山", "海淀区", "房山区"};
+        xAxis.setLabelCount(xAxisValues.size()+1, true);
+        xAxis.setDrawLabels(true);
+        IAxisValueFormatter xAxisFormatter = new XAxisValueFormatter(xValues);
+        xAxis.setValueFormatter(xAxisFormatter);
+        xAxis.setTextColor(Color.parseColor("#a1a1a1"));
         mBarChart.setData(data);
+    }
+
+    public class XAxisValueFormatter implements IAxisValueFormatter {
+
+        private String[] xValues;
+
+        public XAxisValueFormatter(String[] xValues) {
+            this.xValues = xValues;
+        }
+
+        @Override
+        public String getFormattedValue(float value, AxisBase axis) {
+            return xValues[(int) value];
+        }
+
     }
 
     /**

@@ -182,18 +182,18 @@ public class DetailActivity extends CommonActivity {
         List<String> lableNameList = new ArrayList<>();
         lableNameList.add("交通运行");
         lableNameList.add("拥挤指数");
+
         for (int j = 0; j <= 4; j++) {
             float value = (float) (Math.random() * 80);
             y1Value.add(value);
-            y2Value.add(value-10);
-
+            y2Value.add(value-5);
         }
         yValues.add(y1Value);
         yValues.add(y2Value);
 
         List<Integer> colorList = new ArrayList<>();
-        colorList.add(Color.BLUE);
-        colorList.add(Color.DKGRAY);
+        colorList.add(Color.parseColor("#6785f2"));
+        colorList.add(Color.parseColor("#eecc44"));
 
         // 曲线
         LineChartManager lineChartManager = new LineChartManager(mLineChart);
@@ -202,15 +202,15 @@ public class DetailActivity extends CommonActivity {
         lineChartManager.setDescription("");
 
 
-        // 表格
-        DataScrollablePanel scrollablePanel = (DataScrollablePanel) findViewById(R.id.scrollable_panel);
-
-        scrollablePanel.getContentRecyclerView().setHasFixedSize(true);
-        scrollablePanel.getContentRecyclerView().setNestedScrollingEnabled(false);
-
-        ScrollablePanelAdapter scrollablePanelAdapter = new ScrollablePanelAdapter();
-        generateTestData(scrollablePanelAdapter);
-        scrollablePanel.setPanelAdapter(scrollablePanelAdapter);
+//        // 表格
+//        DataScrollablePanel scrollablePanel = (DataScrollablePanel) findViewById(R.id.scrollable_panel);
+//
+//        scrollablePanel.getContentRecyclerView().setHasFixedSize(true);
+//        scrollablePanel.getContentRecyclerView().setNestedScrollingEnabled(false);
+//
+//        ScrollablePanelAdapter scrollablePanelAdapter = new ScrollablePanelAdapter();
+//        generateTestData(scrollablePanelAdapter);
+//        scrollablePanel.setPanelAdapter(scrollablePanelAdapter);
 
     }
 

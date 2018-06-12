@@ -2,14 +2,19 @@ package com.seaboxdata.portal.category;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.linewell.core.view.AutoFixViewGroup;
 import com.linewell.imageloader.UniversalImageLoader;
@@ -30,9 +35,11 @@ public class CategorySubActivity extends CommonActivity {
 
     private boolean mShowEdit = false;
 
-    @BindView(R.id.right_menu)
-    Button mRightMenuBT;
+    @BindView(R.id.app_manager_save)
+    TextView app_manager_save;
 
+    @BindView(R.id.app_manager_canale)
+    ImageView mRightMenuBT;
     private boolean mIsEdit = false;
 
     private List<ServiceCategoryDTO> list = new ArrayList<>();
@@ -58,14 +65,14 @@ public class CategorySubActivity extends CommonActivity {
     }
 
     private void initView() {
-        mRightMenuBT.setVisibility(View.VISIBLE);
-
-        if (mShowEdit) {
-            mRightMenuBT.setText("完成");
-            mIsEdit = true;
-        } else {
-            mRightMenuBT.setText("编辑");
-        }
+//        mRightMenuBT.setVisibility(View.VISIBLE);
+//
+//        if (mShowEdit) {
+//            mRightMenuBT.setText("完成");
+//            mIsEdit = true;
+//        } else {
+//            mRightMenuBT.setText("编辑");
+//        }
 
     }
 
@@ -74,21 +81,20 @@ public class CategorySubActivity extends CommonActivity {
         mRightMenuBT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                if (mIsEdit) {
-//                    mRightMenuBT.setText("编辑");
-//                    mIsEdit = false;
-
-                    finish();
-                } else {
-                    mRightMenuBT.setText("完成");
-                    mIsEdit = true;
-                }
-
-                renderCategory(list, mIsEdit);
+                finish();
 
             }
         });
+
+        app_manager_save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //保存配置
+                renderCategory(list, false);
+            }
+        });
+
+
 
     }
 
@@ -206,35 +212,49 @@ public class CategorySubActivity extends CommonActivity {
                     }
                     // 生成标签
                     View itemView = layoutInflater.inflate(R.layout.item_category_tag, tagsView, false);
-                    final TextView tag = (TextView) itemView.findViewById(R.id.tv_tag);
+                    final CheckBox tag = (CheckBox) itemView.findViewById(R.id.tv_tag);
                     tag.setText(tagDTO.getCategoryName());
 //                    tag.setTag(tagDTO);
 
-                    final View deleteView = itemView.findViewById(R.id.front_fit);
-                    if (showEdit && tagDTO.isChoose()) {
-                        deleteView.setVisibility(View.VISIBLE);
+//                    final View deleteView = itemView.findViewById(R.id.front_fit);
+                    if (tagDTO.isChoose()) {
+                        tag.setTextColor(Color.parseColor("#496cef"));
+                        tag.setChecked(true);
+//                        deleteView.setVisibility(View.VISIBLE);
                     } else {
-                        deleteView.setVisibility(View.GONE);
+//                        deleteView.setVisibility(View.GONE);
+                        tag.setTextColor(Color.parseColor("#272727"));
+                        tag.setChecked(false);
                     }
-
-                    deleteView.setOnClickListener(new View.OnClickListener() {
+                    tag.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                         @Override
-                        public void onClick(View v) {
-                            deleteView.setVisibility(View.GONE);
-                            // TODO 删除
+                        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                            if(isChecked){
+                                tag.setTextColor(Color.parseColor("#496cef"));
+                            }else {
+                                tag.setTextColor(Color.parseColor("#272727"));
+                            }
                         }
+
                     });
+//                    deleteView.setOnClickListener(new View.OnClickListener() {
+//                        @Override
+//                        public void onClick(View v) {
+//                            deleteView.setVisibility(View.GONE);
+//                            // TODO 删除
+//                        }
+//                    });
 
                     //标签的点击
-                    tag.setOnClickListener(new View.OnClickListener() {
-
-                        @Override
-                        public void onClick(View v) {
-                            deleteView.setVisibility(View.VISIBLE);
-                            // TODO 添加
-                            startCategoryList(tagDTO.getPid(), dto.getParentCategoryName(), tagDTO.getResourceCategoryId(), tagDTO.getCategoryName());
-                        }
-                    });
+//                    tag.setOnClickListener(new View.OnClickListener() {
+//
+//                        @Override
+//                        public void onClick(View v) {
+////                            deleteView.setVisibility(View.VISIBLE);
+//                            // TODO 添加
+//                            startCategoryList(tagDTO.getPid(), dto.getParentCategoryName(), tagDTO.getResourceCategoryId(), tagDTO.getCategoryName());
+//                        }
+//                    });
 
 
                     tagsView.addView(itemView);

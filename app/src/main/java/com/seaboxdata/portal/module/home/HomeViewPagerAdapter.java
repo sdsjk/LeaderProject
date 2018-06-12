@@ -34,13 +34,20 @@ public class HomeViewPagerAdapter extends PagerAdapter {
     public Object instantiateItem(ViewGroup container, int position) {
         // return super.instantiateItem(container, position);
         // 修改position
+//        position = position % mList.size();
+//        // 将图片控件添加到容器
+//        View view=mList.get(position);
+//        ViewGroup parent = (ViewGroup) view.getParent();
+//        if (parent != null) {
+//            parent.removeAllViews();
+//        }
+//        container.addView(mList.get(position));
+//
+//        // 返回
+//        return mList.get(position);
+
         position = position % mList.size();
         // 将图片控件添加到容器
-        View view=mList.get(position);
-        ViewGroup parent = (ViewGroup) view.getParent();
-        if (parent != null) {
-            parent.removeAllViews();
-        }
         container.addView(mList.get(position));
 
         // 返回

@@ -3,21 +3,21 @@
     <item android:state_pressed="true">
         <shape>
             <stroke android:width="0.75dp" android:color="@color/brandColor"/>
-            <corners android:radius="3dp"/>
+            <corners android:radius="2dp"/>
             <solid android:color="@color/colorWhite"/>
         </shape>
     </item>
     <item android:state_enabled="false">
         <shape>
             <stroke android:width="0.75dp" android:color="@color/fillColorGrey"/>
-            <corners android:radius="3dp"/>
+            <corners android:radius="2dp"/>
             <solid android:color="@color/transparent"/>
         </shape>
     </item>
     <item>
         <shape>
             <stroke android:width="0.75dp" android:color="@color/textLightGrey"/>
-            <corners android:radius="3dp"/>
+            <corners android:radius="2dp"/>
             <solid android:color="@color/transparent"/>
         </shape>
     </item>

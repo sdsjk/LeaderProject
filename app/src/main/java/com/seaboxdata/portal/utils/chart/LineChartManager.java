@@ -1,6 +1,9 @@
 package com.seaboxdata.portal.utils.chart;
 
+import android.graphics.Color;
+
 import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.components.AxisBase;
 import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.components.LimitLine;
@@ -9,6 +12,7 @@ import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
+import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 
 import java.util.ArrayList;
@@ -37,60 +41,61 @@ public class LineChartManager {
      * 初始化LineChart
      */
     private void initLineChart(boolean legendShow) {
-        lineChart.setDrawGridBackground(false);
-        //显示边界
-        lineChart.setDrawBorders(false);
+            lineChart.setDrawGridBackground(false);
+            //显示边界
+            lineChart.setDrawBorders(false);
 
-        //设置动画效果
-        lineChart.animateX(1000);
+            //设置动画效果
+            lineChart.animateX(1000);
 
-        lineChart.setTouchEnabled(false); // 所有触摸事件,默认true
-        lineChart.setDragEnabled(false);    // 可拖动,默认true
-        lineChart.setScaleEnabled(false);   // 两个轴上的缩放,X,Y分别默认为true
-        lineChart.setScaleXEnabled(false);  // X轴上的缩放,默认true
-        lineChart.setScaleYEnabled(false);  // Y轴上的缩放,默认true
-        lineChart.setPinchZoom(false);  // X,Y轴同时缩放，false则X,Y轴单独缩放,默认false
-        lineChart.setDoubleTapToZoomEnabled(false); // 双击缩放,默认true
-        lineChart.setDragDecelerationEnabled(true);    // 抬起手指，继续滑动,默认true
+            lineChart.setTouchEnabled(true); // 所有触摸事件,默认true
+            lineChart.setDragEnabled(false);    // 可拖动,默认true
+            lineChart.setScaleEnabled(false);   // 两个轴上的缩放,X,Y分别默认为true
+            lineChart.setScaleXEnabled(false);  // X轴上的缩放,默认true
+            lineChart.setScaleYEnabled(false);  // Y轴上的缩放,默认true
+            lineChart.setPinchZoom(false);  // X,Y轴同时缩放，false则X,Y轴单独缩放,默认false
+            lineChart.setDoubleTapToZoomEnabled(false); // 双击缩放,默认true
+            lineChart.setDragDecelerationEnabled(true);    // 抬起手指，继续滑动,默认true
 
-        //折线图例 标签 设置
-        Legend legend = lineChart.getLegend();
-        if (legendShow) {
-            legend.setDrawInside(false);
-            legend.setFormSize(5);
-            legend.setXEntrySpace(7f);
-            legend.setYEntrySpace(0f);
-            legend.setYOffset(0f);
-//            legend.setForm(Legend.LegendForm.SQUARE);
-            // 文字的大小
-            legend.setTextSize(8);
-            //显示位置
-            legend.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
-            legend.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
-            legend.setOrientation(Legend.LegendOrientation.HORIZONTAL);
+            //折线图例 标签 设置
+            Legend legend = lineChart.getLegend();
+            if (legendShow) {
+                legend.setDrawInside(false);
+                legend.setFormSize(8);
+                legend.setXEntrySpace(7f);
+                legend.setYEntrySpace(0f);
+                legend.setYOffset(0f);
+    //            legend.setForm(Legend.LegendForm.SQUARE);
+                // 文字的大小
+                legend.setTextSize(12);
+                //显示位置
+                legend.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
+                legend.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
+                legend.setOrientation(Legend.LegendOrientation.HORIZONTAL);
 
-        } else  {
-            legend.setForm(Legend.LegendForm.NONE);
-        }
+            } else  {
+                legend.setForm(Legend.LegendForm.NONE);
+            }
 
 
-        //XY轴的设置
-        //X轴设置显示位置在底部
-        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
-        xAxis.setAxisMinimum(0f);
-        xAxis.setGranularity(1f);
-        // 不绘制网格线
-        xAxis.setDrawGridLines(false);
+            //XY轴的设置
+            //X轴设置显示位置在底部
+            xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
+            xAxis.setAxisMinimum(0f);
+            xAxis.setGranularity(1f);
+            // 不绘制网格线
+            xAxis.setDrawGridLines(false);
 
-        //保证Y轴从0开始，不然会上移一点
-        leftAxis.setAxisMinimum(0f);
-        // 显示数字但不显示线
-        leftAxis.setDrawAxisLine(false);
+            xAxis.setAxisLineWidth(2.0f);
+            //保证Y轴从0开始，不然会上移一点
+            leftAxis.setAxisMinimum(0f);
+            // 显示数字但不显示线
+            leftAxis.setDrawAxisLine(true);
 
-        rightAxis.setAxisMinimum(0f);
+            rightAxis.setAxisMinimum(0f);
 
-        // 线跟数据都不显示
-        rightAxis.setEnabled(false); //右侧Y轴不显示
+            // 线跟数据都不显示
+            rightAxis.setEnabled(false); //右侧Y轴不显示
 
 
     }
@@ -120,7 +125,7 @@ public class LineChartManager {
 //        lineDataSet.setFormLineWidth(2f);
 //        lineDataSet.setFormSize(15.f);
         //线模式为圆滑曲线（默认折线）
-        lineDataSet.setMode(LineDataSet.Mode.CUBIC_BEZIER);
+//        lineDataSet.setMode(LineDataSet.Mode.CUBIC_BEZIER);
     }
 
     /**
@@ -157,8 +162,33 @@ public class LineChartManager {
         dataSets.add(lineDataSet);
         LineData data = new LineData(dataSets);
         //设置X轴的刻度数
-        xAxis.setLabelCount(xAxisValues.size(), true);
+        xAxis.setLabelCount(xAxisValues.size(), false);
+        xAxis.setTextColor(Color.parseColor("#a1a1a1"));
+        xAxis.setLabelRotationAngle(-45);
+        xAxis.setValueFormatter(new IAxisValueFormatter() {
+                                    @Override
+                                    public String getFormattedValue(float value, AxisBase axis) {
+                                        if (value == 0) {
+                                            return "阜成门";
+                                        }
+                                        if (value == 2) {
+                                            return "国贸";
+                                        }
+                                        if (value == 3) {
+                                            return "积水潭";
+                                        }
+                                        if (value == 4) {
+                                            return "三元桥";
+                                        }
+                                        if (value == 5) {
+                                            return "西直门";
+                                        }
+                                        return "西直门";
+                                    }
+                                    });
+
         lineChart.setData(data);
+
     }
 
 
@@ -188,7 +218,24 @@ public class LineChartManager {
         }
         LineData data = new LineData(dataSets);
         xAxis.setLabelCount(xAxisValues.size(), true);
+        String[] xValues = {"6:00", "9:00", "12:00", "15:00", "18:00"};
+        xAxis.setValueFormatter(new XAxisValueFormatter(xValues));
         lineChart.setData(data);
+    }
+
+    public class XAxisValueFormatter implements IAxisValueFormatter {
+
+        private String[] xValues;
+
+        public XAxisValueFormatter(String[] xValues) {
+            this.xValues = xValues;
+        }
+
+        @Override
+        public String getFormattedValue(float value, AxisBase axis) {
+            return xValues[(int) value];
+        }
+
     }
 
     /**

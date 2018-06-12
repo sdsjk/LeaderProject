@@ -8,7 +8,8 @@
     android:layout_marginRight="@dimen/normal_margin"
     android:layout_marginBottom="@dimen/normal_margin">
 
-    <TextView
+    <CheckBox
+        android:button="@null"
         android:id="@+id/tv_tag"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
@@ -18,28 +19,27 @@
         android:gravity="center"
         android:maxLines="1"
         android:ellipsize="end"
-        android:textSize="13dp"
-        android:textColor="@drawable/selector_classify_text"
+        android:textColor="@drawable/selector_classify_text_ra"
         android:background="@drawable/selector_classify_bg"
         android:text="全部" />
 
-    <RelativeLayout
-        android:id="@+id/front_fit"
-        android:layout_alignRight="@+id/tv_tag"
-        android:gravity="right"
-        android:clickable="true"
-        android:layout_width="24dp"
-        android:layout_height="24dp">
-        <com.linewell.core.view.FontIconText
-            style="@style/icon"
-            android:layout_width="10dp"
-            android:layout_height="10dp"
-            android:background="@drawable/selector_upload_close_button"
-            android:text="@string/icon_close"
-            android:textColor="@color/colorWhite"
-            android:textSize="8dp"
-            fonticontext:typefacename="icon_font.ttf" />
-    </RelativeLayout>
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/front_fit"-->
+        <!--android:layout_alignRight="@+id/tv_tag"-->
+        <!--android:gravity="right"-->
+        <!--android:clickable="true"-->
+        <!--android:layout_width="24dp"-->
+        <!--android:layout_height="24dp">-->
+        <!--<com.linewell.core.view.FontIconText-->
+            <!--style="@style/icon"-->
+            <!--android:layout_width="10dp"-->
+            <!--android:layout_height="10dp"-->
+            <!--android:background="@drawable/selector_upload_close_button"-->
+            <!--android:text="@string/icon_close"-->
+            <!--android:textColor="@color/colorWhite"-->
+            <!--android:textSize="8dp"-->
+            <!--fonticontext:typefacename="icon_font.ttf" />-->
+    <!--</RelativeLayout>-->
 
 </RelativeLayout>
 

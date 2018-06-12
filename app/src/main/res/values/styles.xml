@@ -149,7 +149,7 @@
         <item name="android:layout_marginLeft">@dimen/medium_margin</item>
         <item name="android:paddingLeft">@dimen/normal_margin</item>
         <item name="android:paddingRight">@dimen/normal_margin</item>
-        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_height">26dp</item>
         <item name="android:textColor">@drawable/selector_link_text_grey</item>
         <item name="android:background">@drawable/selector_button_ghost</item>
     </style>

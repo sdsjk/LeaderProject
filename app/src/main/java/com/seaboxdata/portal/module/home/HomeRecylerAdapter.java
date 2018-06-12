@@ -1,10 +1,12 @@
 package com.seaboxdata.portal.module.home;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Handler;
 import android.support.v4.view.MenuCompat;
+import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -16,6 +18,7 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.mikephil.charting.animation.Easing;
@@ -30,6 +33,7 @@ import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.formatter.PercentFormatter;
 import com.github.mikephil.charting.utils.ColorTemplate;
 import com.seaboxdata.portal.R;
+import com.seaboxdata.portal.module.info.InfomationActivity;
 import com.seaboxdata.portal.utils.chart.BarChartManager;
 import com.seaboxdata.portal.utils.chart.PieChartManager;
 
@@ -130,25 +134,26 @@ public class HomeRecylerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         }
     }
 
-
+    private int[] mImages = {R.drawable.banner1, R.drawable.banner2, R.drawable.banner3, R.drawable.banner2};
+    List<ImageView> mList=new ArrayList<>();
     //ViewPage
     class MyViewholder1 extends RecyclerView.ViewHolder {
 
         public MyViewholder1(View itemView) {
             super(itemView);
-            List<HomeViewPageBean> alldata=new ArrayList<>();
-            alldata.add(new HomeViewPageBean(R.drawable.banner1,"远航,扬起 上海精神的时代风帆"));
-            alldata.add(new HomeViewPageBean(R.drawable.banner2,"远航,扬起 上海精神的时代风帆"));
-            alldata.add(new HomeViewPageBean(R.drawable.banner3,"远航,扬起 上海精神的时代风帆"));
+//            List<HomeViewPageBean> alldata=new ArrayList<>();
+//            alldata.add(new HomeViewPageBean(R.drawable.banner1,"远航,扬起 上海精神的时代风帆"));
+//            alldata.add(new HomeViewPageBean(R.drawable.banner2,"远航,扬起 上海精神的时代风帆"));
+//            alldata.add(new HomeViewPageBean(R.drawable.banner3,"远航,扬起 上海精神的时代风帆"));
 
             final ViewPager viewPager= (ViewPager) itemView.findViewById(R.id.home_viewpage);
             final LinearLayout pointGroup = (LinearLayout) itemView.findViewById(R.id.pointgroup);
             // 准备显示的图片集合
-            final List<ImageView> mList = new ArrayList<>();
-            for (int i = 0; i < alldata.size(); i++) {
+             mList = new ArrayList<>();
+            for (int i = 0; i < mImages.length; i++) {
                 ImageView imageView = new ImageView(context);
                 // 将图片设置到ImageView控件上
-                imageView.setImageResource(alldata.get(i).getIconResouse());
+                imageView.setImageResource(mImages[i]);
                 // 将ImageView控件添加到集合
                 mList.add(imageView);
                 // 制作底部小圆点
@@ -169,7 +174,7 @@ public class HomeRecylerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                 // 添加到容器里
                 pointGroup.addView(pointImage);
             }
-            viewPager.setAdapter(new HomeViewPagerAdapter(context,mList));
+            viewPager.setAdapter(new MyAdapter());
             // 对ViewPager设置滑动监听
             viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
                 @Override
@@ -218,6 +223,37 @@ public class HomeRecylerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         }
     }
 
+    private class MyAdapter extends PagerAdapter {
+        @Override
+        public int getCount() {
+            // 返回整数的最大值
+            return Integer.MAX_VALUE;
+        }
+
+        @Override
+        public boolean isViewFromObject(View view, Object object) {
+            return view == object;
+        }
+
+        @Override
+        public Object instantiateItem(ViewGroup container, int position) {
+            // return super.instantiateItem(container, position);
+            // 修改position
+            position = position % mList.size();
+            // 将图片控件添加到容器
+            container.addView(mList.get(position));
+
+            // 返回
+            return mList.get(position);
+        }
+
+        @Override
+        public void destroyItem(ViewGroup container, int position, Object object) {
+            //super.destroyItem(container, position, object);
+            container.removeView((View) object);
+        }
+    }
+
     //业务检测
     class MyViewholder2 extends RecyclerView.ViewHolder {
 
@@ -237,7 +273,19 @@ public class HomeRecylerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             home_jclist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    Toast.makeText(context,""+allData.get(position).getIconName(),Toast.LENGTH_LONG).show();
+                    if(position==0) {
+                        context.startActivity(new Intent(context,HomeCityActivity.class));
+                    }
+//                    Toast.makeText(context,""+allData.get(position).getIconName(),Toast.LENGTH_LONG).show();
+                }
+            });
+
+
+            TextView home_big_info= (TextView) itemView.findViewById(R.id.home_big_info);
+            home_big_info.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    context.startActivity(new Intent(context,InfomationActivity.class));
                 }
             });
         }
@@ -309,36 +357,6 @@ public class HomeRecylerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             super(itemView);
 
             PieChart pie_chart_with_line= (PieChart) itemView.findViewById(R.id.home_chart1);
-
-
-//            pie_chart_with_line.setUsePercentValues(true);
-//            pie_chart_with_line.setDrawHoleEnabled(true);
-//            pie_chart_with_line.setHoleColor(Color.WHITE);
-//
-//            pie_chart_with_line.setTransparentCircleColor(Color.YELLOW);
-//            pie_chart_with_line.setTransparentCircleAlpha(110);
-//            pie_chart_with_line.setTransparentCircleRadius(30f);
-//            /**
-//             * 设置圆环中间洞的半径
-//             */
-//            pie_chart_with_line.setHoleRadius(30f);
-//
-//            /**
-//             * 是否显示洞中间文本
-//             */
-//            pie_chart_with_line.setDrawCenterText(false);
-//
-//            pie_chart_with_line.setRotationAngle(20);
-//            // enable rotation of the chart by touch
-//            pie_chart_with_line.setRotationEnabled(true);
-//
-//            setData(3, 100,pie_chart_with_line);
-//            List<Integer> color=new ArrayList<>();
-//            color.add(R.color.chanyec363fa);
-//            color.add(R.color.chartf5a658);
-//            color.add(R.color.chart755af2);
-//            color.add(R.color.chart496cef);
-//            color.add(R.color.charteecc44);
             PieChartManager pieChartManager=new PieChartManager(pie_chart_with_line);
             List<String> name=new ArrayList<>();
             name.add("电子信息");
@@ -358,12 +376,7 @@ public class HomeRecylerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
            color.add(Color.parseColor("#755af2"));
            color.add(Color.parseColor("#496cef"));
            color.add(Color.parseColor("#eecc44"));
-
             pieChartManager.setPieChart(name,num,color);
-
-
-
-
         }
     }
 
@@ -422,8 +435,6 @@ public class HomeRecylerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             final DoubleLineChatView doubleLineChatViewTwo = (DoubleLineChatView) itemView.findViewById(R.id.line_chat_one);
             doubleLineChatViewTwo.setData(mDataLeftTwo, mDataRightTwo, mDataTextXTwo);
             doubleLineChatViewTwo.start();
-
-
         }
     }
 }

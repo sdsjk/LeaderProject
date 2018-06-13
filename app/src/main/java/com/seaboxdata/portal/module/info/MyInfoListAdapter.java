@@ -1,6 +1,7 @@
 package com.seaboxdata.portal.module.info;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -79,7 +80,12 @@ import com.seaboxdata.portal.R;
 
             public MyViewholder1(View itemView) {
                 super(itemView);
-
+                itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        context.startActivity(new Intent(context,InfoDetailsActivity.class));
+                    }
+                });
 
             }
         }
@@ -90,7 +96,12 @@ import com.seaboxdata.portal.R;
 
             public MyViewholder2(View itemView) {
                 super(itemView);
-
+                itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        context.startActivity(new Intent(context,InfoDetailsActivity.class));
+                    }
+                });
             }
         }
 
@@ -98,14 +109,24 @@ import com.seaboxdata.portal.R;
 
             public MyViewholder3(View itemView) {
                 super(itemView);
-
+                itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        context.startActivity(new Intent(context,InfoDetailsActivity.class));
+                    }
+                });
             }
         }
         class MyViewholder4 extends RecyclerView.ViewHolder {
 
             public MyViewholder4(View itemView) {
                 super(itemView);
-
+                itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        context.startActivity(new Intent(context,InfoDetailsActivity.class));
+                    }
+                });
             }
         }
 

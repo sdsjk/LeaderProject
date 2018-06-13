@@ -47,7 +47,10 @@
         <activity android:name=".module.home.HomeCityActivity" />
         <activity android:name=".module.search.SearchActivityNew" />
         <activity android:name=".module.info.InfomationActivity" />
-        <activity android:name=".module.info.InfoListActivity"></activity>
+        <activity android:name=".module.info.InfoListActivity" />
+        <activity android:name=".module.work.WorkAyActivity" />
+        <activity android:name=".module.work.WorkListActivity" />
+        <activity android:name=".module.info.InfoDetailsActivity"></activity>
     </application>
 
 </manifest>

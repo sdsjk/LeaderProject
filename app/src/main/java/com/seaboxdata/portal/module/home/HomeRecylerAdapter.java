@@ -5,11 +5,9 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Handler;
-import android.support.v4.view.MenuCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,32 +17,15 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.github.mikephil.charting.animation.Easing;
-import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.PieChart;
-import com.github.mikephil.charting.components.Description;
-import com.github.mikephil.charting.components.Legend;
-import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.data.PieData;
-import com.github.mikephil.charting.data.PieDataSet;
-import com.github.mikephil.charting.data.PieEntry;
-import com.github.mikephil.charting.formatter.PercentFormatter;
-import com.github.mikephil.charting.utils.ColorTemplate;
 import com.seaboxdata.portal.R;
 import com.seaboxdata.portal.module.info.InfomationActivity;
-import com.seaboxdata.portal.utils.chart.BarChartManager;
+import com.seaboxdata.portal.module.work.WorkAyActivity;
 import com.seaboxdata.portal.utils.chart.PieChartManager;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
-import static android.R.attr.entries;
 
 
 /**
@@ -282,6 +263,13 @@ public class HomeRecylerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
 
             TextView home_big_info= (TextView) itemView.findViewById(R.id.home_big_info);
+            TextView home_work_ay= (TextView) itemView.findViewById(R.id.home_work_ay);
+            home_work_ay.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    context.startActivity(new Intent(context,WorkAyActivity.class));
+                }
+            });
             home_big_info.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

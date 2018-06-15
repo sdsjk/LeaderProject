@@ -30,7 +30,7 @@
                 android:layout_marginLeft="11dp"
                 android:text="舆情信息"
                 android:textColor="#272727"
-                android:textSize="14sp" />
+                android:textSize="@dimen/home_title_size" />
 
             <ImageView
                 android:layout_width="14dp"
@@ -60,7 +60,7 @@
             android:layout_marginTop="19dp"
             android:text="舆情概览"
             android:textColor="#272727"
-            android:textSize="14sp" />
+            android:textSize="@dimen/home_title_size" />
 
         <TextView
             android:layout_width="wrap_content"

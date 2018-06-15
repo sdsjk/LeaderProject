@@ -27,7 +27,7 @@
                 android:layout_marginLeft="11dp"
                 android:text="办公辅助"
                 android:textColor="#272727"
-                android:textSize="14sp" />
+                android:textSize="@dimen/home_title_size" />
 
             <ImageView
                 android:layout_width="14dp"
@@ -80,7 +80,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="7dp"
+                        android:layout_marginTop="@dimen/home_title_content_spantop"
                         android:text="邮件信息"
                         android:textColor="#a1a1a1"
                         android:textSize="11sp" />
@@ -115,7 +115,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="7dp"
+                        android:layout_marginTop="@dimen/home_title_content_spantop"
                         android:text="代办公文"
                         android:textColor="#a1a1a1"
                         android:textSize="11sp" />
@@ -174,7 +174,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="7dp"
+                        android:layout_marginTop="@dimen/home_title_content_spantop"
                         android:text="督察督办信息"
                         android:textColor="#a1a1a1"
                         android:textSize="11sp" />

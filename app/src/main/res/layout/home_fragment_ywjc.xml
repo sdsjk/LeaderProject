@@ -20,7 +20,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:layout_weight="1"
-            android:drawablePadding="6dp"
+            android:drawablePadding="4dp"
             android:drawableTop="@drawable/home_work"
             android:gravity="center"
             android:text="办公辅助"
@@ -36,7 +36,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:layout_weight="1"
-            android:drawablePadding="6dp"
+            android:drawablePadding="4dp"
             android:drawableTop="@drawable/home_biginfo"
             android:gravity="center"
             android:text="重要信息"
@@ -52,7 +52,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:layout_weight="1"
-            android:drawablePadding="6dp"
+            android:drawablePadding="4dp"
             android:drawableTop="@drawable/home_sentiment"
             android:gravity="center"
             android:text="舆情信息"
@@ -88,7 +88,7 @@
                     android:layout_marginLeft="11dp"
                     android:text="业务检测"
                     android:textColor="#272727"
-                    android:textSize="14sp" />
+                    android:textSize="@dimen/home_title_size" />
 
                 <ImageView
                     android:layout_width="14dp"
@@ -113,6 +113,6 @@
             android:layout_marginBottom="14dp"
             android:layout_marginTop="14dp"
             android:numColumns="4"
-            android:verticalSpacing="10dp"></com.seaboxdata.portal.module.home.MyGridView>
+            android:verticalSpacing="@dimen/gridview_verticalspaning"></com.seaboxdata.portal.module.home.MyGridView>
     </LinearLayout>
 </LinearLayout>

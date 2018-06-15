@@ -26,7 +26,7 @@
             android:layout_marginLeft="11dp"
             android:text="产业园区分布"
             android:textColor="#272727"
-            android:textSize="14sp" />
+            android:textSize="@dimen/home_title_size" />
 
 
     </LinearLayout>

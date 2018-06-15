@@ -74,4 +74,9 @@
     <dimen name="search_hotkey10_layout_marginLeft">152dip</dimen>
     <dimen name="search_hotkey10_layout_marginTop">23dip</dimen>
     <dimen name="search_hotkey10_textSize">17dip</dimen>
+    <dimen name="home_title_size">16sp</dimen>
+    <dimen name="gridview_verticalspaning">15dp</dimen>
+    <dimen name="home_title_content_spantop">5dp</dimen>
+    <dimen name="home_smail_icon_padding">2dp</dimen>
+    <dimen name="calendarview_height">200dp</dimen>
 </resources>

@@ -29,13 +29,14 @@
         >
         <EditText
             android:layout_width="324dp"
-            android:layout_height="32dp"
-            android:background="#99ffffff"
+            android:layout_height="28dp"
+            android:background="@drawable/edit_raduis"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="20dp"
             android:drawableLeft="@drawable/home_search"
             android:paddingLeft="10dp"
+            android:gravity="center_vertical"
             android:drawablePadding="10dp"
             android:hint="输入你感兴趣的内容"
             />

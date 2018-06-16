@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/basic_color"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_bar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/shape_header_bg"
+        android:orientation="vertical"
+        android:visibility="gone"></LinearLayout>
+
+    <include layout="@layout/info_title_common"></include>
+
+    <!-- 验证方式-->
+    <LinearLayout
+        android:id="@+id/verification_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="为你帐号安全考虑，请选择以下任意一种方式进行安全验证"
+            android:textColor="#a1a1a1"
+            android:textSize="12sp" />
+
+        <RelativeLayout
+            android:id="@+id/verification_phone"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/colorWhite">
+
+            <TextView
+                android:id="@+id/setting_verification_phone"
+                style="@style/mySetting"
+                android:text="通过手机验证码" />
+
+            <ImageView style="@style/mySettingIcon" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#aaaaaa"></View>
+
+        <RelativeLayout
+            android:id="@+id/verification_email"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/colorWhite">
+
+            <TextView
+                android:id="@+id/setting_verification_email"
+                style="@style/mySetting"
+                android:text="通过邮箱验证码" />
+
+            <ImageView style="@style/mySettingIcon" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <!-- 安全校验-->
+    <LinearLayout
+        android:id="@+id/setting_verifition_safe_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/setting_safe_email"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="验证码发送到134*****@163.com"
+            android:textColor="#272727"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/verification_code"
+                android:layout_width="195dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/setting_editview"
+                android:hint="输入验证码"
+                android:paddingLeft="26dp"
+                android:textSize="14sp"
+                android:textColorHint="#a1a1a1" />
+
+            <TextView
+                android:id="@+id/setting_verification_time"
+                android:layout_width="91dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="29dp"
+                android:background="@drawable/setting_btn"
+                android:gravity="center"
+                android:text="58秒"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/setting_safe_next"
+            android:layout_width="315dp"
+            android:layout_height="42dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="23dp"
+            android:background="@drawable/setting_editview"
+            android:text="下一步"
+            android:textColor="#f6300f" />
+
+    </LinearLayout>
+
+
+    <!--  邮箱验证-->
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="请输入你要修改的邮箱"
+            android:textColor="#272727"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/new_email"
+            android:layout_width="327dp"
+            android:layout_height="42dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/setting_editview"
+            android:hint="新邮箱"
+            android:textSize="14sp"
+            android:paddingLeft="26dp"
+
+            />
+
+        <Button
+            android:id="@+id/setting_email_next"
+            android:layout_width="327dp"
+            android:layout_height="42dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/setting_btn"
+            android:text="下一步"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+
+</LinearLayout>
+

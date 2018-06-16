@@ -4,8 +4,8 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,13 +14,15 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.linewell.core.view.FontIconText;
-import com.linewell.pulllistview.ListParams;
-import com.linewell.pulllistview.RecyclerViewFragment;
 import com.seaboxdata.portal.R;
+import com.seaboxdata.portal.bean.RemindBean;
 import com.seaboxdata.portal.common.CommonFragment;
-import com.seaboxdata.portal.config.ServiceConfig;
+import com.seaboxdata.portal.module.remind.RemindAdapter;
 import com.seaboxdata.portal.utils.StatusBarUtil;
 import com.seaboxdata.portal.utils.SystemBarTintManager;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.ButterKnife;
 
@@ -66,43 +68,23 @@ public class WorkFragment extends CommonFragment {
         FontIconText fontIconText = (FontIconText) view. findViewById(R.id.backBtn);
         fontIconText.setVisibility(View.GONE);
         TextView textView = (TextView) view.findViewById(R.id.centerTitle);
-        textView.setText("办公");
+        textView.setText("会议提醒");
+        RecyclerView home_tx_recycler= (RecyclerView) view.findViewById(R.id.home_tx_recycler);
+        List<RemindBean> allData=new ArrayList<>();
+        allData.add(new RemindBean(1,"2018年5月15日",null,null,null,null));
 
-        FragmentManager fragmentManage = getChildFragmentManager();
-        if (fragmentManage.getFragments() == null || fragmentManage.getFragments().size() == 0) {
-            FragmentTransaction fTransaction = getChildFragmentManager().beginTransaction();
-            workListFragment = new WorkListFragment();
+        allData.add(new RemindBean(2,"2018年5月15日","会议一","07-07","特朗普被提名为诺贝尔和平奖候选人","地点: 二楼会议室"));
+        allData.add(new RemindBean(2,"2018年5月15日","会议二","07-07","宁静今年已经46岁了","地点: 三楼会议室"));
 
-            Bundle bundle = new Bundle();
-            bundle.putSerializable(RecyclerViewFragment.PARAMS,
-                    getListParams(ServiceConfig.BASE, R.layout.item_work));
-            workListFragment.setArguments(bundle);
+        allData.add(new RemindBean(1,"2018年5月16日",null,null,null,null));
+        allData.add(new RemindBean(2,"2018年5月15日","会议三","07-07","但是由于保养得宜，看起来依旧非常年轻","地点: 四楼会议室"));
 
-            fTransaction.add(R.id.work_list_fl, workListFragment);
-            fTransaction.commit();
-        }
-
+        allData.add(new RemindBean(1,"2018年5月17日",null,null,null,null));
+        allData.add(new RemindBean(2,"2018年5月17日","会议四","08-08","感觉有那么一丢丢说不出来的诡异","地点: 五楼会议室"));
+        allData.add(new RemindBean(2,"2018年5月17日","会议五","08-08","照片中宁静依旧走酷帅路线","地点: 六楼会议室"));
+        allData.add(new RemindBean(2,"2018年5月17日","会议六","08-08","此外宁静还蹲坐在一个柱子上，姿势相当霸气","地点: 七楼会议室"));
+        home_tx_recycler.setAdapter(new RemindAdapter(getActivity(),allData));
+        home_tx_recycler.setLayoutManager(new LinearLayoutManager(getActivity()));
 
     }
-
-
-
-    /**
-     *
-     * @param serviceUrl
-     * @param layoutId
-     * @return
-     */
-    public ListParams getListParams(String serviceUrl, int layoutId){
-        ListParams params = new ListParams();
-        params.setrClass(R.id.class);
-        params.setItemLayoutId(layoutId);
-        params.setServiceUrl(serviceUrl);
-
-        // TODO
-        params.setLoadLocal(true);
-
-        return params;
-    }
-
 }

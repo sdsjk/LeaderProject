@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fonticontext="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:fonticontext="http://schemas.android.com/apk/res-auto"
     android:background="@color/backgroundGrey">
+
     <LinearLayout
         android:id="@+id/ll_bar"
         android:layout_width="match_parent"
@@ -14,117 +15,237 @@
 
     <include
         android:id="@+id/layout_toolbar_normal"
-        android:layout_below="@+id/ll_bar"
         layout="@layout/layout_toolbar_normal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></include>
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_bar"></include>
 
     <ScrollView
-        android:layout_below="@+id/layout_toolbar_normal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_toolbar_normal">
+
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorWhite">
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="88dp">
+
                     <ImageView
-                        android:id="@+id/userHead" style="@style/img"
+                        android:id="@+id/userHead"
+                        style="@style/img"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:layout_centerVertical="true"
-                        android:layout_marginRight="10dp"
                         android:layout_marginLeft="@dimen/medium_big_margin"
-                        android:src="@drawable/img_user_head_sample"
-                        android:layout_width="50dp" android:layout_height="50dp" />
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/img_user_head_sample" />
+
                     <LinearLayout
-                        android:layout_toRightOf="@+id/userHead"
-                        android:orientation="vertical"
-                        android:layout_centerVertical="true"
-                        android:gravity="center_vertical"
-                        android:layout_marginRight="@dimen/medium_big_margin"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <TextView style="@style/text"
-                            android:maxLines="1" android:ellipsize="end"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/medium_big_margin"
+                        android:layout_toRightOf="@+id/userHead"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/text"
+                            android:ellipsize="end"
+                            android:maxLines="1"
                             android:text="张大力" />
-                        <TextView style="@style/text"
+
+                        <TextView
+                            style="@style/text"
                             android:layout_marginTop="@dimen/normal_margin"
-                            android:maxLines="1" android:ellipsize="end"
-                            android:textColor="@color/textGrey" android:text="部门 审计" />
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="部门 审计"
+                            android:textColor="@color/textGrey" />
                     </LinearLayout>
                 </RelativeLayout>
-                <View style="@style/horizontalLine" android:layout_marginLeft="@dimen/medium_margin" android:layout_marginRight="@dimen/medium_margin"/>
-                <TextView style="@style/text.normalSmaller" android:layout_height="40dp"
-                    android:gravity="center_vertical" android:layout_marginLeft="@dimen/medium_margin"
-                    android:layout_marginRight="@dimen/medium_margin" android:textColor="@color/textGrey"
-                    android:text="上次登录时间 2018/5/5 18:01:01"/>
+
+                <View
+                    style="@style/horizontalLine"
+                    android:layout_marginLeft="@dimen/medium_margin"
+                    android:layout_marginRight="@dimen/medium_margin" />
+
+                <TextView
+                    style="@style/text.normalSmaller"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="@dimen/medium_margin"
+                    android:layout_marginRight="@dimen/medium_margin"
+                    android:gravity="center_vertical"
+                    android:text="上次登录时间 2018/5/5 18:01:01"
+                    android:textColor="@color/textGrey" />
 
             </LinearLayout>
 
             <LinearLayout style="@style/listViewWrapper">
+
+                <LinearLayout
+                    android:id="@+id/my_approval"
+                    style="@style/listViewItem">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginRight="@dimen/small_margin"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/my_approval" />
+
+                    <TextView
+                        style="@style/listViewText"
+                        android:text="重要批示" />
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/dot_info"
+                        android:text="20"
+                        android:textColor="#ffffff"
+                        android:gravity="center"
+                        android:layout_marginRight="10dp"
+                        />
+
+                    <com.linewell.core.view.FontIconText
+                        style="@style/listViewIconRight"
+                        fonticontext:typefacename="icon_font.ttf" />
+                </LinearLayout>
+
                 <LinearLayout
                     android:id="@+id/category_sub"
                     style="@style/listViewItem">
-                    <ImageView android:layout_width="24dp" android:layout_height="24dp"
-                        android:adjustViewBounds="true" android:scaleType="centerCrop"
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
                         android:layout_marginRight="@dimen/small_margin"
-                        android:src="@drawable/icon_app_setting"/>
-                    <TextView style="@style/listViewText" android:text="首页应用设置"/>
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/my_appseting" />
+
+                    <TextView
+                        style="@style/listViewText"
+                        android:text="首页应用设置" />
+
                     <com.linewell.core.view.FontIconText
-                        fonticontext:typefacename="icon_font.ttf"
-                        style="@style/listViewIconRight"/>
+                        style="@style/listViewIconRight"
+                        fonticontext:typefacename="icon_font.ttf" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:id="@+id/my_monitoring"
                     style="@style/listViewItem">
-                    <ImageView android:layout_width="24dp" android:layout_height="24dp"
-                        android:adjustViewBounds="true" android:scaleType="centerCrop"
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
                         android:layout_marginRight="@dimen/small_margin"
-                        android:src="@drawable/icon_aim"/>
-                    <TextView style="@style/listViewText" android:text="业务监测指标设置"/>
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/my_indexseting" />
+
+                    <TextView
+                        style="@style/listViewText"
+                        android:text="业务监测指标设置" />
+
                     <com.linewell.core.view.FontIconText
-                        fonticontext:typefacename="icon_font.ttf"
-                        style="@style/listViewIconRight"/>
+                        style="@style/listViewIconRight"
+                        fonticontext:typefacename="icon_font.ttf" />
                 </LinearLayout>
-                <LinearLayout style="@style/listViewItem">
-                    <ImageView android:layout_width="24dp" android:layout_height="24dp"
-                        android:adjustViewBounds="true" android:scaleType="centerCrop"
+
+                <LinearLayout
+                    android:id="@+id/my_read_hostory"
+                    style="@style/listViewItem">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
                         android:layout_marginRight="@dimen/small_margin"
-                        android:src="@drawable/icon_browse_history"/>
-                    <TextView style="@style/listViewText" android:text="历史浏览"/>
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/my_hostory" />
+
+                    <TextView
+                        style="@style/listViewText"
+                        android:text="历史浏览" />
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/dot_info"
+                        android:text="30"
+                        android:textColor="#ffffff"
+                        android:gravity="center"
+                        android:layout_marginRight="10dp"
+                        />
                     <com.linewell.core.view.FontIconText
-                        fonticontext:typefacename="icon_font.ttf"
-                        style="@style/listViewIconRight"/>
+                        style="@style/listViewIconRight"
+                        fonticontext:typefacename="icon_font.ttf" />
                 </LinearLayout>
-                <LinearLayout style="@style/listViewItem">
-                    <ImageView android:layout_width="24dp" android:layout_height="24dp"
-                        android:adjustViewBounds="true" android:scaleType="centerCrop"
+
+                <LinearLayout
+                    android:id="@+id/my_meessage"
+                    style="@style/listViewItem">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
                         android:layout_marginRight="@dimen/small_margin"
-                        android:src="@drawable/icon_bell"/>
-                    <TextView style="@style/listViewText" android:text="消息"/>
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/my_message" />
+
+                    <TextView
+                        style="@style/listViewText"
+                        android:text="消息" />
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/dot_info"
+                        android:text="2"
+                        android:textColor="#ffffff"
+                        android:gravity="center"
+                        android:layout_marginRight="10dp"
+                        />
                     <com.linewell.core.view.FontIconText
-                        fonticontext:typefacename="icon_font.ttf"
-                        style="@style/listViewIconRight"/>
+                        style="@style/listViewIconRight"
+                        fonticontext:typefacename="icon_font.ttf" />
                 </LinearLayout>
             </LinearLayout>
 
 
             <LinearLayout style="@style/listViewWrapper">
-                <LinearLayout style="@style/listViewItem">
-                    <ImageView android:layout_width="24dp" android:layout_height="24dp"
-                        android:adjustViewBounds="true" android:scaleType="centerCrop"
+
+                <LinearLayout style="@style/listViewItem"
+                    android:id="@+id/my_app_setting"
+                    >
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
                         android:layout_marginRight="@dimen/small_margin"
-                        android:src="@drawable/icon_app_setting"/>
-                    <TextView style="@style/listViewText" android:text="版本监测"/>
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/mysetting" />
+
+                    <TextView
+                        style="@style/listViewText"
+                        android:text="设置" />
+
                     <com.linewell.core.view.FontIconText
-                        fonticontext:typefacename="icon_font.ttf"
-                        style="@style/listViewIconRight"/>
+                        style="@style/listViewIconRight"
+                        fonticontext:typefacename="icon_font.ttf" />
                 </LinearLayout>
             </LinearLayout>
 

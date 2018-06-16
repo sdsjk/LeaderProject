@@ -13,10 +13,8 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.seaboxdata.portal.R;
-import com.seaboxdata.portal.module.home.HomeCityActivity;
 import com.seaboxdata.portal.module.home.HomeFragmentYwBean;
 import com.seaboxdata.portal.module.home.HomeGridViewAdapter;
 
@@ -229,8 +227,9 @@ public class InfoationAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
             home_jclist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                    Toast.makeText(context,""+allData.get(position).getIconName(),Toast.LENGTH_LONG).show();
-                      context.startActivity(new Intent(context,InfoListActivity.class));
+                    Intent intent=new Intent(context,InfoListActivity.class);
+                    intent.putExtra("titleName",allData.get(position).getIconName());
+                    context.startActivity(intent);
                 }
             });
         }

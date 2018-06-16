@@ -16,6 +16,16 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="Comment_Dialog" parent="@style/AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowSoftInputMode">stateAlwaysVisible</item><!--显示软件盘-->
+        <item name="android:backgroundDimAmount">0.5</item>
+    </style>
+
+
     <!--dialog 去掉标题-->
     <style name="curDialog" parent="@android:style/Theme.Dialog">
         <item name="android:windowFrame">@null</item>
@@ -656,6 +666,26 @@
     <style name="toolbarTabItem.active">
         <item name="android:textSize">@dimen/big_text</item>
         <item name="android:background">@drawable/shape_toolbar_tab_item_bg</item>
+    </style>
+    <!--设置样式-->
+    <style name="mySetting">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginLeft">12dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#272727</item>
+
+    </style>
+
+    <style name="mySettingIcon">
+        <item name="android:src">@drawable/work_into</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">10dp</item>
+
     </style>
     <!--toolbar的tab end-->
 

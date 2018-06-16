@@ -80,12 +80,16 @@ import com.seaboxdata.portal.R;
 
             public MyViewholder1(View itemView) {
                 super(itemView);
+
                 itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        context.startActivity(new Intent(context,InfoDetailsActivity.class));
+                        Intent intent = new Intent(context, InfoDetailsActivity.class);
+                        intent.putExtra("mIndexPage",2);
+                        context.startActivity(intent);
                     }
                 });
+
 
             }
         }
@@ -99,7 +103,9 @@ import com.seaboxdata.portal.R;
                 itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        context.startActivity(new Intent(context,InfoDetailsActivity.class));
+                        Intent intent = new Intent(context, InfoDetailsActivity.class);
+                        intent.putExtra("mIndexPage",2);
+                        context.startActivity(intent);
                     }
                 });
             }
@@ -112,7 +118,9 @@ import com.seaboxdata.portal.R;
                 itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        context.startActivity(new Intent(context,InfoDetailsActivity.class));
+                        Intent intent = new Intent(context, InfoDetailsActivity.class);
+                        intent.putExtra("mIndexPage",2);
+                        context.startActivity(intent);
                     }
                 });
             }
@@ -124,9 +132,12 @@ import com.seaboxdata.portal.R;
                 itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        context.startActivity(new Intent(context,InfoDetailsActivity.class));
+                        Intent intent = new Intent(context, InfoDetailsActivity.class);
+                        intent.putExtra("mIndexPage",2);
+                        context.startActivity(intent);
                     }
                 });
+
             }
         }
 

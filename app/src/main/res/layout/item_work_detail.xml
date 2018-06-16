@@ -1,32 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="52dp"
-    android:orientation="horizontal" android:gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
     android:background="@drawable/selector_border_bottom_white"
-    android:paddingLeft="@dimen/medium_margin" android:paddingRight="@dimen/medium_margin">
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/medium_margin"
+    android:paddingRight="@dimen/medium_margin">
 
     <View
         android:layout_width="10dp"
         android:layout_height="10dp"
         android:layout_marginRight="@dimen/normal_margin"
-        android:background="@drawable/shape_circle_size_10"/>
+        android:background="@drawable/shape_circle_size_10"
+        android:visibility="gone" />
+
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+
         <TextView
             style="@style/text.normalSmaller"
-            android:maxLines="1" android:ellipsize="end"
-            android:text="就划转投资项目相关事项征求企业意见"
-            />
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="就划转投资项目相关事项征求企业意见" />
 
         <LinearLayout
-            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
+            android:layout_marginTop="8dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -35,16 +43,18 @@
                 android:textSize="11dp" />
 
             <ImageView
-                android:layout_marginLeft="@dimen/bigger_margin"
-                android:layout_gravity="center_vertical"
                 android:layout_width="10dp"
                 android:layout_height="10dp"
-                android:src="@drawable/time"/>
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/bigger_margin"
+                android:src="@drawable/time" />
 
             <TextView
+                style="@style/text"
                 android:layout_marginLeft="6dp"
-                style="@style/text" android:textSize="11dp"
-                android:text="10:30" android:textColor="#a0a0a0" />
+                android:text="10:30"
+                android:textColor="#a0a0a0"
+                android:textSize="11dp" />
 
         </LinearLayout>
     </LinearLayout>

@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.seaboxdata.portal.R;
@@ -14,8 +15,8 @@ import com.seaboxdata.portal.common.CommonActivity;
 import com.seaboxdata.portal.utils.StatusBarUtil;
 import com.seaboxdata.portal.utils.SystemBarTintManager;
 
-public class InfomationActivity extends CommonActivity {
-
+public class InfomationActivity extends CommonActivity implements View.OnClickListener {
+    private ImageView infomation_back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,5 +44,14 @@ public class InfomationActivity extends CommonActivity {
         RecyclerView infomation_recyclerview= (RecyclerView) findViewById(R.id.infomation_recyclerview);
         infomation_recyclerview.setAdapter(new InfoationAdapter(this));
         infomation_recyclerview.setLayoutManager(new LinearLayoutManager(this));
+        infomation_back= (ImageView) findViewById(R.id.infomation_back);
+        infomation_back.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        if(v==infomation_back){
+            finish();
+        }
     }
 }

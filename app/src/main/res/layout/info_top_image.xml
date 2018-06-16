@@ -17,6 +17,7 @@
             android:layout_height="12dp"
             android:text="热点"
             android:textSize="24px"
+            android:layout_margin="3dp"
             android:textColor="#ffffff"
             android:background="@drawable/infomation_top_image"
             />
@@ -31,6 +32,7 @@
                 android:layout_height="wrap_content"
                 android:text="150秒! 速览习主席青岛峰会上精彩瞬间"
                 android:textSize="14sp"
+                android:textColor="#272727"
                 />
             <LinearLayout
                 android:layout_width="match_parent"

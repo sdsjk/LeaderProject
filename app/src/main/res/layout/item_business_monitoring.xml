@@ -1,28 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/item_monitoring_root_view" android:clickable="true"
-    android:layout_width="match_parent" android:layout_height="105dp"
+    android:id="@+id/item_monitoring_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="126dp"
+    android:layout_marginLeft="@dimen/medium_margin"
+    android:layout_marginRight="@dimen/medium_margin"
     android:background="@drawable/selector_bussiniss_monitoring_bg"
-    android:layout_marginLeft="@dimen/medium_margin" android:layout_marginRight="@dimen/medium_margin"
-    android:layout_marginTop="@dimen/medium_big_margin">
+    android:layout_marginTop="12dp"
+    android:clickable="true">
     <!--对根元素设置selected为整个选中状态-->
     <TextView
         android:id="@+id/search_service_name"
-        style="@style/text.medium" android:layout_marginRight="58dp"
-        android:maxLines="1" android:ellipsize="end"
-        android:layout_marginLeft="19dp" android:layout_marginTop="@dimen/medium_big_margin"
-        android:textColor="@drawable/selector_business_monitoring_text"
-        android:text="义务教育" />
+        style="@style/text.medium"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="58dp"
+        android:layout_marginTop="31dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="义务教育"
+        android:textColor="@drawable/selector_business_monitoring_text" />
+
     <TextView
-        style="@style/text.medium" android:layout_marginRight="58dp"
-        android:maxLines="1" android:ellipsize="end"
-        android:layout_marginLeft="19dp" android:layout_marginTop="57dp"
-        android:textColor="@drawable/selector_business_monitoring_text"
-        android:text="义务教育人数" />
+        android:layout_below="@id/search_service_name"
+        style="@style/text.medium"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="58dp"
+        android:layout_marginTop="27dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="义务教育人数"
+        android:textColor="@drawable/selector_business_monitoring_text" />
+
     <ImageView
+        android:layout_width="28dp"
+        android:layout_height="28dp"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:layout_marginRight="@dimen/medium_big_margin"
-        android:layout_width="28dp" android:layout_height="28dp"
-        android:src="@drawable/selector_business_monitoring_check"/>
+        android:src="@drawable/selector_business_monitoring_check" />
+    <TextView
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:gravity="right"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:background="@drawable/my_icon_shap"
+        />
 </RelativeLayout>

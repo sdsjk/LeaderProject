@@ -1,12 +1,14 @@
 package com.seaboxdata.portal.module.work;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.seaboxdata.portal.R;
+import com.seaboxdata.portal.module.info.InfoDetailsActivity;
 
 import java.util.List;
 
@@ -50,6 +52,15 @@ public class WorkListAdapter extends RecyclerView.Adapter<WorkListAdapter.MyView
             time= (TextView) itemView.findViewById(R.id.item_work_time);
             title= (TextView) itemView.findViewById(R.id.item_list_title);
             content= (TextView) itemView.findViewById(R.id.item_list_content);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(mContext, InfoDetailsActivity.class);
+                    intent.putExtra("mIndexPage",1);
+                    mContext.startActivity(intent);
+                }
+            });
+
 
         }
     }

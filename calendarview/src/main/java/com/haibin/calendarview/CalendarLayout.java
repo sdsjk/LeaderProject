@@ -123,6 +123,17 @@ public final class CalendarLayout extends LinearLayout {
 
     private CustomCalendarViewDelegate mDelegate;
 
+    public interface  ScrollerStatusListener{
+        void  scrollerTop();
+        void scrollerBottom();
+    }
+
+    private ScrollerStatusListener mScrollerStatusListener;
+
+    public void setScrollerStatusListener(ScrollerStatusListener scrollerStatusListener) {
+        this.mScrollerStatusListener = scrollerStatusListener;
+    }
+
     public CalendarLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
         setOrientation(LinearLayout.VERTICAL);
@@ -250,15 +261,21 @@ public final class CalendarLayout extends LinearLayout {
                 }
                 if (Math.abs(mYVelocity) >= 800) {
                     if (mYVelocity < 0) {
+
+
                         shrink();
                     } else {
+
                         expand();
+
                     }
                     return super.onTouchEvent(event);
                 }
                 if (event.getY() - downY > 0) {
+                    mScrollerStatusListener.scrollerBottom();
                     expand();
                 } else {
+                    mScrollerStatusListener.scrollerTop();
                     shrink();
                 }
                 break;
@@ -407,6 +424,7 @@ public final class CalendarLayout extends LinearLayout {
             }
         });
         objectAnimator.start();
+        mScrollerStatusListener.scrollerBottom();
         return true;
     }
 
@@ -417,6 +435,7 @@ public final class CalendarLayout extends LinearLayout {
      */
     @SuppressWarnings("all")
     public boolean shrink() {
+
         if (isAnimating || mContentView == null) {
             return false;
         }
@@ -442,6 +461,7 @@ public final class CalendarLayout extends LinearLayout {
             }
         });
         objectAnimator.start();
+        mScrollerStatusListener.scrollerTop();
         return true;
     }
 

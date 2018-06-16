@@ -50,7 +50,16 @@
         <activity android:name=".module.info.InfoListActivity" />
         <activity android:name=".module.work.WorkAyActivity" />
         <activity android:name=".module.work.WorkListActivity" />
-        <activity android:name=".module.info.InfoDetailsActivity"></activity>
+        <activity android:name=".module.info.InfoDetailsActivity" />
+        <activity android:name=".module.history.HistoryBrowsing" />
+        <activity android:name=".module.setting.MySettingActivity" />
+        <activity android:name=".module.my.message.MyMeaasgeListActivity" />
+        <activity android:name=".module.setting.AcountSetting" />
+        <activity android:name=".module.setting.ModiffPassword" />
+        <activity android:name=".module.setting.ModiffEmailActivity" />
+        <activity android:name=".module.setting.EmailSettingActivity" />
+        <activity android:name=".module.setting.SuggestHandleActivity" />
+        <activity android:name=".module.setting.EmailFinshActivity"></activity>
     </application>
 
 </manifest>

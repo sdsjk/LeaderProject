@@ -36,6 +36,7 @@ public class DubanListFragment extends CommonFragment {
         recyclerView= (RecyclerView) inflate.findViewById(R.id.work_duban_list);
         recyclerView.setAdapter(new WorkListAdapter(getActivity(),allData));
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
     }
 
 

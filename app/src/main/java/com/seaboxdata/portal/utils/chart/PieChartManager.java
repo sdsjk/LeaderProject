@@ -21,7 +21,7 @@ import java.util.List;
 public class PieChartManager {
 
     PieChart pieChart;
-
+    Legend legend;
     public PieChartManager(PieChart mPieChart) {
         this.pieChart = mPieChart;
         initChart();
@@ -39,7 +39,8 @@ public class PieChartManager {
         pieChart.getDescription().setEnabled(false);
         pieChart.setDrawEntryLabels(false);
         pieChart.setExtraOffsets(0, 0, 40, 5);
-        Legend legend = pieChart.getLegend();
+
+        legend = pieChart.getLegend();
         legend.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
         legend.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
         legend.setOrientation(Legend.LegendOrientation.VERTICAL);
@@ -47,6 +48,8 @@ public class PieChartManager {
         legend.setXEntrySpace(7f);
         legend.setYEntrySpace(0f);
         legend.setYOffset(0f);
+        legend.setTextColor(Color.parseColor("#a1a1a1"));
+        legend.setTextSize(12);
 
         pieChart.animateXY(1000, 1000);//设置动画
     }
@@ -119,7 +122,6 @@ public class PieChartManager {
         pieData.setValueFormatter(new PercentFormatter());
         pieData.setValueTextSize(11f);
         pieData.setValueTextColor(Color.DKGRAY);
-
         pieChart.setData(pieData);
         pieChart.invalidate(); // refresh
     }

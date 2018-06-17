@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+>
+
+    <LinearLayout
+        android:id="@+id/ll_bar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/shape_header_bg"
+        android:orientation="vertical"
+        android:visibility="gone"></LinearLayout>
+
+    <include layout="@layout/info_title_common"></include>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:background="#a1a1a1"></View>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:id="@+id/more_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

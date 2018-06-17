@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/hot_key_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/ll_bar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/shape_header_bg"
+        android:orientation="vertical"
+        android:visibility="gone"></LinearLayout>
+
+    <include layout="@layout/info_title_common"></include>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:background="#a1a1a1"></View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        >
+
+        <TextView
+            android:id="@+id/hot_key1"
+            style="@style/hot_key1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/search_hotkey1_layout_marginLeft"
+            android:layout_marginTop="@dimen/search_hotkey1_layout_marginTop"
+            android:background="@android:color/transparent"
+            android:singleLine="true"
+            android:text="11111"
+            android:textSize="@dimen/search_hotkey1_textSize" />
+
+
+        <TextView
+            android:id="@+id/hot_key2"
+            style="@style/hot_key2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/search_hotkey2_layout_marginLeft"
+            android:layout_marginTop="@dimen/search_hotkey2_layout_marginTop"
+            android:singleLine="true"
+            android:textSize="@dimen/search_hotkey2_textSize"
+            android:text="22222"
+            />
+
+
+        <TextView
+            android:id="@+id/hot_key3"
+            style="@style/hot_key3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/search_hotkey3_layout_marginLeft"
+            android:layout_marginTop="@dimen/search_hotkey3_layout_marginTop"
+            android:singleLine="true"
+            android:textSize="@dimen/search_hotkey3_textSize" />
+
+        <TextView
+            android:id="@+id/hot_key4"
+            style="@style/hot_key4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/search_hotkey4_layout_marginLeft"
+            android:layout_marginTop="@dimen/search_hotkey4_layout_marginTop"
+            android:singleLine="true"
+            android:textSize="@dimen/search_hotkey4_textSize" />
+
+
+
+        <TextView
+            android:id="@+id/hot_key5"
+            style="@style/hot_key5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/search_hotkey5_layout_marginLeft"
+            android:layout_marginTop="@dimen/search_hotkey5_layout_marginTop"
+            android:singleLine="true"
+            android:textSize="@dimen/search_hotkey5_textSize" />
+
+
+        <TextView
+            android:id="@+id/hot_key6"
+            style="@style/hot_key6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/search_hotkey6_layout_marginLeft"
+            android:layout_marginTop="@dimen/search_hotkey6_layout_marginTop"
+            android:singleLine="true"
+            android:textSize="@dimen/search_hotkey6_textSize" />
+
+
+        <TextView
+            android:id="@+id/hot_key7"
+            style="@style/hot_key7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/search_hotkey7_layout_marginLeft"
+            android:layout_marginTop="@dimen/search_hotkey7_layout_marginTop"
+            android:singleLine="true"
+            android:textSize="@dimen/search_hotkey7_textSize" />
+
+
+
+        <TextView
+            android:id="@+id/hot_key8"
+            style="@style/hot_key8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/search_hotkey8_layout_marginLeft"
+            android:layout_marginTop="@dimen/search_hotkey8_layout_marginTop"
+            android:singleLine="true"
+            android:textSize="@dimen/search_hotkey8_textSize" />
+
+
+
+        <TextView
+            android:id="@+id/hot_key9"
+            style="@style/hot_key9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/search_hotkey9_layout_marginLeft"
+            android:layout_marginTop="@dimen/search_hotkey9_layout_marginTop"
+            android:singleLine="true"
+            android:textSize="@dimen/search_hotkey9_textSize" />
+
+
+
+        <TextView
+            android:id="@+id/hot_key10"
+            style="@style/hot_key10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/search_hotkey10_layout_marginLeft"
+            android:layout_marginTop="@dimen/search_hotkey10_layout_marginTop"
+            android:singleLine="true"
+            android:textSize="@dimen/search_hotkey10_textSize" />
+        </LinearLayout>
+</LinearLayout>

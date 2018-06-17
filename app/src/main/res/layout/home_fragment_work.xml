@@ -1,117 +1,243 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#ffffff"
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_marginTop="18dp"
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="9dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:layout_height="42dp"
+        android:background="#ffffff">
 
-        <TextView
-            android:id="@+id/home_work_icon"
-            android:layout_width="4dp"
-            android:layout_height="13dp"
-            android:layout_marginLeft="10dp"
-            android:background="#4a6def" />
-
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@id/home_work_icon"
-            android:layout_marginLeft="11dp"
-            android:text="办公辅助"
-            android:textColor="#272727"
-            android:textSize="14sp" />
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_gravity="right"
-            android:layout_marginRight="10dp"
-            android:text="更多"
-            android:textColor="#a1a1a1"
-            android:textSize="14sp" />
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/home_decorate_one" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:text="办公辅助"
+                android:textColor="#272727"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginLeft="11dp"
+                android:src="@drawable/home_decorate_one" />
+        </LinearLayout>
 
     </RelativeLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_height="0.4dp"
-        android:background="#aaaaaa" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="12dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="邮件"
-            android:textColor="#272727"
-            android:textSize="12sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="#e1e1e1"></View>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="督察督办"
-            android:textColor="#272727"
-            android:textSize="12sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="公文"
-            android:textColor="#272727"
-            android:textSize="12sp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="32dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="我的邮件"
+                        android:textColor="#272727"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="邮件信息"
+                        android:textColor="#a1a1a1"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="39dp"
+                    android:layout_height="39dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/home_myemail" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="32dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="我的公文"
+                        android:textColor="#272727"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="代办公文"
+                        android:textColor="#a1a1a1"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="39dp"
+                    android:layout_height="39dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/home_mydoc" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="#e1e1e1"
+
+            ></View>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="#e1e1e1"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="32dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="督察督办"
+                        android:textColor="#272727"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="督察督办信息"
+                        android:textColor="#a1a1a1"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="39dp"
+                    android:layout_height="39dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/home_beijing" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="更多"
+                    android:textColor="#272727"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
     </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="18dp"
+        android:background="#ffffff"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="98dp"
             android:orientation="horizontal"
-            android:gravity="center"
-            >
+            android:paddingTop="14dp">
 
             <TextView
                 android:layout_width="30dp"
                 android:layout_height="16dp"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/home_work_email"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/info_hots"
                 android:gravity="center"
-                android:text="邮件"
-                android:textColor="#ffffff"
+                android:text="公文"
+                android:textColor="#fbd16d"
                 android:textSize="10sp" />
 
+
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="7dp"
                 android:orientation="vertical"
-                android:paddingTop="10dp"
                 android:paddingBottom="10dp">
 
                 <TextView
@@ -123,59 +249,75 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="2018-05-28" />
+                    android:text="2018-05-28"
+                    android:textColor="#a1a1a1" />
             </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="93dp"
+                android:layout_height="71dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/work_radius"
+                android:src="@drawable/demo1" />
 
         </LinearLayout>
 
         <View
             android:layout_width="match_parent"
+            android:layout_height="0.4dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_height="0.4dp"
             android:background="#aaaaaa" />
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="98dp"
             android:orientation="horizontal"
-            android:gravity="center"
-            >
+            android:paddingTop="14dp">
 
             <TextView
                 android:layout_width="30dp"
                 android:layout_height="16dp"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/home_work_email"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/info_hots"
                 android:gravity="center"
                 android:text="会议"
-                android:textColor="#ffffff"
+                android:textColor="#fbd16d"
                 android:textSize="10sp" />
 
+
             <LinearLayout
-                android:paddingTop="10dp"
-                android:layout_marginLeft="7dp"
-                android:layout_width="match_parent"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-
+                android:layout_marginLeft="7dp"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="乡镇关于召开2018年度党委班子民主生活会的请示" />
-                <TextView
-                    android:layout_marginTop="5dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="地点：政府西一楼会议室" />
+                    android:text="马拉多纳力挺阿根廷 为吸烟向所有人说抱歉" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="2018-05-28" />
+                    android:text="2018-05-28"
+                    android:textColor="#a1a1a1" />
             </LinearLayout>
 
+
+            <ImageView
+                android:layout_width="93dp"
+                android:layout_height="71dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/work_radius"
+                android:src="@drawable/demo2" />
+
         </LinearLayout>
+
+
     </LinearLayout>
-    </LinearLayout>
+</LinearLayout>

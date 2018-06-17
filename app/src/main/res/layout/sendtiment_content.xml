@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="14dp"
+        android:text="舆情概览"
+        android:textColor="#272727"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="14dp"
+        android:text="检测主题相关信息20条，其中敏感信息0条，敏感占比0%，非敏感20条非敏感占比100%"
+        android:textColor="#272727"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="22dp"
+        android:text="(一)信息来源统计"
+        android:textColor="#272727"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="284dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="30dp"
+        >
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/home_chart2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="22dp"
+        android:text="(二)媒体活跃度"
+        android:textColor="#272727"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="330dp"
+        android:layout_height="160dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        >
+        <com.seaboxdata.portal.module.home.DoubleLineChatView
+            android:id="@+id/line_chat_one"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            app:chatview_animation_duration="1000"
+            app:chatview_left_background_color="#6785f2"
+            app:chatview_left_text_data_color="#6785f2"
+            app:chatview_line_big_distance="15dp"
+            app:chatview_line_small_distance="3dp"
+            app:chatview_line_width="15dp"
+            app:chatview_right_background_color="#8c77f5"
+            app:chatview_right_text_data_color="#8c77f5"
+            app:chatview_show_arrow="false"
+            app:isshowone="true"
+            app:chatview_show_y_interval="false"
+            app:chatview_text_data_size="10sp"
+            app:chatview_text_xy_color="#a1a1a1"
+            app:chatview_text_xy_size="10sp"
+            app:chatview_x_distance="40dp"
+            app:chatview_y_distance="30dp"
+            />
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="22dp"
+        android:text="(三)信息来源统计"
+        android:textColor="#272727"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="284dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="30dp"
+        >
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/home_chart1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="22dp"
+        android:text="(四)信息来源统计"
+        android:textColor="#272727"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="284dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="30dp"
+        >
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/home_chart4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="主要舆情"
+            android:textSize="16sp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:stretchColumns="*">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="序列"
+                    android:textColor="#272727"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="标题"
+                    android:textColor="#272727"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="日期来源"
+                    android:textColor="#272727"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="属性"
+                    android:textColor="#272727"
+                    android:textSize="14sp" />
+
+            </TableRow>
+
+            <TableRow android:layout_marginTop="22dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textColor="#272727"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="魏则西事件"
+                    android:textColor="#272727"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="02/08\n最新网"
+                    android:textColor="#272727"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="非敏感"
+                    android:textColor="#272727"
+                    android:textSize="14sp" />
+
+            </TableRow>
+
+            <TableRow android:layout_marginTop="22dp"
+                android:layout_marginBottom="20dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:textColor="#272727"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="全国300名学术精英\n聚商丘研讨'和谐医患关系'"
+                    android:textColor="#272727"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="02/08\n最新网"
+                    android:textColor="#272727"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="非敏感"
+                    android:textColor="#272727"
+                    android:textSize="14sp" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+    <include layout="@layout/sendtiment_hot_item"></include>
+
+</LinearLayout>

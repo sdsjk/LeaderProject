@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:uinput="http://schemas.android.com/tools"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/ll_bar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/shape_header_bg"
+        android:orientation="vertical"
+        android:visibility="gone"></LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+
+        <ImageView
+            android:id="@+id/search_fit"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="9dp"
+            android:paddingLeft="@dimen/normal_margin"
+            android:paddingRight="@dimen/normal_margin"
+            android:layout_centerVertical="true"
+            android:src="@drawable/home_icon_sercher"/>
+        <EditText
+            android:layout_toRightOf="@id/search_fit"
+            android:id="@+id/m_tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:background="@drawable/shape_border_bottom_white"
+            android:layout_marginRight="36dp"
+            android:hint="校园暴力"
+            android:layout_marginLeft="10dp"
+            android:textColorHint="#a1a1a1"
+            ></EditText>
+
+        <TextView
+            android:id="@+id/category_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:textColor="#a1a1a1"
+            android:text="取消"
+            android:textSize="16sp"
+            />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:background="#aaaaaa"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        ></View>
+
+    <!--历史记录-->
+    <LinearLayout
+        android:id="@+id/layout_search_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/subTitle"
+            android:layout_marginTop="0dp"
+            >
+
+            <TextView
+                android:textColor="#a1a1a1"
+                style="@style/subTitleText"
+                android:text="历史搜索" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/list_search_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.linewell.core.view.AutoFixViewGroup
+                android:id="@+id/viewgroup_keywor_list_last"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/medium_margin">
+
+            </com.linewell.core.view.AutoFixViewGroup>
+        </LinearLayout>
+
+        <!--热门-->
+        <LinearLayout
+            android:id="@+id/layout_hot_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                style="@style/subTitle"
+                android:layout_marginTop="0dp"
+                android:background="@color/transparent">
+
+                <TextView
+                    android:textColor="#a1a1a1"
+                    style="@style/subTitleText"
+                    android:text="热门信息" />
+            </LinearLayout>
+            <com.seaboxdata.portal.module.home.MyListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/search_info_list"
+                ></com.seaboxdata.portal.module.home.MyListView>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.linewell.core.view.AutoFixViewGroup
+        android:id="@+id/hot_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/medium_margin">
+
+    </com.linewell.core.view.AutoFixViewGroup>
+
+
+    <Button
+        android:id="@+id/hot_more"
+        android:layout_width="100dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/hot_more"
+        android:text="更多"
+        android:textColor="#4a6def"
+        android:textSize="14sp" />
+</LinearLayout>

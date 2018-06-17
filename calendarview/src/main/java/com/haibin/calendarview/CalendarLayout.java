@@ -424,7 +424,10 @@ public final class CalendarLayout extends LinearLayout {
             }
         });
         objectAnimator.start();
-        mScrollerStatusListener.scrollerBottom();
+        if(mScrollerStatusListener!=null) {
+            mScrollerStatusListener.scrollerBottom();
+        }
+
         return true;
     }
 
@@ -461,7 +464,10 @@ public final class CalendarLayout extends LinearLayout {
             }
         });
         objectAnimator.start();
-        mScrollerStatusListener.scrollerTop();
+        if(mScrollerStatusListener!=null) {
+            mScrollerStatusListener.scrollerTop();
+        }
+
         return true;
     }
 

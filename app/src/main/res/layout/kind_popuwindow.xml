@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:paddingTop="17dp"
+                android:text="信息属性"
+                android:textColor="#272727"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:paddingTop="17dp"
+                android:text="结果呈现"
+                android:textColor="#272727"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:paddingTop="17dp"
+                android:text="来源"
+                android:textColor="#272727"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:paddingTop="17dp"
+                android:text="领域标签"
+                android:textColor="#272727"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.1dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="20dp"
+            android:background="#aaaaaa"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <CheckBox
+
+                    style="@style/checkbox_style"
+                    android:layout_marginLeft="16dp"
+                    android:text="全部" />
+
+                <CheckBox
+                    style="@style/checkbox_style"
+                    android:layout_marginLeft="8dp"
+                    android:text="敏感" />
+
+                <CheckBox
+                    style="@style/checkbox_style"
+                    android:layout_marginLeft="8dp"
+                    android:checked="true"
+                    android:text="非敏感" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="20dp">
+
+                <CheckBox
+
+                    style="@style/checkbox_style"
+                    android:layout_marginLeft="16dp"
+                    android:text="正面" />
+
+                <CheckBox
+                    style="@style/checkbox_style"
+                    android:layout_marginLeft="8dp"
+                    android:checked="true"
+                    android:text="反面" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <CheckBox
+
+                    style="@style/checkbox_style"
+                    android:layout_marginLeft="16dp"
+                    android:text="全网" />
+
+                <CheckBox
+                    style="@style/checkbox_style"
+                    android:layout_marginLeft="8dp"
+                    android:text="本地" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="20dp">
+
+                <CheckBox
+                    style="@style/checkbox_style"
+
+                    android:layout_marginLeft="16dp"
+                    android:checked="true"
+                    android:text="信访情况" />
+
+
+                <CheckBox
+                    style="@style/checkbox_style"
+                    android:layout_marginLeft="8dp"
+
+                    android:text="市民热线" />
+
+                <CheckBox
+                    style="@style/checkbox_style"
+                    android:layout_marginLeft="8dp"
+                    android:checked="true"
+                    android:text="网络舆情" />
+
+                <CheckBox
+                    style="@style/checkbox_style"
+                    android:layout_marginLeft="8dp"
+                    android:checked="true"
+                    android:text="医患关系" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <CheckBox
+
+                    style="@style/checkbox_style"
+                    android:layout_marginLeft="16dp"
+                    android:text="交通" />
+
+                <CheckBox
+                    style="@style/checkbox_style"
+                    android:layout_marginLeft="8dp"
+                    android:text="司法公正" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#aaaaaa"></View>
+
+        <Button
+            android:id="@+id/kind_sure"
+            android:layout_width="100dp"
+            android:layout_height="34dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/hot_more"
+            android:text="确定"
+            android:textColor="#4a6def"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

@@ -59,7 +59,13 @@
         <activity android:name=".module.setting.ModiffEmailActivity" />
         <activity android:name=".module.setting.EmailSettingActivity" />
         <activity android:name=".module.setting.SuggestHandleActivity" />
-        <activity android:name=".module.setting.EmailFinshActivity"></activity>
+        <activity android:name=".module.setting.EmailFinshActivity" />
+        <activity android:name=".module.sentiment.SenTimentActivity" />
+        <activity android:name=".module.sentiment.SentimentHotWordActivity" />
+        <activity android:name=".module.sentiment.SentimentMoreActivity" />
+        <activity android:name=".module.sentiment.BriefMakeActivity" />
+        <activity android:name=".module.sentiment.SentimetSearcheActivity" />
+        <activity android:name=".module.sentiment.SentimedtAnalysisActivity"></activity>
     </application>
 
 </manifest>

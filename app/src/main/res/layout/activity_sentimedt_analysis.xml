@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:uinput="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_bar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/shape_header_bg"
+        android:orientation="vertical"
+        android:visibility="gone"></LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+
+        <ImageView
+            android:id="@+id/analysis_back"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:src="@drawable/icon_back"
+
+            />
+
+        <ImageView
+            android:id="@+id/search_fit"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="9dp"
+            android:layout_toRightOf="@id/analysis_back"
+            android:paddingLeft="@dimen/normal_margin"
+            android:paddingRight="@dimen/normal_margin"
+            android:src="@drawable/home_icon_sercher" />
+
+        <EditText
+            android:id="@+id/m_tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="36dp"
+            android:layout_toRightOf="@id/search_fit"
+            android:background="@drawable/shape_border_bottom_white"
+            android:hint="搜索"
+            android:textColorHint="#a1a1a1"></EditText>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#aaaaaa"></View>
+
+    <android.support.design.widget.TabLayout
+        android:background="#ffffff"
+        android:id="@+id/search_table"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        app:tabIndicatorColor="#496cef"
+        app:tabIndicatorHeight="2dp"
+        app:tabSelectedTextColor="#000000"
+        app:tabTextColor="#a1a1a1"></android.support.design.widget.TabLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#aaaaaa"></View>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/search_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

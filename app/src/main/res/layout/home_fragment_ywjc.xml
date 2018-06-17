@@ -1,82 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#ffffff"
-    android:orientation="vertical"
-
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/info_head"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="9dp"
+        android:background="#ffffff"
         android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="4dp"
-            android:layout_height="13dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="15dp"
-            android:background="#4a6cef" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="11dp"
-            android:layout_marginTop="15dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="业务检测"
-            android:textColor="#272727"
-            android:textSize="14sp" />
-
-        <TextView
-            android:id="@+id/home_big_info"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="11dp"
-            android:layout_marginTop="15dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="重要信息"
-            android:textColor="#272727"
-            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/home_work_ay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="11dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_weight="1"
+            android:drawablePadding="6dp"
+            android:drawableTop="@drawable/home_work"
             android:gravity="center"
             android:text="办公辅助"
             android:textColor="#272727"
             android:textSize="14sp" />
+
+
         <TextView
+            android:id="@+id/home_big_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="11dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_weight="1"
+            android:drawablePadding="6dp"
+            android:drawableTop="@drawable/home_biginfo"
+            android:gravity="center"
+            android:text="重要信息"
+            android:textColor="#272727"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/home_sentiment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:drawablePadding="6dp"
+            android:drawableTop="@drawable/home_sentiment"
             android:gravity="center"
             android:text="舆情信息"
             android:textColor="#272727"
             android:textSize="14sp" />
     </LinearLayout>
 
-    <View
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_height="0.4dp"
-        android:background="#aaaaaa" />
-    <com.seaboxdata.portal.module.home.MyGridView
-        android:layout_marginTop="14dp"
-        android:layout_marginBottom="14dp"
-        android:numColumns="4"
-        android:id="@+id/home_jclist"
-        android:verticalSpacing="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"></com.seaboxdata.portal.module.home.MyGridView>
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/home_decorate_one" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="11dp"
+                    android:text="业务检测"
+                    android:textColor="#272727"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginLeft="11dp"
+                    android:src="@drawable/home_decorate_one" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="#e1e1e1"></View>
+
+        <com.seaboxdata.portal.module.home.MyGridView
+            android:id="@+id/home_jclist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="14dp"
+            android:layout_marginTop="14dp"
+            android:numColumns="4"
+            android:verticalSpacing="10dp"></com.seaboxdata.portal.module.home.MyGridView>
+    </LinearLayout>
 </LinearLayout>

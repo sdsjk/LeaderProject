@@ -5,40 +5,40 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#ffffff"
     android:layout_marginBottom="50dp"
+    android:layout_marginTop="18dp"
     android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="9dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:layout_height="42dp"
+        android:background="#ffffff">
 
-        <TextView
-            android:id="@+id/home_yq_icon"
-            android:layout_width="4dp"
-            android:layout_height="13dp"
-            android:layout_marginLeft="10dp"
-            android:background="#4a6def" />
-
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@id/home_yq_icon"
-            android:layout_marginLeft="11dp"
-            android:text="舆情信息"
-            android:textColor="#272727"
-            android:textSize="14sp" />
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_gravity="right"
-            android:layout_marginRight="10dp"
-            android:text="更多"
-            android:textColor="#a1a1a1"
-            android:textSize="14sp" />
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/home_decorate_one" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:text="舆情信息"
+                android:textColor="#272727"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginLeft="11dp"
+                android:src="@drawable/home_decorate_one" />
+        </LinearLayout>
+
     </RelativeLayout>
 
     <View
@@ -57,32 +57,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="22dp"
-            android:layout_marginTop="14dp"
+            android:layout_marginTop="19dp"
             android:text="舆情概览"
             android:textColor="#272727"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="22dp"
-            android:layout_marginTop="14dp"
+            android:layout_marginTop="13dp"
             android:text="检测主题相关信息20条，其中敏感信息0条，敏感占比0%，非敏感20条非敏感占比100%"
             android:textColor="#272727"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
-            android:layout_marginTop="22dp"
+            android:layout_marginTop="14dp"
             android:text="(一)信息来源统计"
             android:textColor="#272727"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
         <LinearLayout
             android:layout_width="284dp"
-            android:layout_height="130dp"
+            android:layout_height="150dp"
             android:layout_marginLeft="30dp"
             >
 
@@ -100,7 +100,7 @@
             android:layout_marginTop="22dp"
             android:text="(二)媒体活跃度"
             android:textColor="#272727"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
         <LinearLayout
             android:layout_width="330dp"
@@ -115,8 +115,8 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="10dp"
                 app:chatview_animation_duration="1000"
-                app:chatview_left_background_color="#6785f2"
-                app:chatview_left_text_data_color="#6785f2"
+                app:chatview_left_background_color="#f5615c"
+                app:chatview_left_text_data_color="#f5615c"
                 app:chatview_line_big_distance="15dp"
                 app:chatview_line_small_distance="3dp"
                 app:chatview_line_width="15dp"
@@ -147,104 +147,139 @@
                 android:text="主要舆情"
                 android:textSize="16sp" />
 
+
+
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="9dp"
-                android:stretchColumns="*">
+                android:layout_marginTop="19dp"
+                android:background="@drawable/tablayout_border"
+                android:stretchColumns="*"
+                >
 
                 <TableRow>
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
                         android:text="序列"
                         android:textColor="#272727"
-                        android:textSize="14sp" />
+                        android:background="@drawable/tablayout_border"
+                        />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:background="@drawable/tablayout_border"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:gravity="center"
                         android:text="标题"
                         android:textColor="#272727"
                         android:textSize="14sp" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:background="@drawable/tablayout_border"
+                        android:gravity="center"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
                         android:text="日期来源"
                         android:textColor="#272727"
                         android:textSize="14sp" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:background="@drawable/tablayout_border"
+                        android:gravity="center"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
                         android:text="属性"
                         android:textColor="#272727"
                         android:textSize="14sp" />
 
                 </TableRow>
 
-                <TableRow android:layout_marginTop="22dp">
+                <TableRow >
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:background="@drawable/tablayout_border"
+                        android:gravity="center"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
                         android:text="1"
+                        android:layout_marginTop="-1dp"
                         android:textColor="#272727"
                         android:textSize="14sp" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:background="@drawable/tablayout_border"
+                        android:gravity="center"
+                        android:paddingTop="5dp"
+                        android:layout_marginTop="-1dp"
+                        android:paddingBottom="5dp"
                         android:text="魏则西事件"
                         android:textColor="#272727"
                         android:textSize="14sp" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="02/08\n最新网"
+                        android:background="@drawable/tablayout_border"
+                        android:gravity="center"
+                        android:layout_marginTop="-1dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="02/08最新网"
                         android:textColor="#272727"
                         android:textSize="14sp" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-1dp"
+                        android:gravity="center"
+                        android:background="@drawable/tablayout_border"
                         android:text="非敏感"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
                         android:textColor="#272727"
                         android:textSize="14sp" />
 
                 </TableRow>
 
-                <TableRow android:layout_marginTop="22dp"
-                    android:layout_marginBottom="20dp"
+                <TableRow
                     >
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="24dp"
                         android:text="2"
+                        android:layout_marginTop="-1dp"
+                        android:background="@drawable/tablayout_border"
                         android:textColor="#272727"
                         android:textSize="14sp" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="-1dp"
                         android:text="全国300名学术精英\n聚商丘研讨'和谐医患关系'"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:textColor="#272727"
+                        android:background="@drawable/tablayout_border"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:layout_marginTop="-1dp"
+                        android:paddingTop="8dp"
+                        android:background="@drawable/tablayout_border"
+                        android:paddingBottom="24dp"
+                        android:text="02/08最新网"
                         android:textColor="#272727"
                         android:textSize="14sp" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="02/08\n最新网"
-                        android:textColor="#272727"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="-1dp"
+                        android:paddingTop="8dp"
+                        android:background="@drawable/tablayout_border"
+                        android:paddingBottom="24dp"
                         android:text="非敏感"
                         android:textColor="#272727"
                         android:textSize="14sp" />

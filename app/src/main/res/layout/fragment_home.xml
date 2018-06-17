@@ -13,13 +13,7 @@
         android:background="@drawable/shape_header_bg"
         android:orientation="vertical"
         android:visibility="gone"></LinearLayout>
-    <LinearLayout
-        android:id="@+id/ll_bar"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@drawable/shape_header_bg"
-        android:orientation="vertical"
-        android:visibility="gone"></LinearLayout>
+
 
 
     <RelativeLayout

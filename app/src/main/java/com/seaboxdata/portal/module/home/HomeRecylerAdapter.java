@@ -3,7 +3,6 @@ package com.seaboxdata.portal.module.home;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.Typeface;
 import android.os.Handler;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -15,14 +14,15 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.PieChart;
 import com.seaboxdata.portal.R;
 import com.seaboxdata.portal.module.info.InfomationActivity;
+import com.seaboxdata.portal.module.sentiment.SenTimentActivity;
 import com.seaboxdata.portal.module.work.WorkAyActivity;
 import com.seaboxdata.portal.utils.chart.PieChartManager;
+import com.seaboxdata.portal.utils.view.ScrollTextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -264,6 +264,7 @@ public class HomeRecylerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
             TextView home_big_info= (TextView) itemView.findViewById(R.id.home_big_info);
             TextView home_work_ay= (TextView) itemView.findViewById(R.id.home_work_ay);
+           TextView home_sentiment= (TextView) itemView.findViewById(R.id.home_sentiment);
             home_work_ay.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -276,6 +277,14 @@ public class HomeRecylerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                     context.startActivity(new Intent(context,InfomationActivity.class));
                 }
             });
+            home_sentiment.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    context.startActivity(new Intent(context, SenTimentActivity.class));
+                }
+            });
+
+
         }
     }
 
@@ -331,13 +340,6 @@ public class HomeRecylerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
         }
     }
-    String[] mParties = new String[] {
-            "Party A", "Party B", "Party C", "Party D", "Party E", "Party F", "Party G", "Party H",
-            "Party I", "Party J", "Party K", "Party L", "Party M", "Party N", "Party O", "Party P",
-            "Party Q", "Party R", "Party S", "Party T", "Party U", "Party V", "Party W", "Party X",
-            "Party Y", "Party Z"
-    };
-    private Typeface tf;
     //通州园区
     class MyViewholder4 extends RecyclerView.ViewHolder {
 
@@ -359,11 +361,11 @@ public class HomeRecylerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             num.add(60.0f);
             num.add(70.0f);
             List<Integer> color=new ArrayList<>();
-           color.add(Color.parseColor("#c363fa"));
-           color.add(Color.parseColor("#f5a658"));
-           color.add(Color.parseColor("#755af2"));
-           color.add(Color.parseColor("#496cef"));
-           color.add(Color.parseColor("#eecc44"));
+           color.add(Color.parseColor("#fbd16d"));
+           color.add(Color.parseColor("#ff3f60"));
+           color.add(Color.parseColor("#ff990a"));
+           color.add(Color.parseColor("#c3dd68"));
+           color.add(Color.parseColor("#fb8041"));
             pieChartManager.setPieChart(name,num,color);
         }
     }
@@ -374,12 +376,17 @@ public class HomeRecylerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
         public MyViewholder5(View itemView) {
             super(itemView);
-            ListView home_info_list= (ListView) itemView.findViewById(R.id.home_info_list);
-            List<HomeInfoBean> allData=new ArrayList<>();
-            allData.add(new HomeInfoBean("民航局禁止航班飞行中驾驶员少于2名机组成员","2018-05-28"));
-            allData.add(new HomeInfoBean("重磅! 世界最大物美基地落户北京城市副中心","2018-05-28"));
-
-            home_info_list.setAdapter(new HomeInfoListAdapter(context,allData));
+//            ListView home_info_list= (ListView) itemView.findViewById(R.id.home_info_list);
+//            List<HomeInfoBean> allData=new ArrayList<>();
+//            allData.add(new HomeInfoBean("民航局禁止航班飞行中驾驶员少于2名机组成员","2018-05-28"));
+//            allData.add(new HomeInfoBean("重磅! 世界最大物美基地落户北京城市副中心","2018-05-28"));
+//
+//            home_info_list.setAdapter(new HomeInfoListAdapter(context,allData));
+            List<String> allData=new ArrayList<>();
+            allData.add("民航局禁止航班飞行中驾驶员少于2名机组成员");
+            allData.add("重磅! 世界最大物美基地落户北京城市副中心");
+            ScrollTextView scroll_tv= (ScrollTextView) itemView.findViewById(R.id.scroll_tv);
+            scroll_tv.setTipList(allData);
         }
     }
 
@@ -407,9 +414,9 @@ public class HomeRecylerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             num.add(20.0f);
             num.add(10.0f);
             List<Integer> color=new ArrayList<>();
-            color.add(Color.parseColor("#6785f2"));
-            color.add(Color.parseColor("#c363fa"));
-            color.add(Color.parseColor("#6f3ded"));
+            color.add(Color.parseColor("#fbd06a"));
+            color.add(Color.parseColor("#f6993f"));
+            color.add(Color.parseColor("#e71f19"));
 
             pieChartManager.setSolidPieChart(name,num,color);
 

@@ -15,6 +15,17 @@
         android:src="@drawable/infomation_back" />
 
     <TextView
+        android:id="@+id/infomation_close"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:gravity="center"
+        android:text="关闭"
+        android:textColor="#272727"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <TextView
         android:id="@+id/info_title_common"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,6 +43,6 @@
         android:layout_marginRight="10dp"
         android:text="提交"
         android:textColor="#1c1c1c"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:visibility="gone" />
 </RelativeLayout>

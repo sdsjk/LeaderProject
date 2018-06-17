@@ -2,7 +2,7 @@
 <LinearLayout android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginTop="9dp"
-    android:layout_height="230dp"
+    android:layout_height="wrap_content"
     android:background="#ffffff"
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android">
@@ -10,10 +10,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="9dp"
+        android:layout_marginTop="16dp"
         android:orientation="horizontal">
 
         <TextView
+            android:visibility="gone"
             android:layout_width="4dp"
             android:layout_height="13dp"
             android:layout_marginLeft="10dp"
@@ -34,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
 
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="23dp"
         android:orientation="vertical"
         >
         <LinearLayout
@@ -52,7 +53,7 @@
             <TextView
                 android:layout_width="10dp"
                 android:layout_height="10dp"
-                android:background="#6785f2"
+                android:background="#fbd06a"
                 android:layout_marginLeft="30dp"
                 />
             <TextView
@@ -64,7 +65,7 @@
             <TextView
                 android:layout_width="10dp"
                 android:layout_height="10dp"
-                android:background="#8c77f5"
+                android:background="#e71f19"
                 android:layout_marginLeft="30dp"
                 />
             <TextView
@@ -82,13 +83,13 @@
             android:layout_marginTop="15dp"
             android:layout_marginLeft="10dp"
             app:chatview_animation_duration="1000"
-            app:chatview_left_background_color="#6785f2"
-            app:chatview_left_text_data_color="#6785f2"
+            app:chatview_left_background_color="#fbd06a"
+            app:chatview_left_text_data_color="#fbd06a"
             app:chatview_line_big_distance="25dp"
             app:chatview_line_small_distance="3dp"
             app:chatview_line_width="15dp"
-            app:chatview_right_background_color="#8c77f5"
-            app:chatview_right_text_data_color="#8c77f5"
+            app:chatview_right_background_color="#e71f19"
+            app:chatview_right_text_data_color="#e71f19"
             app:chatview_show_arrow="false"
             app:chatview_show_y_interval="false"
             app:chatview_text_data_size="10sp"

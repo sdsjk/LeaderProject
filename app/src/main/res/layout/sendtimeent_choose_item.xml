@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/choose_time"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/times"
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+
+                    android:gravity="center_vertical"
+                    android:text="时间"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/time_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/up" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.4dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:background="#aaaaaa" />
+
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/choose_hot"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/hot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+
+                    android:gravity="center_vertical"
+                    android:text="热词"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/hot_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+                    android:src="@drawable/up" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.4dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:background="#aaaaaa" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/choose_kind"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/kind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+
+                    android:gravity="center_vertical"
+                    android:text="种类"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/kind_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/up" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.4dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

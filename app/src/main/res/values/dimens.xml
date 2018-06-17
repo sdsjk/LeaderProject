@@ -33,4 +33,45 @@
     <dimen name="text_margin">16dp</dimen>
     <dimen name="point_size">6dp</dimen>
     <dimen name="point_margin">6dp</dimen>
+
+
+    <dimen name="search_hotkey1_layout_marginLeft">48dip</dimen>
+    <dimen name="search_hotkey1_layout_marginTop">6dip</dimen>
+    <dimen name="search_hotkey1_textSize">35dip</dimen>
+
+    <dimen name="search_hotkey2_layout_marginLeft">198dip</dimen>
+    <dimen name="search_hotkey2_layout_marginTop">53dip</dimen>
+    <dimen name="search_hotkey2_textSize">14dip</dimen>
+
+    <dimen name="search_hotkey3_layout_marginLeft">41dip</dimen>
+    <dimen name="search_hotkey3_layout_marginTop">16dip</dimen>
+    <dimen name="search_hotkey3_textSize">20dip</dimen>
+
+    <dimen name="search_hotkey4_layout_marginLeft">184dip</dimen>
+    <dimen name="search_hotkey4_layout_marginTop">10dip</dimen>
+    <dimen name="search_hotkey4_textSize">26dip</dimen>
+
+    <dimen name="search_hotkey5_layout_marginLeft">65dip</dimen>
+    <dimen name="search_hotkey5_layout_marginTop">16dip</dimen>
+    <dimen name="search_hotkey5_textSize">13dip</dimen>
+
+    <dimen name="search_hotkey6_layout_marginLeft">181dip</dimen>
+    <dimen name="search_hotkey6_layout_marginTop">13dip</dimen>
+    <dimen name="search_hotkey6_textSize">13dip</dimen>
+
+    <dimen name="search_hotkey7_layout_marginLeft">107dip</dimen>
+    <dimen name="search_hotkey7_layout_marginTop">29dip</dimen>
+    <dimen name="search_hotkey7_textSize">11dip</dimen>
+
+    <dimen name="search_hotkey8_layout_marginLeft">38dip</dimen>
+    <dimen name="search_hotkey8_layout_marginTop">28dip</dimen>
+    <dimen name="search_hotkey8_textSize">19dip</dimen>
+
+    <dimen name="search_hotkey9_layout_marginLeft">212dip</dimen>
+    <dimen name="search_hotkey9_layout_marginTop">8dip</dimen>
+    <dimen name="search_hotkey9_textSize">19dip</dimen>
+
+    <dimen name="search_hotkey10_layout_marginLeft">152dip</dimen>
+    <dimen name="search_hotkey10_layout_marginTop">23dip</dimen>
+    <dimen name="search_hotkey10_textSize">17dip</dimen>
 </resources>

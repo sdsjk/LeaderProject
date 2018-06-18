@@ -22,7 +22,7 @@
         android:id="@+id/home_fragment_new"
         />
     <RelativeLayout
-        android:background="#ffffff"
+        android:background="#00000000"
         android:id="@+id/home_title"
         android:layout_width="match_parent"
         android:layout_height="83dp"

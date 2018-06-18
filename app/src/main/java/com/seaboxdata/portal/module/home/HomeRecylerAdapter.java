@@ -385,8 +385,24 @@ public class HomeRecylerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             List<String> allData=new ArrayList<>();
             allData.add("民航局禁止航班飞行中驾驶员少于2名机组成员");
             allData.add("重磅! 世界最大物美基地落户北京城市副中心");
+            allData.add("中华龙舟如何奋楫争先？习近平这些话要牢记");
+            allData.add("习近平要求把这项工作作为重大政治任务");
+            allData.add("这场教育实践活动 它带来的改变你感受到了吗?");
+            allData.add("坚决打好打胜污染防治攻坚战  文脉颂中华");
             ScrollTextView scroll_tv= (ScrollTextView) itemView.findViewById(R.id.scroll_tv);
-            scroll_tv.setTipList(allData);
+
+            if (allData!=null&&allData.size()>0) {
+
+                StringBuilder sBuilder = new StringBuilder();
+                for (String threadlistBean : allData) {
+                    String content = threadlistBean;
+                    content = content.length()>=19?content.substring(0, 18)+"..":content;
+                    sBuilder.append(content).append("k#");
+                }
+                sBuilder.deleteCharAt(sBuilder.lastIndexOf("#"));
+                sBuilder.deleteCharAt(sBuilder.lastIndexOf("k"));
+                scroll_tv.setScrollText(sBuilder.toString().trim());
+            }
         }
     }
 

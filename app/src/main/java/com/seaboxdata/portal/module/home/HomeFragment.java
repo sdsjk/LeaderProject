@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -83,11 +82,11 @@ public class HomeFragment extends CommonFragment {
     private void setSystemBarAlpha(int alpha) {
 
         if (alpha >= 255) {
-            home_title.setBackgroundColor(Color.argb(255, 255, 255, 255));
+            home_title.setBackgroundColor(Color.argb(255, 48, 63, 159));
         } else {
             //标题栏渐变。a:alpha透明度 r:红 g：绿 b蓝
 //        titlebar.setBackgroundColor(Color.rgb(57, 174, 255));//没有透明效果
-            home_title.setBackgroundColor(Color.argb(alpha, 255, 255, 255));//透明效果是由参数1决定的，透明范围[0,255]
+            home_title.setBackgroundColor(Color.argb(alpha, 48, 63, 159));//透明效果是由参数1决定的，透明范围[0,255]
 //            home_title.getBackground().setAlpha(alpha);
         }
 //        home_title.setBackgroundColor(Color.argb(alpha*2, 255, 255, 255));//透明效果是由参数1决定的，透明范围[0,255]

@@ -61,6 +61,7 @@ public class InfoFragment extends CommonFragment implements  CalendarView.OnDate
             LinearLayout linear_bar = (LinearLayout) view.findViewById(R.id.ll_bar);
             linear_bar.setVisibility(View.VISIBLE);
             linear_bar.getLayoutParams().height = getStatusBarHeight(mActivity);
+
             if (StatusBarUtil.StatusBarLightMode(mActivity) == 0) {
 //                linear_bar.setBackgroundColor(mContext.getResources().getColor(R.color.black_opacity80));
             }

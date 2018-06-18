@@ -10,20 +10,15 @@ import android.widget.LinearLayout;
 
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.LineChart;
-import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.charts.RadarChart;
-import com.github.mikephil.charting.charts.ScatterChart;
 import com.seaboxdata.portal.R;
 import com.seaboxdata.portal.common.CommonFragment;
 import com.seaboxdata.portal.utils.chart.BarChartManager;
 import com.seaboxdata.portal.utils.chart.LineChartManager;
-import com.seaboxdata.portal.utils.chart.PieChartManager;
 import com.seaboxdata.portal.utils.chart.RadarChartManager;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
-import java.util.jar.JarFile;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

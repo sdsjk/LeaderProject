@@ -28,7 +28,7 @@ public class PieChartManager {
     }
 
     private void initChart() {
-        pieChart.setHoleRadius(70f);//半径
+        pieChart.setHoleRadius(80f);//半径
         pieChart.setTransparentCircleRadius(60f);// 半透明圈
         pieChart.setDrawCenterText(true);//饼状图中间可以添加文字
         //  是否显示中间的洞
@@ -38,7 +38,7 @@ public class PieChartManager {
         pieChart.setUsePercentValues(true);//显示成百分比
         pieChart.getDescription().setEnabled(false);
         pieChart.setDrawEntryLabels(false);
-        pieChart.setExtraOffsets(0, 0, 40, 5);
+        pieChart.setExtraOffsets(8, 8, 40, 8);
 
         legend = pieChart.getLegend();
         legend.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
@@ -46,10 +46,12 @@ public class PieChartManager {
         legend.setOrientation(Legend.LegendOrientation.VERTICAL);
         legend.setDrawInside(false);
         legend.setXEntrySpace(7f);
-        legend.setYEntrySpace(0f);
+        legend.setYEntrySpace(1f);
         legend.setYOffset(0f);
+        legend.setXOffset(4f);
         legend.setTextColor(Color.parseColor("#a1a1a1"));
         legend.setTextSize(12);
+
 
         pieChart.animateXY(1000, 1000);//设置动画
     }

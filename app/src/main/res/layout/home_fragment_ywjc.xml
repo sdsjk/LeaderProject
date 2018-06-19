@@ -24,7 +24,7 @@
             android:drawableTop="@drawable/home_work"
             android:gravity="center"
             android:text="办公辅助"
-            android:textColor="#272727"
+            android:textColor="#222222"
             android:textSize="14sp" />
 
 
@@ -40,7 +40,7 @@
             android:drawableTop="@drawable/home_biginfo"
             android:gravity="center"
             android:text="重要信息"
-            android:textColor="#272727"
+            android:textColor="#222222"
             android:textSize="14sp" />
 
 
@@ -56,7 +56,7 @@
             android:drawableTop="@drawable/home_sentiment"
             android:gravity="center"
             android:text="舆情信息"
-            android:textColor="#272727"
+            android:textColor="#222222"
             android:textSize="14sp" />
     </LinearLayout>
 
@@ -75,6 +75,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
+                android:gravity="center_vertical"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -87,7 +88,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="11dp"
                     android:text="业务检测"
-                    android:textColor="#272727"
+                    android:textColor="#222222"
                     android:textSize="@dimen/home_title_size" />
 
                 <ImageView

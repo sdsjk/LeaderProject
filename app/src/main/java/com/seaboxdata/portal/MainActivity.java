@@ -2,6 +2,7 @@ package com.seaboxdata.portal;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -213,7 +214,8 @@ public class MainActivity extends CommonActivity implements View.OnClickListener
 
         switch (index) {
             case HOME_INDEX:
-
+                getWindow().getDecorView().setSystemUiVisibility(
+                        View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
                 if (selectIndex == HOME_INDEX) {
                     return true;
                 }
@@ -226,7 +228,10 @@ public class MainActivity extends CommonActivity implements View.OnClickListener
                 mCurIndex = HOME_INDEX;
                 break;
             case Rc_INDEX:
-
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+//实现状态栏图标和文字颜色为暗色
+                    getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+                }
                 if (selectIndex == Rc_INDEX) {
                     return true;
                 }
@@ -244,7 +249,10 @@ public class MainActivity extends CommonActivity implements View.OnClickListener
 
 
             case Tx_INDEX:
-
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+//实现状态栏图标和文字颜色为暗色
+                    getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+                }
                 if (selectIndex == Tx_INDEX) {
                     return true;
                 }
@@ -273,7 +281,10 @@ public class MainActivity extends CommonActivity implements View.OnClickListener
                 break;
 
             case MY_INDEX:
-
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+//实现状态栏图标和文字颜色为暗色
+                    getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+                }
                 if (selectIndex == MY_INDEX) {
                     return true;
                 }

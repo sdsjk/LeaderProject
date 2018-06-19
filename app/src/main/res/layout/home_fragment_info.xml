@@ -15,6 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <ImageView
@@ -27,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="11dp"
                 android:text="重要信息"
-                android:textColor="#272727"
+                android:textColor="#222222"
                 android:textSize="@dimen/home_title_size" />
 
             <ImageView
@@ -68,21 +69,21 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="32dp"
+                    android:layout_marginLeft="@dimen/info_paddingleft"
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="公共信息"
-                        android:textColor="#272727"
+                        android:textColor="#222222"
                         android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/home_title_content_spantop"
-                        android:text="征服公共信息"
+                        android:text="政府公共信息"
                         android:textColor="#a1a1a1"
                         android:textSize="11sp" />
                 </LinearLayout>
@@ -90,7 +91,7 @@
                 <ImageView
                     android:layout_width="39dp"
                     android:layout_height="39dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="@dimen/info_icon_padding"
                     android:src="@drawable/home_public_info" />
             </LinearLayout>
 
@@ -98,34 +99,37 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="right"
                 android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="32dp"
+
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="热点问题"
-                        android:textColor="#272727"
+                        android:textColor="#222222"
                         android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/home_title_content_spantop"
-                        android:text="征服热点问题"
+                        android:text="政府热点问题"
                         android:textColor="#a1a1a1"
                         android:textSize="11sp" />
                 </LinearLayout>
 
                 <ImageView
+
                     android:layout_width="39dp"
                     android:layout_height="39dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="@dimen/info_icon_padding"
+                    android:layout_marginRight="@dimen/info_paddingleft"
                     android:src="@drawable/home_hot" />
             </LinearLayout>
 
@@ -155,14 +159,14 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="32dp"
+                    android:layout_marginLeft="@dimen/info_paddingleft"
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="政务问题"
-                        android:textColor="#272727"
+                        android:textColor="#222222"
                         android:textSize="14sp" />
 
                     <TextView
@@ -175,9 +179,10 @@
                 </LinearLayout>
 
                 <ImageView
+
                     android:layout_width="39dp"
                     android:layout_height="39dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="@dimen/info_icon_padding"
                     android:src="@drawable/home_groverment" />
             </LinearLayout>
 
@@ -185,19 +190,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="right"
                 android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="32dp"
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="昨日市情"
-                        android:textColor="#272727"
+                        android:textColor="#222222"
                         android:textSize="14sp" />
 
                     <TextView
@@ -212,7 +217,8 @@
                 <ImageView
                     android:layout_width="39dp"
                     android:layout_height="39dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="@dimen/info_icon_padding"
+                    android:layout_marginRight="@dimen/info_paddingleft"
                     android:src="@drawable/home_yeastoday" />
             </LinearLayout>
 
@@ -240,14 +246,14 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="32dp"
+                    android:layout_marginLeft="@dimen/info_paddingleft"
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="北京信息"
-                        android:textColor="#272727"
+                        android:textColor="#222222"
                         android:textSize="14sp" />
 
                     <TextView
@@ -262,7 +268,7 @@
                 <ImageView
                     android:layout_width="39dp"
                     android:layout_height="39dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="@dimen/info_icon_padding"
                     android:src="@drawable/home_beijing" />
             </LinearLayout>
 
@@ -273,10 +279,13 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:paddingTop="20dp"
+                    android:paddingBottom="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="更多"
-                    android:textColor="#272727"
+                    android:layout_marginRight="90dp"
+                    android:textColor="#222222"
                     android:textSize="14sp" />
 
             </LinearLayout>
@@ -321,7 +330,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/info_hots"
                 android:padding="@dimen/home_smail_icon_padding"
                 android:text="最新"

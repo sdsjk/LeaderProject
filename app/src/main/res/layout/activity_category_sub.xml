@@ -23,7 +23,7 @@
     android:text="应用管理"
     android:gravity="center"
     android:layout_marginLeft="20dp"
-    android:textColor="#272727"
+    android:textColor="#222222"
     />
         <LinearLayout
             android:layout_width="wrap_content"
@@ -39,7 +39,7 @@
                 android:layout_height="33dp"
                 android:text="保存"
                 android:gravity="center"
-                android:textColor="#272727"
+                android:textColor="#222222"
                 android:textSize="16sp"
                 android:background="@drawable/app_manager_save"
                 />

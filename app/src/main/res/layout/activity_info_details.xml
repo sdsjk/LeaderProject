@@ -53,7 +53,7 @@
                     android:layout_marginLeft="12dp"
                     android:layout_toRightOf="@id/info_bottom_write"
                     android:text="写评论"
-                    android:textColor="#272727"
+                    android:textColor="#222222"
                     android:textSize="12sp" />
 
                 <ImageView

@@ -7,14 +7,11 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RadioButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.linewell.core.view.AutoFixViewGroup;
 import com.linewell.imageloader.UniversalImageLoader;
@@ -223,7 +220,7 @@ public class CategorySubActivity extends CommonActivity {
 //                        deleteView.setVisibility(View.VISIBLE);
                     } else {
 //                        deleteView.setVisibility(View.GONE);
-                        tag.setTextColor(Color.parseColor("#272727"));
+                        tag.setTextColor(Color.parseColor("#222222"));
                         tag.setChecked(false);
                     }
                     tag.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -232,7 +229,7 @@ public class CategorySubActivity extends CommonActivity {
                             if(isChecked){
                                 tag.setTextColor(Color.parseColor("#496cef"));
                             }else {
-                                tag.setTextColor(Color.parseColor("#272727"));
+                                tag.setTextColor(Color.parseColor("#222222"));
                             }
                         }
 

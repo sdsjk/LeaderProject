@@ -14,7 +14,7 @@
         android:text="这次真定了 特朗普被提名为诺贝尔和平奖候选人"
         android:singleLine="true"
         android:ellipsize="end"
-        android:textColor="#272727"
+        android:textColor="#222222"
         android:textSize="14sp" />
     <View
         android:layout_width="match_parent"

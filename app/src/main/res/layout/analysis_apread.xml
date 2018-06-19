@@ -31,7 +31,7 @@
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"
                 android:text="来源分析"
-                android:textColor="#272727"
+                android:textColor="#222222"
                 android:textSize="14sp" />
         </LinearLayout>
 
@@ -69,7 +69,7 @@
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"
                 android:text="活跃媒体"
-                android:textColor="#272727"
+                android:textColor="#222222"
                 android:textSize="14sp" />
         </LinearLayout>
 
@@ -106,7 +106,7 @@
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"
                 android:text="地域分布"
-                android:textColor="#272727"
+                android:textColor="#222222"
                 android:textSize="14sp" />
         </LinearLayout>
 

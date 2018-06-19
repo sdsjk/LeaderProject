@@ -14,6 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <ImageView
@@ -26,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="11dp"
                 android:text="办公辅助"
-                android:textColor="#272727"
+                android:textColor="#222222"
                 android:textSize="@dimen/home_title_size" />
 
             <ImageView
@@ -67,14 +68,14 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="32dp"
+                    android:layout_marginLeft="@dimen/info_paddingleft"
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="我的邮件"
-                        android:textColor="#272727"
+                        android:textColor="#222222"
                         android:textSize="14sp" />
 
                     <TextView
@@ -89,7 +90,7 @@
                 <ImageView
                     android:layout_width="39dp"
                     android:layout_height="39dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="38dp"
                     android:src="@drawable/home_myemail" />
             </LinearLayout>
 
@@ -97,19 +98,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="right"
                 android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="32dp"
+
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="我的公文"
-                        android:textColor="#272727"
+                        android:textColor="#222222"
                         android:textSize="14sp" />
 
                     <TextView
@@ -124,7 +126,8 @@
                 <ImageView
                     android:layout_width="39dp"
                     android:layout_height="39dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="@dimen/info_paddingleft"
+                    android:layout_marginLeft="@dimen/info_icon_padding"
                     android:src="@drawable/home_mydoc" />
             </LinearLayout>
 
@@ -161,14 +164,14 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="32dp"
+                    android:layout_marginLeft="@dimen/info_paddingleft"
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="督察督办"
-                        android:textColor="#272727"
+                        android:textColor="#222222"
                         android:textSize="14sp" />
 
                     <TextView
@@ -183,7 +186,7 @@
                 <ImageView
                     android:layout_width="39dp"
                     android:layout_height="39dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="@dimen/info_icon_padding"
                     android:src="@drawable/home_beijing" />
             </LinearLayout>
 
@@ -194,10 +197,11 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:layout_marginRight="65dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="更多"
-                    android:textColor="#272727"
+                    android:textColor="#222222"
                     android:textSize="14sp" />
 
             </LinearLayout>
@@ -226,10 +230,10 @@
                 android:layout_height="16dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/info_hots"
+                android:background="@drawable/info_new"
                 android:gravity="center"
                 android:text="公文"
-                android:textColor="#fbd16d"
+                android:textColor="#ff3f60"
                 android:textSize="10sp" />
 
 
@@ -243,12 +247,16 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="乡镇关于召开2018年度党委班子民主生活会的请示" />
+                    android:text="乡镇关于召开2018年度党委班子民主生活会的请示"
+                    android:textSize="14sp"
+                    android:textColor="@color/main_black"
+                    />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
+                    android:textSize="14sp"
                     android:text="2018-05-28"
                     android:textColor="#a1a1a1" />
             </LinearLayout>
@@ -281,10 +289,10 @@
                 android:layout_height="16dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/info_hots"
+                android:background="@drawable/info_new"
                 android:gravity="center"
                 android:text="会议"
-                android:textColor="#fbd16d"
+                android:textColor="#ff3f60"
                 android:textSize="10sp" />
 
 
@@ -298,6 +306,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/main_black"
                     android:text="马拉多纳力挺阿根廷 为吸烟向所有人说抱歉" />
 
                 <TextView

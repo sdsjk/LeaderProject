@@ -33,7 +33,7 @@
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:text="验证码发送到134*****@163.com"
-            android:textColor="#272727"
+            android:textColor="#222222"
             android:textSize="14sp" />
 
         <LinearLayout

@@ -38,7 +38,7 @@
             android:textSize="16sp"
             android:text="督察督办"
             android:layout_marginLeft="10dp"
-            android:textColor="#272727"
+            android:textColor="#222222"
             />
     </LinearLayout>
     <LinearLayout
@@ -90,7 +90,7 @@
                 android:textSize="16sp"
                 android:text="我的邮件"
                 android:layout_marginLeft="10dp"
-                android:textColor="#272727"
+                android:textColor="#222222"
                 />
         </LinearLayout>
         <LinearLayout
@@ -149,7 +149,7 @@
                 android:textSize="16sp"
                 android:text="我的公文"
                 android:layout_marginLeft="10dp"
-                android:textColor="#272727"
+                android:textColor="#222222"
                 />
         </LinearLayout>
         <LinearLayout

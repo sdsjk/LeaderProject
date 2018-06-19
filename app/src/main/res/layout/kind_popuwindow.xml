@@ -23,7 +23,7 @@
                 android:gravity="center"
                 android:paddingTop="17dp"
                 android:text="信息属性"
-                android:textColor="#272727"
+                android:textColor="#222222"
                 android:textSize="13sp" />
 
             <TextView
@@ -33,7 +33,7 @@
                 android:gravity="center"
                 android:paddingTop="17dp"
                 android:text="结果呈现"
-                android:textColor="#272727"
+                android:textColor="#222222"
                 android:textSize="13sp" />
 
             <TextView
@@ -43,7 +43,7 @@
                 android:gravity="center"
                 android:paddingTop="17dp"
                 android:text="来源"
-                android:textColor="#272727"
+                android:textColor="#222222"
                 android:textSize="13sp" />
 
             <TextView
@@ -53,7 +53,7 @@
                 android:gravity="center"
                 android:paddingTop="17dp"
                 android:text="领域标签"
-                android:textColor="#272727"
+                android:textColor="#222222"
                 android:textSize="13sp" />
 
         </LinearLayout>

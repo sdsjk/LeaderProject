@@ -50,7 +50,7 @@ public class PieChartManager {
         legend.setYOffset(0f);
         legend.setXOffset(4f);
         legend.setTextColor(Color.parseColor("#a1a1a1"));
-        legend.setTextSize(12);
+        legend.setTextSize(13);
 
 
         pieChart.animateXY(1000, 1000);//设置动画
@@ -91,6 +91,43 @@ public class PieChartManager {
         pieChart.invalidate(); // refresh
     }
 
+
+    /**
+     * 设置饼状图
+     *
+     * @param name   饼状图分类的名字
+     * @param date   数值
+     * @param colors 颜色集合
+     */
+    public void setHomePieChart(List<String> name, List<Float> date, List<Integer> colors) {
+        pieChart.setExtraOffsets(8, 8, 50, 8);
+        List<PieEntry> yValue = new ArrayList<>();
+        for (int i = 0; i < date.size(); i++) {
+            PieEntry entry = new PieEntry(date.get(i), name.get(i));
+            yValue.add(entry);
+        }
+        PieDataSet set = new PieDataSet(yValue, "");
+        set.setDrawValues(true);
+        set.setValueTextSize(6);
+        set.setColors(colors);
+        set.setValueTextColor(Color.WHITE);
+        set.setValueLinePart1Length(0.43f);
+        set.setValueLinePart1OffsetPercentage(80f);//数据连接线距图形片内部边界的距离，为百分数
+        set.setValueLinePart1Length(0.3f);
+        set.setValueLinePart2Length(0.4f);
+        set.setValueLineColor(Color.parseColor("#d5d5d5"));//设置连接线的颜色
+        set.setYValuePosition(PieDataSet.ValuePosition.OUTSIDE_SLICE);
+        PieData pieData = new PieData(set);
+        pieData.setValueFormatter(new PercentFormatter());
+        pieData.setValueTextSize(11f);
+        pieData.setValueTextColor(Color.DKGRAY);
+
+
+//        PieData data = new PieData(set);
+        pieChart.setData(pieData);
+        pieChart.invalidate(); // refresh
+    }
+
     /**
      * 设实心饼状图
      *
@@ -99,6 +136,45 @@ public class PieChartManager {
      * @param colors 颜色集合
      */
     public void setSolidPieChart(List<String> name, List<Float> date, List<Integer> colors) {
+
+        pieChart.setHoleRadius(0);//实心圆
+        pieChart.setTransparentCircleRadius(0);// 半透明圈
+        pieChart.setDrawCenterText(false);//饼状图中间不可以添加文字
+
+        List<PieEntry> yValue = new ArrayList<>();
+        for (int i = 0; i < date.size(); i++) {
+            PieEntry entry = new PieEntry(date.get(i), name.get(i));
+            yValue.add(entry);
+        }
+        PieDataSet set = new PieDataSet(yValue, "");
+        set.setDrawValues(true);
+        set.setValueTextSize(12);
+        set.setColors(colors);
+
+        set.setValueTextColor(Color.WHITE);
+        set.setValueLinePart1OffsetPercentage(80f);//数据连接线距图形片内部边界的距离，为百分数
+        set.setValueLinePart1Length(0.3f);
+        set.setValueLinePart2Length(0.4f);
+        set.setValueLineColor(Color.parseColor("#a1a1a1"));//设置连接线的颜色
+        set.setYValuePosition(PieDataSet.ValuePosition.OUTSIDE_SLICE);
+        PieData pieData = new PieData(set);
+        pieData.setValueFormatter(new PercentFormatter());
+        pieData.setValueTextSize(11f);
+        pieData.setValueTextColor(Color.DKGRAY);
+        pieChart.setData(pieData);
+        pieChart.invalidate(); // refresh
+    }
+
+
+
+    /**
+     * 设实心饼状图
+     *
+     * @param name   饼状图分类的名字
+     * @param date   数值
+     * @param colors 颜色集合
+     */
+    public void setHomeSolidPieChart(List<String> name, List<Float> date, List<Integer> colors) {
 
         pieChart.setHoleRadius(0);//实心圆
         pieChart.setTransparentCircleRadius(0);// 半透明圈

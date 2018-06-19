@@ -45,7 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="顾雏军:政府让我救科龙 当时最高检办案动机不纯"
-            android:textColor="#272727"
+            android:textColor="#222222"
             android:textSize="16sp" />
 
         <TextView

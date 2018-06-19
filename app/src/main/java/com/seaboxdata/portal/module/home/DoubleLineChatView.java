@@ -12,7 +12,6 @@ import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
-import android.view.WindowManager;
 import android.view.animation.DecelerateInterpolator;
 
 import com.seaboxdata.portal.R;
@@ -326,7 +325,7 @@ public class DoubleLineChatView extends View {
      * 绘制坐标轴
      */
     private void drawLineXY(Canvas canvas) {
-        canvas.drawLine(mYDistance, mViewHeight - mXDistance, mYDistance, 15, mPaintTextXY);
+        canvas.drawLine(mYDistance, mViewHeight - mXDistance, mYDistance, 25, mPaintTextXY);
         canvas.drawLine(mYDistance, mViewHeight - mXDistance, mViewWidth - 15, mViewHeight - mXDistance, mPaintTextXY);
 
         if (mIsShowArrow) {

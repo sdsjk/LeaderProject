@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:text="解读|上合青岛峰会的这些新的阐述、新亮点你看懂了吗?"
         android:textSize="14sp"
-        android:textColor="#272727"
+        android:textColor="#222222"
         />
     <LinearLayout
         android:paddingLeft="20dp"

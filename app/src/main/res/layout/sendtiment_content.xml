@@ -12,7 +12,7 @@
         android:layout_marginLeft="22dp"
         android:layout_marginTop="14dp"
         android:text="舆情概览"
-        android:textColor="#272727"
+        android:textColor="#222222"
         android:textSize="16sp" />
 
     <TextView
@@ -21,7 +21,7 @@
         android:layout_marginLeft="22dp"
         android:layout_marginTop="14dp"
         android:text="检测主题相关信息20条，其中敏感信息0条，敏感占比0%，非敏感20条非敏感占比100%"
-        android:textColor="#272727"
+        android:textColor="#222222"
         android:textSize="16sp" />
 
     <TextView
@@ -30,7 +30,7 @@
         android:layout_marginLeft="25dp"
         android:layout_marginTop="22dp"
         android:text="(一)信息来源统计"
-        android:textColor="#272727"
+        android:textColor="#222222"
         android:textSize="16sp" />
 
     <LinearLayout
@@ -52,7 +52,7 @@
         android:layout_marginLeft="25dp"
         android:layout_marginTop="22dp"
         android:text="(二)媒体活跃度"
-        android:textColor="#272727"
+        android:textColor="#222222"
         android:textSize="16sp" />
 
     <LinearLayout
@@ -93,7 +93,7 @@
         android:layout_marginLeft="25dp"
         android:layout_marginTop="22dp"
         android:text="(三)信息来源统计"
-        android:textColor="#272727"
+        android:textColor="#222222"
         android:textSize="16sp" />
 
     <LinearLayout
@@ -116,7 +116,7 @@
         android:layout_marginLeft="25dp"
         android:layout_marginTop="22dp"
         android:text="(四)信息来源统计"
-        android:textColor="#272727"
+        android:textColor="#222222"
         android:textSize="16sp" />
 
     <LinearLayout
@@ -157,28 +157,28 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="序列"
-                    android:textColor="#272727"
+                    android:textColor="#222222"
                     android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="标题"
-                    android:textColor="#272727"
+                    android:textColor="#222222"
                     android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="日期来源"
-                    android:textColor="#272727"
+                    android:textColor="#222222"
                     android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="属性"
-                    android:textColor="#272727"
+                    android:textColor="#222222"
                     android:textSize="14sp" />
 
             </TableRow>
@@ -189,28 +189,28 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1"
-                    android:textColor="#272727"
+                    android:textColor="#222222"
                     android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="魏则西事件"
-                    android:textColor="#272727"
+                    android:textColor="#222222"
                     android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="02/08\n最新网"
-                    android:textColor="#272727"
+                    android:textColor="#222222"
                     android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="非敏感"
-                    android:textColor="#272727"
+                    android:textColor="#222222"
                     android:textSize="14sp" />
 
             </TableRow>
@@ -223,28 +223,28 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2"
-                    android:textColor="#272727"
+                    android:textColor="#222222"
                     android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="全国300名学术精英\n聚商丘研讨'和谐医患关系'"
-                    android:textColor="#272727"
+                    android:textColor="#222222"
                     android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="02/08\n最新网"
-                    android:textColor="#272727"
+                    android:textColor="#222222"
                     android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="非敏感"
-                    android:textColor="#272727"
+                    android:textColor="#222222"
                     android:textSize="14sp" />
             </TableRow>
         </TableLayout>

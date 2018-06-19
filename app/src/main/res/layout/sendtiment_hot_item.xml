@@ -28,7 +28,7 @@
             android:layout_alignLeft="@id/home_yq_icon"
             android:layout_marginLeft="11dp"
             android:text="舆情信息"
-            android:textColor="#272727"
+            android:textColor="#222222"
             android:textSize="14sp" />
 
         <TextView
@@ -80,7 +80,7 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="10dp"
                 android:text="顾雏军:政府让我救科龙 当时最高检办案动机不纯"
-                android:textColor="#272727"
+                android:textColor="#222222"
                 android:textSize="16sp" />
 
             <TextView
@@ -142,7 +142,7 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="10dp"
                 android:text="顾雏军:政府让我救科龙 当时最高检办案动机不纯"
-                android:textColor="#272727"
+                android:textColor="#222222"
                 android:textSize="16sp" />
 
             <TextView
@@ -204,7 +204,7 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="10dp"
                 android:text="顾雏军:政府让我救科龙 当时最高检办案动机不纯"
-                android:textColor="#272727"
+                android:textColor="#222222"
                 android:textSize="16sp" />
 
             <TextView
@@ -265,7 +265,7 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="10dp"
                 android:text="顾雏军:政府让我救科龙 当时最高检办案动机不纯"
-                android:textColor="#272727"
+                android:textColor="#222222"
                 android:textSize="16sp" />
 
             <TextView

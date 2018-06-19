@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="11dp"
             android:text="产业园区分布"
-            android:textColor="#272727"
+            android:textColor="#222222"
             android:textSize="@dimen/home_title_size" />
 
 
@@ -85,17 +85,17 @@
             app:chatview_animation_duration="1000"
             app:chatview_left_background_color="#fbd06a"
             app:chatview_left_text_data_color="#fbd06a"
-            app:chatview_line_big_distance="25dp"
+            app:chatview_line_big_distance="28dp"
             app:chatview_line_small_distance="3dp"
-            app:chatview_line_width="15dp"
+            app:chatview_line_width="8dp"
             app:chatview_right_background_color="#e71f19"
             app:chatview_right_text_data_color="#e71f19"
             app:chatview_show_arrow="false"
             app:chatview_show_y_interval="false"
             app:chatview_text_data_size="10sp"
-            app:chatview_text_xy_color="#a1a1a1"
+            app:chatview_text_xy_color="#d5d5d5"
             app:chatview_text_xy_size="10sp"
-            app:chatview_x_distance="40dp"
+            app:chatview_x_distance="30dp"
             app:chatview_y_distance="30dp"
             />
         <!--<com.github.mikephil.charting.charts.BarChart-->

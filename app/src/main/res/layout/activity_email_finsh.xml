@@ -28,7 +28,7 @@
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:text="请输入你要修改的邮箱"
-            android:textColor="#272727"
+            android:textColor="#222222"
             android:textSize="14sp" />
 
         <EditText

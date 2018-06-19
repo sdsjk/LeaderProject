@@ -115,17 +115,13 @@ public class HomeRecylerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         }
     }
 
-    private int[] mImages = {R.drawable.banner1, R.drawable.banner2, R.drawable.banner3, R.drawable.banner2};
+    private int[] mImages = {R.drawable.banner_new, R.drawable.banner_new, R.drawable.banner_new, R.drawable.banner_new};
     List<ImageView> mList=new ArrayList<>();
     //ViewPage
     class MyViewholder1 extends RecyclerView.ViewHolder {
 
         public MyViewholder1(View itemView) {
             super(itemView);
-//            List<HomeViewPageBean> alldata=new ArrayList<>();
-//            alldata.add(new HomeViewPageBean(R.drawable.banner1,"远航,扬起 上海精神的时代风帆"));
-//            alldata.add(new HomeViewPageBean(R.drawable.banner2,"远航,扬起 上海精神的时代风帆"));
-//            alldata.add(new HomeViewPageBean(R.drawable.banner3,"远航,扬起 上海精神的时代风帆"));
 
             final ViewPager viewPager= (ViewPager) itemView.findViewById(R.id.home_viewpage);
             final LinearLayout pointGroup = (LinearLayout) itemView.findViewById(R.id.pointgroup);
@@ -366,7 +362,7 @@ public class HomeRecylerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
            color.add(Color.parseColor("#ff990a"));
            color.add(Color.parseColor("#c3dd68"));
            color.add(Color.parseColor("#fb8041"));
-            pieChartManager.setPieChart(name,num,color);
+            pieChartManager.setHomePieChart(name,num,color);
         }
     }
 
@@ -434,7 +430,7 @@ public class HomeRecylerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             color.add(Color.parseColor("#f6993f"));
             color.add(Color.parseColor("#e71f19"));
 
-            pieChartManager.setSolidPieChart(name,num,color);
+            pieChartManager.setHomeSolidPieChart(name,num,color);
 
             /**
              * 第二组数据

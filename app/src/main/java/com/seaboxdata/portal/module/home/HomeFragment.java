@@ -26,7 +26,9 @@ public class HomeFragment extends CommonFragment {
     private View view;
     private RecyclerView recyclerView;
     private HomeRecylerAdapter homeRecylerAdapter;
+    LinearLayout linear_bar;
     View home_title;
+
     @Override
     public View onCreateCustomView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_home_new, container, false);
@@ -36,8 +38,7 @@ public class HomeFragment extends CommonFragment {
             SystemBarTintManager tintManager = new SystemBarTintManager(mActivity);
             tintManager.setStatusBarTintColor(Color.TRANSPARENT);
             tintManager.setStatusBarTintEnabled(true);
-
-            LinearLayout linear_bar = (LinearLayout) view.findViewById(R.id.ll_bar);
+            linear_bar = (LinearLayout) view.findViewById(R.id.ll_bar);
             linear_bar.setVisibility(View.VISIBLE);
             linear_bar.setBackgroundColor(mContext.getResources().getColor(R.color.colorWhite));
             linear_bar.getLayoutParams().height = 0;
@@ -48,17 +49,19 @@ public class HomeFragment extends CommonFragment {
         initView(view);
         return view;
     }
+
     private void initView(View view) {
 
-        home_title=view.findViewById(R.id.home_title);
-        recyclerView= (RecyclerView) view.findViewById(R.id.home_fragment_new);
-        homeRecylerAdapter=new HomeRecylerAdapter(getActivity());
+        home_title = view.findViewById(R.id.home_title);
+        recyclerView = (RecyclerView) view.findViewById(R.id.home_fragment_new);
+        homeRecylerAdapter = new HomeRecylerAdapter(getActivity());
         recyclerView.setAdapter(homeRecylerAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.addOnScrollListener(mOnScrollListener);
 
 
     }
+
     int mDistance = 0;
     int maxDistance = 255;//当距离在[0,255]变化时，透明度在[0,255之间变化]
     RecyclerView.OnScrollListener mOnScrollListener = new RecyclerView.OnScrollListener() {
@@ -70,23 +73,31 @@ public class HomeFragment extends CommonFragment {
             mDistance += dy;
             float percent = mDistance * 1f / maxDistance;//百分比
             int alpha = (int) (percent * 255);
-            int argb = Color.argb(alpha, 57, 174, 255);
+            int argb = Color.argb(alpha, 255, 255, 255);
             setSystemBarAlpha(alpha);
         }
     };
 
     /**
      * 设置标题栏背景透明度
+     *
      * @param alpha 透明度
      */
     private void setSystemBarAlpha(int alpha) {
 
         if (alpha >= 255) {
-            home_title.setBackgroundColor(Color.argb(255, 48, 63, 159));
+            mActivity.getWindow().getDecorView().setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+//            home_title.setBackgroundColor(Color.argb(255, 48, 63, 159));
+            home_title.setBackgroundColor(Color.argb(255, 255, 255, 255));
+        } else if (alpha == 0) {
+            home_title.setBackgroundColor(Color.argb(0, 255, 255, 255));
+            mActivity.getWindow().getDecorView().setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
         } else {
             //标题栏渐变。a:alpha透明度 r:红 g：绿 b蓝
 //        titlebar.setBackgroundColor(Color.rgb(57, 174, 255));//没有透明效果
-            home_title.setBackgroundColor(Color.argb(alpha, 48, 63, 159));//透明效果是由参数1决定的，透明范围[0,255]
+            home_title.setBackgroundColor(Color.argb(alpha, 255, 255, 255));//透明效果是由参数1决定的，透明范围[0,255]
 //            home_title.getBackground().setAlpha(alpha);
         }
 //        home_title.setBackgroundColor(Color.argb(alpha*2, 255, 255, 255));//透明效果是由参数1决定的，透明范围[0,255]

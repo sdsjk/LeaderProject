@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="11dp"
             android:text="性别分析"
-            android:textColor="#272727"
+            android:textColor="#222222"
             android:textSize="14sp" />
     </LinearLayout>
 
@@ -53,7 +53,7 @@
             android:layout_height="wrap_content"
             android:paddingLeft="11dp"
             android:text="学历分布"
-            android:textColor="#272727"
+            android:textColor="#222222"
             android:textSize="14sp" />
     </LinearLayout>
 
@@ -91,7 +91,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="11dp"
             android:text="民族分布"
-            android:textColor="#272727"
+            android:textColor="#222222"
             android:textSize="14sp" />
 
     </LinearLayout>

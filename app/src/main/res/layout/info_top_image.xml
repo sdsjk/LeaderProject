@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:text="150秒! 速览习主席青岛峰会上精彩瞬间"
                 android:textSize="14sp"
-                android:textColor="#272727"
+                android:textColor="#222222"
                 />
             <LinearLayout
                 android:layout_width="match_parent"

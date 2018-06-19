@@ -3,8 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#f8f6f6"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
+
     <LinearLayout
         android:id="@+id/ll_bar"
         android:layout_width="match_parent"
@@ -12,34 +12,36 @@
         android:background="@drawable/shape_header_bg"
         android:orientation="vertical"
         android:visibility="gone"></LinearLayout>
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-    <android.support.v7.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/home_fragment_new"
-        />
     <RelativeLayout
-        android:background="#00000000"
-        android:id="@+id/home_title"
         android:layout_width="match_parent"
-        android:layout_height="83dp"
-        >
-        <EditText
-            android:layout_width="324dp"
-            android:layout_height="28dp"
-            android:background="@drawable/edit_raduis"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="20dp"
-            android:drawableLeft="@drawable/home_search"
-            android:paddingLeft="10dp"
-            android:gravity="center_vertical"
-            android:drawablePadding="10dp"
-            android:hint="输入你感兴趣的内容"
-            />
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/home_fragment_new"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/home_title"
+            android:layout_width="match_parent"
+            android:layout_height="83dp"
+            android:background="#00000000">
+
+            <EditText
+                android:layout_width="324dp"
+                android:layout_height="28dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/edit_raduis"
+                android:drawableLeft="@drawable/home_search"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:hint="输入你感兴趣的内容"
+                android:paddingLeft="15dp"
+                android:textSize="12dp"
+                android:textColorHint="#ffffff" />
+        </RelativeLayout>
     </RelativeLayout>
-</RelativeLayout>
 </LinearLayout>

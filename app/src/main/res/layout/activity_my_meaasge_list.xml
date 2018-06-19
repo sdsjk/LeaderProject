@@ -46,7 +46,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text="小秘书"
-                    android:textColor="#272727"
+                    android:textColor="#222222"
                     android:textSize="14sp" />
 
                 <TextView
@@ -126,7 +126,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text="气象预警"
-                    android:textColor="#272727"
+                    android:textColor="#222222"
                     android:textSize="14sp" />
 
                 <TextView
@@ -207,7 +207,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text="出行提示"
-                    android:textColor="#272727"
+                    android:textColor="#222222"
                     android:textSize="14sp" />
 
                 <TextView

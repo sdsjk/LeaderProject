@@ -16,7 +16,7 @@
             android:layout_marginLeft="10dp"
             android:padding="10dp"
             android:text="会议一"
-            android:textColor="#272727"
+            android:textColor="#222222"
             android:textSize="16sp" />
 
         <TextView
@@ -45,7 +45,7 @@
         android:paddingLeft="20dp"
         android:paddingRight="10dp"
         android:text="这次真定了 特朗普被提名为诺贝尔和平奖候选人"
-        android:textColor="#272727"
+        android:textColor="#222222"
         android:textSize="14sp" />
 
     <TextView

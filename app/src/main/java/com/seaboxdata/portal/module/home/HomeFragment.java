@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 
 import com.seaboxdata.portal.R;
@@ -28,6 +29,7 @@ public class HomeFragment extends CommonFragment {
     private HomeRecylerAdapter homeRecylerAdapter;
     LinearLayout linear_bar;
     View home_title;
+    EditText home_search_ed;
 
     @Override
     public View onCreateCustomView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -58,7 +60,7 @@ public class HomeFragment extends CommonFragment {
         recyclerView.setAdapter(homeRecylerAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.addOnScrollListener(mOnScrollListener);
-
+        home_search_ed = (EditText) view.findViewById(R.id.home_search_ed);
 
     }
 
@@ -90,8 +92,10 @@ public class HomeFragment extends CommonFragment {
                     View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
 //            home_title.setBackgroundColor(Color.argb(255, 48, 63, 159));
             home_title.setBackgroundColor(Color.argb(255, 255, 255, 255));
+            home_search_ed.setBackground(getResources().getDrawable(R.drawable.edit_raduis_up));
         } else if (alpha == 0) {
             home_title.setBackgroundColor(Color.argb(0, 255, 255, 255));
+            home_search_ed.setBackground(getResources().getDrawable(R.drawable.edit_raduis));
             mActivity.getWindow().getDecorView().setSystemUiVisibility(
                     View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
         } else {

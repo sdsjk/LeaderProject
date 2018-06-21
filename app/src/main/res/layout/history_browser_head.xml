@@ -6,6 +6,7 @@
     android:background="#f8f6f6"
     >
     <TextView
+        android:layout_marginLeft="10dp"
         android:id="@+id/history_browser_head"
         android:layout_width="match_parent"
         android:layout_height="31dp"
@@ -13,6 +14,6 @@
         android:text="2018年5月15号"
         android:textColor="#a1a1a1"
         android:paddingLeft="10dp"
-        android:textSize="12sp"
+        android:textSize="16sp"
         />
 </LinearLayout>

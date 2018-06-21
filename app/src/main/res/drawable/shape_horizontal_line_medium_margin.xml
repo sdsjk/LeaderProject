@@ -6,7 +6,7 @@
             <size android:width="1px" android:height="1px"/>
         </shape>
     </item>
-    <item android:left="@dimen/medium_margin" android:right="@dimen/medium_margin">
+    <item android:left="45dp" android:right="@dimen/medium_margin">
         <shape>
             <solid android:color="@color/borderColor"/>
             <size android:width="1px" android:height="1px"/>

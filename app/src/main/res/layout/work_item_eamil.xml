@@ -13,10 +13,11 @@
 
         <TextView
             android:id="@+id/work_email_fristname"
-            android:layout_width="34dp"
-            android:layout_height="34dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="17dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="5dp"
             android:background="@drawable/work_email_fristname"
             android:gravity="center"
             android:text="YU"
@@ -31,7 +32,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+
                 android:layout_marginTop="14dp"
                 android:orientation="horizontal">
 
@@ -71,7 +72,7 @@
                         android:paddingTop="2dp"
                         android:text="05-28"
                         android:textColor="#a1a1a1"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
 
                     <ImageView
                         android:layout_width="16dp"
@@ -87,7 +88,7 @@
                 android:id="@+id/item_list_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="16dp"
+                android:paddingLeft="6dp"
                 android:paddingRight="10dp"
                 android:text="顾雏军:政府让我救科龙 当时最高检办案动机不纯"
                 android:textColor="#222222"
@@ -98,9 +99,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/info_title_content_spantop"
                 android:ellipsize="end"
-                android:paddingLeft="16dp"
+                android:paddingLeft="6dp"
                 android:paddingRight="10dp"
                 android:singleLine="true"
                 android:text="顾雏军案再审#【进行法庭调查】审判员张勇健：现在质证第四组证据，分别是证据37-39、41-45、47、49、51-53,全部是证人证言"
@@ -115,5 +116,5 @@
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="#a1a1a1"></View>
+        android:background="@color/split_view"></View>
 </LinearLayout>

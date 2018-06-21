@@ -15,6 +15,7 @@ public class DefaultWeekView extends WeekView {
     private float mRadio;
     private int mPadding;
     private float mSchemeBaseLine;
+    private int mRadius;
 
     public DefaultWeekView(Context context) {
         super(context);
@@ -36,6 +37,12 @@ public class DefaultWeekView extends WeekView {
 
     }
 
+    @Override
+    protected void onPreviewHook() {
+//        mSolarTermTextPaint.setTextSize(mCurMonthLunarTextPaint.getTextSize());
+        mRadius = Math.min(mItemWidth, mItemHeight) / 11 * 5;
+    }
+
     /**
      * 如果需要点击Scheme没有效果，则return true
      *
@@ -47,8 +54,12 @@ public class DefaultWeekView extends WeekView {
      */
     @Override
     protected boolean onDrawSelected(Canvas canvas, Calendar calendar, int x, boolean hasScheme) {
-        mSelectedPaint.setStyle(Paint.Style.FILL);
-        canvas.drawRect(x + mPadding, mPadding, x + mItemWidth - mPadding, mItemHeight - mPadding, mSelectedPaint);
+       mSelectedPaint.setStyle(Paint.Style.FILL);
+//        canvas.drawRect (x + mPadding, mPadding, x + mItemWidth - mPadding, mItemHeight - mPadding, mSelectedPaint);
+        float mRadius = Math.min(mItemWidth, mItemHeight) / 11 * 5;
+        float cx=(x + mPadding)+((x + mItemWidth - mPadding)-(x + mPadding))/2;
+        float cy=(mPadding)+((+ mItemHeight - mPadding)-( mPadding))/2;
+        canvas.drawCircle(cx, cy, mRadius, mSelectedPaint);
         return true;
     }
 

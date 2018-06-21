@@ -26,8 +26,8 @@
             android:src="@drawable/infomation_back" />
 
         <LinearLayout
-            android:layout_width="185dp"
-            android:layout_height="35dp"
+            android:layout_width="175dp"
+            android:layout_height="30dp"
             android:layout_centerInParent="true"
             android:background="@drawable/history_title"
             android:gravity="center_vertical"
@@ -42,7 +42,7 @@
                 android:gravity="center"
                 android:text="历史推送"
                 android:textColor="#ffffff"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/history_browser"
@@ -52,10 +52,14 @@
                 android:gravity="center"
                 android:text="浏览历史"
                 android:textColor="#4a6def"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
         </LinearLayout>
     </RelativeLayout>
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/split_view"
+        ></View>
     <FrameLayout
         android:id="@+id/history_fragment"
         android:layout_width="match_parent"

@@ -1,65 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="56dp"
-    android:background="@drawable/selector_border_bottom_white"
-    android:gravity="center_vertical"
-    android:orientation="horizontal"
-    android:paddingLeft="@dimen/medium_margin"
-    android:paddingRight="@dimen/medium_margin">
-
-    <View
-        android:layout_width="10dp"
-        android:layout_height="10dp"
-        android:layout_marginRight="@dimen/normal_margin"
-        android:background="@drawable/shape_circle_size_10"
-        android:visibility="gone" />
+    android:layout_height="57dp"
+    android:background="#ffffff">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:orientation="vertical">
+        android:layout_height="56dp"
 
-        <TextView
-            style="@style/text.normalSmaller"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:text="就划转投资项目相关事项征求企业意见" />
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/medium_margin"
+        android:paddingRight="@dimen/medium_margin">
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginRight="@dimen/normal_margin"
+            android:background="@drawable/shape_circle_size_10"
+            android:visibility="gone" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginTop="8dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="地点：政府西一楼会议室"
-                android:textColor="#a0a0a0"
-                android:textSize="11dp" />
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="10dp"
-                android:layout_height="10dp"
+                <TextView
+                    android:layout_width="7dp"
+                    android:layout_height="7dp"
+                    android:background="@drawable/dot_bule" />
+
+                <TextView
+                    style="@style/text.normalSmaller"
+                    android:layout_marginLeft="9dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="就划转投资项目相关事项征求企业意见"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/bigger_margin"
-                android:src="@drawable/time" />
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
-            <TextView
-                style="@style/text"
-                android:layout_marginLeft="6dp"
-                android:text="10:30"
-                android:textColor="#a0a0a0"
-                android:textSize="11dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="政府西一楼会议室"
+                    android:textColor="#a0a0a0"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/bigger_margin"
+                    android:src="@drawable/time"
+                    android:visibility="gone" />
+
+                <TextView
+                    style="@style/text"
+                    android:layout_marginLeft="6dp"
+                    android:text="10:30"
+                    android:textColor="#a0a0a0"
+                    android:textSize="11dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
 
         </LinearLayout>
+
     </LinearLayout>
 
+    <View
+        android:id="@+id/split_view"
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="28dp"
+        android:background="@color/borderColor"
 
-</LinearLayout>
+        ></View>
 
+</RelativeLayout>
 

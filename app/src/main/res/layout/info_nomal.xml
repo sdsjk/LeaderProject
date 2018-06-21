@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="解读|上合青岛峰会的这些新的阐述、新亮点你看懂了吗?"
-        android:textSize="14sp"
+        android:textSize="16sp"
         android:textColor="#222222"
         />
     <LinearLayout
@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="@dimen/info_title_content_spantop"
         android:layout_marginBottom="10dp"
         >
         <TextView
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:text="热点问题"
             android:textColor="#a1a1a1"
-            android:textSize="9dp"
+            android:textSize="@dimen/size12"
             />
 
         <TextView
@@ -36,13 +36,13 @@
             android:layout_height="wrap_content"
             android:text="2018-05-28"
             android:textColor="#a1a1a1"
-            android:textSize="9dp"
+            android:textSize="@dimen/size12"
             />
     </LinearLayout>
     <View
         android:layout_width="match_parent"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginRight="10dp"
         android:layout_height="0.1dp"
-        android:background="#aaaaaa" />
+        android:background="@color/split_view" />
 </LinearLayout>

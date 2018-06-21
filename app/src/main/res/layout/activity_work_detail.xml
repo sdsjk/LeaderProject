@@ -2,10 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorWhite">
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
     <LinearLayout
         android:id="@+id/ll_bar"
         android:layout_width="match_parent"
@@ -13,10 +14,11 @@
         android:background="@drawable/shape_header_bg"
         android:orientation="vertical"
         android:visibility="gone"></LinearLayout>
+
     <include
         layout="@layout/layout_toolbar_normal"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"></include>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></include>
 
 
     <com.haibin.calendarview.CalendarLayout
@@ -34,13 +36,16 @@
             android:background="@color/colorWhite"
             app:current_day_lunar_text_color="#ff0000"
             app:current_day_text_color="#ffffff"
-            app:current_month_lunar_text_color="#CFCFCF"
+            app:current_month_lunar_text_color="#00CFCFCF"
             app:current_month_text_color="#333333"
-            app:lunar_text_size="10sp"
+            app:day_text_size="14sp"
+            app:lunar_text_size="8sp"
+            app:calendar_height="45dp"
             app:max_year="2022"
             app:max_year_month="12"
             app:min_year="2016"
             app:min_year_month="9"
+            app:month_view="com.seaboxdata.portal.module.work.CustomMonthView"
             app:month_view_show_mode="mode_only_current"
             app:other_month_lunar_text_color="#e1e1e1"
             app:other_month_text_color="#e1e1e1"
@@ -51,12 +56,11 @@
             app:selected_text_color="#ffffff"
             app:selected_theme_color="#fd5a5d"
             app:week_background="#fff"
-            app:week_bar_height="40dp"
-            app:week_start_with="sun"
-            app:month_view="com.seaboxdata.portal.module.work.CustomMonthView"
-            app:week_view="com.seaboxdata.portal.module.work.CustomWeekView"
+            app:week_bar_height="35dp"
             app:week_line_background="#00000000"
+            app:week_start_with="sun"
             app:week_text_color="#a1a1a1"
+            app:week_view="com.seaboxdata.portal.module.work.CustomWeekView"
             app:year_view_background="#f6f6f6"
             app:year_view_day_text_color="#333333"
             app:year_view_day_text_size="9sp"
@@ -81,25 +85,25 @@
                 tools:ignore="KeyboardInaccessibleWidget">
 
                 <LinearLayout
-                    android:layout_marginTop="13dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
                     android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/work_detail_time"
                         android:layout_width="317dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/medium_margin"
                         android:text="2018年5月15号"
                         android:textColor="#a0a0a0"
-                        android:textSize="11dp"
-                        android:layout_marginLeft="@dimen/medium_margin"/>
+                        android:textSize="11dp" />
 
                     <LinearLayout
                         android:id="@+id/work_detail_content"
-                        android:layout_marginTop="5dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
                         android:orientation="vertical">
 
                     </LinearLayout>

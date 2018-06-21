@@ -38,7 +38,7 @@ public class InfoationAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         switch (viewType) {
             case 0:
-                View view = LayoutInflater.from(context).inflate(R.layout.home_fragment_viewpage, parent, false);
+                View view = LayoutInflater.from(context).inflate(R.layout.info_arc_viewpage, parent, false);
                 return new MyViewholder1(view);
             case 1:
 //                View ywjc = LayoutInflater.from(parent.getContext()).inflate(R.layout.home_fragment_ywjc, parent, false);
@@ -94,7 +94,7 @@ public class InfoationAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         }
     }
 
-    private int[] mImages = {R.drawable.banner1, R.drawable.banner2, R.drawable.banner3, R.drawable.banner2};
+    private int[] mImages = {R.drawable.info_banner, R.drawable.info_banner, R.drawable.info_banner, R.drawable.info_banner};
     List<ImageView> mList = new ArrayList<>();
 
     class MyViewholder1 extends RecyclerView.ViewHolder {

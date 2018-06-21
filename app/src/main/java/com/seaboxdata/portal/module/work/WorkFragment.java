@@ -73,16 +73,16 @@ public class WorkFragment extends CommonFragment {
         List<RemindBean> allData=new ArrayList<>();
         allData.add(new RemindBean(1,"2018年5月15日",null,null,null,null));
 
-        allData.add(new RemindBean(2,"2018年5月15日","会议一","07-07","特朗普被提名为诺贝尔和平奖候选人","地点: 二楼会议室"));
-        allData.add(new RemindBean(2,"2018年5月15日","会议二","07-07","宁静今年已经46岁了","地点: 三楼会议室"));
+        allData.add(new RemindBean(2,"2018年5月15日","会议一","07-07","特朗普被提名为诺贝尔和平奖候选人","二楼会议室"));
+        allData.add(new RemindBean(2,"2018年5月15日","会议二","07-07","宁静今年已经46岁了","三楼会议室"));
 
         allData.add(new RemindBean(1,"2018年5月16日",null,null,null,null));
-        allData.add(new RemindBean(2,"2018年5月15日","会议三","07-07","但是由于保养得宜，看起来依旧非常年轻","地点: 四楼会议室"));
+        allData.add(new RemindBean(2,"2018年5月15日","会议三","07-07","但是由于保养得宜，看起来依旧非常年轻","四楼会议室"));
 
         allData.add(new RemindBean(1,"2018年5月17日",null,null,null,null));
-        allData.add(new RemindBean(2,"2018年5月17日","会议四","08-08","感觉有那么一丢丢说不出来的诡异","地点: 五楼会议室"));
-        allData.add(new RemindBean(2,"2018年5月17日","会议五","08-08","照片中宁静依旧走酷帅路线","地点: 六楼会议室"));
-        allData.add(new RemindBean(2,"2018年5月17日","会议六","08-08","此外宁静还蹲坐在一个柱子上，姿势相当霸气","地点: 七楼会议室"));
+        allData.add(new RemindBean(2,"2018年5月17日","会议四","08-08","感觉有那么一丢丢说不出来的诡异","五楼会议室"));
+        allData.add(new RemindBean(2,"2018年5月17日","会议五","08-08","照片中宁静依旧走酷帅路线","六楼会议室"));
+        allData.add(new RemindBean(2,"2018年5月17日","会议六","08-08","此外宁静还蹲坐在一个柱子上，姿势相当霸气","七楼会议室"));
         home_tx_recycler.setAdapter(new RemindAdapter(getActivity(),allData));
         home_tx_recycler.setLayoutManager(new LinearLayoutManager(getActivity()));
 

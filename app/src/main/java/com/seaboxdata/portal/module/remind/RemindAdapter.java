@@ -53,12 +53,22 @@ public class RemindAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                 break;
             case 2:
                 ListHolder list= (ListHolder) holder;
-                RemindBean remindBean= mAlldata.get(position);
-
+                    RemindBean remindBean= mAlldata.get(position);
                     list.info_title_name.setText(remindBean.getTitleName());
                     list.info_content_time.setText(remindBean.getTime());
                     list.remind_content.setText(remindBean.getContent());
                     list.remind_adress.setText(remindBean.getAddress());
+                try {
+                    if(position<mAlldata.size()-1) {
+                        if(mAlldata.get(position+1).getType()==1){
+                            list.line_split.setVisibility(View.INVISIBLE);
+                        }
+
+                    }
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+
                 break;
         }
     }
@@ -87,13 +97,15 @@ public class RemindAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     public class ListHolder extends ViewHolder {
         TextView  info_title_name,info_content_time,remind_content,remind_adress;
         ImageView remind_icon;
+        View line_split;
         public ListHolder(View itemView) {
             super(itemView);
               info_title_name= (TextView) itemView.findViewById(R.id.info_title_name);
               info_content_time= (TextView) itemView.findViewById(R.id.info_content_time);
               remind_content= (TextView) itemView.findViewById(R.id.remind_content);
               remind_adress= (TextView) itemView.findViewById(R.id.remind_adress);
-            remind_icon= (ImageView) itemView.findViewById(R.id.remind_icon);
+                remind_icon= (ImageView) itemView.findViewById(R.id.remind_icon);
+            line_split=itemView.findViewById(R.id.line_split);
         }
     }
 }

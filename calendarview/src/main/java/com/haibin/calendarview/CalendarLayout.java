@@ -272,10 +272,10 @@ public final class CalendarLayout extends LinearLayout {
                     return super.onTouchEvent(event);
                 }
                 if (event.getY() - downY > 0) {
-                    mScrollerStatusListener.scrollerBottom();
+//                    mScrollerStatusListener.scrollerBottom();
                     expand();
                 } else {
-                    mScrollerStatusListener.scrollerTop();
+//                    mScrollerStatusListener.scrollerTop();
                     shrink();
                 }
                 break;

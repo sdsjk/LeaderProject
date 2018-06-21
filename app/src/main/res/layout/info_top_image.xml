@@ -3,15 +3,17 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:background="#ffffff"
-    android:layout_height="87dp">
+    android:layout_height="wrap_content">
     <LinearLayout
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         >
         <TextView
+            android:visibility="gone"
             android:gravity="center"
             android:layout_width="28dp"
             android:layout_height="12dp"
@@ -21,9 +23,18 @@
             android:textColor="#ffffff"
             android:background="@drawable/infomation_top_image"
             />
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/infomation_top_image"
+            android:gravity="center"
+            android:text="热点"
+            android:textColor="#efb518"
+            android:textSize="12sp" />
         <LinearLayout
             android:layout_marginLeft="10dp"
-            android:layout_width="210dp"
+            android:layout_width="190dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             >
@@ -31,14 +42,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="150秒! 速览习主席青岛峰会上精彩瞬间"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textColor="#222222"
                 />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="17dp"
+                android:layout_marginTop="@dimen/info_title_content_spantop"
                 android:layout_marginBottom="10dp"
                 >
                 <TextView
@@ -46,7 +57,7 @@
                     android:layout_height="wrap_content"
                     android:text="热点问题"
                     android:textColor="#a1a1a1"
-                    android:textSize="9dp"
+                    android:textSize="@dimen/size12"
                     />
 
                 <TextView
@@ -55,16 +66,17 @@
                     android:layout_height="wrap_content"
                     android:text="2018-05-28"
                     android:textColor="#a1a1a1"
-                    android:textSize="9dp"
+                    android:textSize="@dimen/size12"
                     />
             </LinearLayout>
 
         </LinearLayout>
         <ImageView
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
             android:layout_width="93dp"
             android:layout_height="71dp"
             android:background="@drawable/info_newinfo_icon"
-
             />
     </LinearLayout>
     <View
@@ -72,6 +84,6 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_height="0.4dp"
-        android:background="#aaaaaa" />
+        android:background="@color/split_view" />
 
 </LinearLayout>

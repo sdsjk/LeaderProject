@@ -28,8 +28,8 @@
         >
         <ImageView
             android:layout_marginLeft="15dp"
-            android:layout_width="29dp"
-            android:layout_height="29dp"
+            android:layout_width="31dp"
+            android:layout_height="31dp"
             android:background="@drawable/work_duban"
             />
         <TextView
@@ -80,8 +80,8 @@
             >
             <ImageView
                 android:layout_marginLeft="15dp"
-                android:layout_width="29dp"
-                android:layout_height="29dp"
+                android:layout_width="31dp"
+                android:layout_height="31dp"
                 android:background="@drawable/work_email"
                 />
             <TextView
@@ -121,8 +121,8 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="0.4dp"
-        android:background="#aaaaaa"
-        android:layout_marginLeft="16dp"
+        android:background="@color/split_view"
+        android:layout_marginLeft="55dp"
         android:layout_marginRight="16dp"
         ></View>
     <RelativeLayout
@@ -139,8 +139,8 @@
             >
             <ImageView
                 android:layout_marginLeft="15dp"
-                android:layout_width="29dp"
-                android:layout_height="29dp"
+                android:layout_width="31dp"
+                android:layout_height="31dp"
                 android:background="@drawable/work_myword"
                 />
             <TextView

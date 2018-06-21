@@ -7,7 +7,7 @@
     android:layout_height="wrap_content">
     <com.seaboxdata.portal.module.home.MyGridView
         android:layout_marginTop="14dp"
-        android:layout_marginBottom="14dp"
+        android:layout_marginBottom="8dp"
         android:numColumns="5"
         android:id="@+id/home_jclist"
         android:verticalSpacing="10dp"

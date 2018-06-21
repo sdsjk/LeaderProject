@@ -81,14 +81,19 @@ public class HistoryPushFragment extends CommonFragment implements  CalendarView
     private void initData() {
         final int year = mCalendarView.getCurYear();
         final int month = mCalendarView.getCurMonth();
-        mCalendarView.setRange(2018, 5, 2019, 12);
+        mCalendarView.setRange(2017, 5, 2026, 12);
         mCalendarView.scrollToCalendar(year, month, mCalendarView.getCurDay());
 
 
         LayoutInflater layoutInflater = LayoutInflater.from(getActivity());
         for (int i = 0; i < 2; i++) {
             View view = layoutInflater.inflate(R.layout.item_work_detail, mContentView, false);
+            if(i==1){
+                view.findViewById(R.id.split_view).setVisibility(View.GONE);
+
+            }
             mContentView.addView(view);
+
         }
     }
 

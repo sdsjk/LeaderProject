@@ -37,6 +37,8 @@ public class DefaultMonthView extends MonthView {
 
     }
 
+
+
     /**
      *
      * @param canvas    canvas
@@ -49,7 +51,11 @@ public class DefaultMonthView extends MonthView {
     @Override
     protected boolean onDrawSelected(Canvas canvas, Calendar calendar, int x, int y, boolean hasScheme) {
         mSelectedPaint.setStyle(Paint.Style.FILL);
-        canvas.drawRect(x + mPadding, y + mPadding, x + mItemWidth - mPadding, y + mItemHeight - mPadding, mSelectedPaint);
+//        canvas.drawRect(x + mPadding, y + mPadding, x + mItemWidth - mPadding, y + mItemHeight - mPadding, mSelectedPaint);
+        float mRadius = Math.min(mItemWidth, mItemHeight) / 11 * 5;
+        float cx=(x + mPadding)+((x + mItemWidth - mPadding)-(x + mPadding))/2;
+        float cy=(y + mPadding)+((y + mItemHeight - mPadding)-(y + mPadding))/2;
+        canvas.drawCircle(cx, cy, mRadius, mSelectedPaint);
         return true;
     }
 

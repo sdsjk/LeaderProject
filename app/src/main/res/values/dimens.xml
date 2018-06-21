@@ -80,4 +80,7 @@
     <dimen name="home_smail_icon_padding">1dp</dimen>
     <dimen name="info_paddingleft">26dp</dimen>
     <dimen name="info_icon_padding">30dp</dimen>
+    <dimen name="my_icon">20dp</dimen>
+    <dimen name="size12">12sp</dimen>
+    <dimen name="info_title_content_spantop">4dp</dimen>
 </resources>

@@ -58,7 +58,7 @@ public class CustomWeekView extends WeekView {
 
     public CustomWeekView(Context context) {
         super(context);
-        mTextPaint.setTextSize(dipToPx(context, 6));
+        mTextPaint.setTextSize(dipToPx(context, 4));
         mTextPaint.setColor(0xffffffff);
         mTextPaint.setAntiAlias(true);
         mTextPaint.setFakeBoldText(true);

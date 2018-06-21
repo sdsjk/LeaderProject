@@ -22,6 +22,7 @@
         android:layout_alignParentStart="true"></include>
 
     <ScrollView
+        android:layout_marginTop="9dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/layout_toolbar_normal">
@@ -95,42 +96,12 @@
             <LinearLayout style="@style/listViewWrapper">
 
                 <LinearLayout
-                    android:id="@+id/my_approval"
-                    style="@style/listViewItem">
-
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_marginRight="@dimen/small_margin"
-                        android:adjustViewBounds="true"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/my_approval" />
-
-                    <TextView
-                        style="@style/listViewText"
-                        android:text="重要批示" />
-                    <TextView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:background="@drawable/dot_info"
-                        android:text="20"
-                        android:textColor="#ffffff"
-                        android:gravity="center"
-                        android:layout_marginRight="10dp"
-                        />
-
-                    <com.linewell.core.view.FontIconText
-                        style="@style/listViewIconRight"
-                        fonticontext:typefacename="icon_font.ttf" />
-                </LinearLayout>
-
-                <LinearLayout
                     android:id="@+id/category_sub"
                     style="@style/listViewItem">
 
                     <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
+                        android:layout_width="@dimen/my_icon"
+                        android:layout_height="@dimen/my_icon"
                         android:layout_marginRight="@dimen/small_margin"
                         android:adjustViewBounds="true"
                         android:scaleType="centerCrop"
@@ -150,8 +121,8 @@
                     style="@style/listViewItem">
 
                     <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
+                        android:layout_width="@dimen/my_icon"
+                        android:layout_height="@dimen/my_icon"
                         android:layout_marginRight="@dimen/small_margin"
                         android:adjustViewBounds="true"
                         android:scaleType="centerCrop"
@@ -171,8 +142,8 @@
                     style="@style/listViewItem">
 
                     <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
+                        android:layout_width="@dimen/my_icon"
+                        android:layout_height="@dimen/my_icon"
                         android:layout_marginRight="@dimen/small_margin"
                         android:adjustViewBounds="true"
                         android:scaleType="centerCrop"
@@ -197,11 +168,12 @@
 
                 <LinearLayout
                     android:id="@+id/my_meessage"
-                    style="@style/listViewItem">
+                    style="@style/listViewItemXiaoxi">
 
                     <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
+                        android:id="@+id/imageView"
+                        android:layout_width="@dimen/my_icon"
+                        android:layout_height="@dimen/my_icon"
                         android:layout_marginRight="@dimen/small_margin"
                         android:adjustViewBounds="true"
                         android:scaleType="centerCrop"
@@ -223,6 +195,36 @@
                         style="@style/listViewIconRight"
                         fonticontext:typefacename="icon_font.ttf" />
                 </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/my_approval"
+                    style="@style/listViewItem">
+
+                    <ImageView
+                        android:layout_width="@dimen/my_icon"
+                        android:layout_height="@dimen/my_icon"
+                        android:layout_marginRight="@dimen/small_margin"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/my_approval" />
+
+                    <TextView
+                        style="@style/listViewText"
+                        android:text="重要批示" />
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/dot_info"
+                        android:gravity="center"
+                        android:text="20"
+                        android:textColor="#ffffff" />
+
+                    <com.linewell.core.view.FontIconText
+                        style="@style/listViewIconRight"
+                        fonticontext:typefacename="icon_font.ttf" />
+                </LinearLayout>
             </LinearLayout>
 
 
@@ -233,8 +235,8 @@
                     >
 
                     <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
+                        android:layout_width="@dimen/my_icon"
+                        android:layout_height="@dimen/my_icon"
                         android:layout_marginRight="@dimen/small_margin"
                         android:adjustViewBounds="true"
                         android:scaleType="centerCrop"

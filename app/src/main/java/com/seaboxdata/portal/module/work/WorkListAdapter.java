@@ -35,6 +35,9 @@ public class WorkListAdapter extends RecyclerView.Adapter<WorkListAdapter.MyView
         holder.time.setText(allData.get(position).getTime());
         holder.title.setText(allData.get(position).getTitle());
         holder.content.setText(allData.get(position).getContent());
+        if(allData.size()-1==position) {
+            holder.split_view.setVisibility(View.GONE);
+        }
     }
     @Override
     public int getItemCount() {
@@ -46,12 +49,14 @@ public class WorkListAdapter extends RecyclerView.Adapter<WorkListAdapter.MyView
         private TextView time;
         private TextView title;
         private TextView content;
+        private View split_view;
 
         public MyViewHolder(View itemView) {
             super(itemView);
             time= (TextView) itemView.findViewById(R.id.item_work_time);
             title= (TextView) itemView.findViewById(R.id.item_list_title);
             content= (TextView) itemView.findViewById(R.id.item_list_content);
+            split_view=itemView.findViewById(R.id.split_view);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

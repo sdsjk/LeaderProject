@@ -51,6 +51,17 @@ public class HistoryBrowsingAdapter extends RecyclerView.Adapter<RecyclerView.Vi
                 ListHolder list= (ListHolder) holder;
                 RemindBean remindBean= mAlldata.get(position);
                 list.history_browser_content.setText(remindBean.getContent());
+                try {
+                    if(position<mAlldata.size()-1) {
+                        if(mAlldata.get(position+1).getType()==1){
+                            list.split_view.setVisibility(View.INVISIBLE);
+                        }
+                    }
+                }catch (Exception r){
+                    r.printStackTrace();
+                }
+
+
                 break;
         }
     }
@@ -78,10 +89,11 @@ public class HistoryBrowsingAdapter extends RecyclerView.Adapter<RecyclerView.Vi
 
     public class ListHolder extends RecyclerView.ViewHolder {
         TextView  history_browser_content;
+        View split_view;
         public ListHolder(View itemView) {
             super(itemView);
             history_browser_content= (TextView) itemView.findViewById(R.id.history_browser_content);
-
+            split_view=itemView.findViewById(R.id.split_view);
         }
     }
 

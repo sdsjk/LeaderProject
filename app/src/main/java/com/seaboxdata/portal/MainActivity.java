@@ -92,7 +92,7 @@ public class MainActivity extends CommonActivity implements View.OnClickListener
 
         checkVersionUpdate();
 
-        if(savedInstanceState!=null){
+        if (savedInstanceState != null) {
             mCurIndex = savedInstanceState.getInt("test", HOME_INDEX);
         }
 
@@ -101,7 +101,7 @@ public class MainActivity extends CommonActivity implements View.OnClickListener
         EventBus.getDefault().register(this);
     }
 
-    private void handleNotifyIntent(){
+    private void handleNotifyIntent() {
 //        Intent intent = getIntent();
 //        if(intent==null){
 //            return;
@@ -114,8 +114,8 @@ public class MainActivity extends CommonActivity implements View.OnClickListener
 //        startActivity(realIntent);
     }
 
-    private void onRefreshFragments(){
-        switch (mCurIndex){
+    private void onRefreshFragments() {
+        switch (mCurIndex) {
             case HOME_INDEX:
                 if (null != mHomeView) {
                     mHomeView.performClick();
@@ -190,7 +190,7 @@ public class MainActivity extends CommonActivity implements View.OnClickListener
     @Override
     public void onClick(View v) {
         currentTab = v;
-        if (changeFragment((Integer)v.getTag())) {
+        if (changeFragment((Integer) v.getTag())) {
             changeTabMenu();
         }
 
@@ -318,19 +318,19 @@ public class MainActivity extends CommonActivity implements View.OnClickListener
             fTransaction.hide(mCurrentFragment);
         }
 
-        if(fragment!=mHomeFragment&&mHomeFragment!=null){
+        if (fragment != mHomeFragment && mHomeFragment != null) {
             fTransaction.hide(mHomeFragment);
         }
-        if(fragment!= mInfoFragment && mInfoFragment !=null){
+        if (fragment != mInfoFragment && mInfoFragment != null) {
             fTransaction.hide(mInfoFragment);
         }
-        if(fragment!=mSentimentFragment&&mSentimentFragment!=null){
+        if (fragment != mSentimentFragment && mSentimentFragment != null) {
             fTransaction.hide(mSentimentFragment);
         }
-        if (mWorkFragment!=null&&fragment!=mWorkFragment) {
+        if (mWorkFragment != null && fragment != mWorkFragment) {
             fTransaction.hide(mWorkFragment);
         }
-        if(fragment!=mMyFragment&&mMyFragment!=null){
+        if (fragment != mMyFragment && mMyFragment != null) {
             fTransaction.hide(mMyFragment);
         }
 
@@ -351,12 +351,12 @@ public class MainActivity extends CommonActivity implements View.OnClickListener
     public void onAttachFragment(Fragment fragment) {
         super.onAttachFragment(fragment);
         if (fragment instanceof HomeFragment) {
-            mHomeFragment = (HomeFragment)fragment;
+            mHomeFragment = (HomeFragment) fragment;
         } else if (fragment instanceof MyFragment) {
-            mMyFragment = (MyFragment)fragment;
+            mMyFragment = (MyFragment) fragment;
         } else if (fragment instanceof InfoFragment) {
-            mInfoFragment = (InfoFragment)fragment;
-        }  else if (fragment instanceof SentimentFragment) {
+            mInfoFragment = (InfoFragment) fragment;
+        } else if (fragment instanceof SentimentFragment) {
             mSentimentFragment = (SentimentFragment) fragment;
         } else if (fragment instanceof WorkFragment) {
             mWorkFragment = (WorkFragment) fragment;
@@ -495,7 +495,7 @@ public class MainActivity extends CommonActivity implements View.OnClickListener
         }
     }
 
-    private void refreshMsgCount(){
+    private void refreshMsgCount() {
 
         //其他数量
         MessageCountUtils.refresh(this, new AppHttpResultHandler<Object>() {
@@ -513,7 +513,7 @@ public class MainActivity extends CommonActivity implements View.OnClickListener
 
     }
 
-    private void onRefreshMsgCount(){
+    private void onRefreshMsgCount() {
         int count = MessageCountUtils.getAllCount();
 
         BadgeUtil.setBadgeCount(this, count);
@@ -526,7 +526,7 @@ public class MainActivity extends CommonActivity implements View.OnClickListener
 //            mInfoFragment.refreshMesCount(count);
 //        }
 
-        TextView mMesCountTV = (TextView)findViewById(R.id.messageCountTV);
+        TextView mMesCountTV = (TextView) findViewById(R.id.messageCountTV);
         if (count > 0) {
             mMesCountTV.setVisibility(View.VISIBLE);
 
@@ -573,7 +573,7 @@ public class MainActivity extends CommonActivity implements View.OnClickListener
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         if (null != previousTab) {
-            outState.putInt("test", (Integer)previousTab.getTag());
+            outState.putInt("test", (Integer) previousTab.getTag());
         }
         super.onSaveInstanceState(outState);
     }
@@ -584,9 +584,8 @@ public class MainActivity extends CommonActivity implements View.OnClickListener
     }
 
 
-    public static class MessageEvent{}
-
-
+    public static class MessageEvent {
+    }
 
 
 }

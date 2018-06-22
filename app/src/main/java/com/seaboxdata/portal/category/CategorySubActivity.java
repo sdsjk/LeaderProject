@@ -3,10 +3,12 @@ package com.seaboxdata.portal.category;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
@@ -19,6 +21,8 @@ import com.linewell.innochina.core.entity.params.base.BaseParams;
 import com.seaboxdata.portal.R;
 import com.seaboxdata.portal.bean.ServiceCategoryDTO;
 import com.seaboxdata.portal.common.CommonActivity;
+import com.seaboxdata.portal.utils.StatusBarUtil;
+import com.seaboxdata.portal.utils.SystemBarTintManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,7 +57,22 @@ public class CategorySubActivity extends CommonActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category_sub);
         setCenterTitle("应用管理");
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            getWindow().addFlags(
+                    WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            SystemBarTintManager tintManager = new SystemBarTintManager(this);
+            tintManager.setStatusBarTintColor(Color.TRANSPARENT);
+            tintManager.setStatusBarTintEnabled(true);
 
+            LinearLayout linear_bar = (LinearLayout) findViewById(R.id.ll_bar);
+            linear_bar.setVisibility(View.VISIBLE);
+            linear_bar.setBackgroundColor(getResources().getColor(R.color.colorWhite));
+            linear_bar.getLayoutParams().height = getStatusBarHeight();
+
+            if (StatusBarUtil.StatusBarLightMode(this) == 0) {
+//                linear_bar.setBackgroundColor(mContext.getResources().getColor(R.color.black_opacity80));
+            }
+        }
         mShowEdit = getIntent().getBooleanExtra(KEY_DATA, false);
 
         initView();
@@ -228,8 +247,10 @@ public class CategorySubActivity extends CommonActivity {
                         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                             if(isChecked){
                                 tag.setTextColor(Color.parseColor("#496cef"));
+                                tagDTO.setChoose(true);
                             }else {
                                 tag.setTextColor(Color.parseColor("#222222"));
+                                tagDTO.setChoose(false);
                             }
                         }
 
@@ -242,7 +263,7 @@ public class CategorySubActivity extends CommonActivity {
 //                        }
 //                    });
 
-                    //标签的点击
+//                    标签的点击
 //                    tag.setOnClickListener(new View.OnClickListener() {
 //
 //                        @Override

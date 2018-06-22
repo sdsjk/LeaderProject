@@ -15,7 +15,7 @@
         android:singleLine="true"
         android:ellipsize="end"
         android:textColor="#222222"
-        android:textSize="16sp" />
+        android:textSize="14sp" />
     <View
         android:id="@+id/split_view"
         android:layout_width="match_parent"

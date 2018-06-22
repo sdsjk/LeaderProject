@@ -48,7 +48,7 @@ public class PieChartManager {
         legend.setXEntrySpace(7f);
         legend.setYEntrySpace(1f);
         legend.setYOffset(0f);
-        legend.setXOffset(4f);
+        legend.setXOffset(0f);
         legend.setTextColor(Color.parseColor("#a1a1a1"));
         legend.setTextSize(13);
 
@@ -136,7 +136,8 @@ public class PieChartManager {
      * @param colors 颜色集合
      */
     public void setSolidPieChart(List<String> name, List<Float> date, List<Integer> colors) {
-
+        legend.setYEntrySpace(10f);
+        legend.setYOffset(9f);
         pieChart.setHoleRadius(0);//实心圆
         pieChart.setTransparentCircleRadius(0);// 半透明圈
         pieChart.setDrawCenterText(false);//饼状图中间不可以添加文字

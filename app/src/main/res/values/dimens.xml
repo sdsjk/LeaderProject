@@ -15,7 +15,7 @@
     <!--字号-->
     <dimen name="micro_text">10dp</dimen>
     <dimen name="small_text">12dp</dimen>
-    <dimen name="normal_smaller_text">13dp</dimen>
+    <dimen name="normal_smaller_text">12sp</dimen>
     <dimen name="normal_text">14dp</dimen>
     <dimen name="medium_text">15dp</dimen>
     <dimen name="big_text">16dp</dimen>
@@ -83,4 +83,5 @@
     <dimen name="my_icon">20dp</dimen>
     <dimen name="size12">12sp</dimen>
     <dimen name="info_title_content_spantop">4dp</dimen>
+    <dimen name="rect_width_height">22dp</dimen>
 </resources>

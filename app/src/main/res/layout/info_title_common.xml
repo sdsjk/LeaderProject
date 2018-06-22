@@ -43,6 +43,6 @@
         android:layout_marginRight="10dp"
         android:text="提交"
         android:textColor="#1c1c1c"
-        android:textSize="14sp"
+        android:textSize="16sp"
         android:visibility="gone" />
 </RelativeLayout>

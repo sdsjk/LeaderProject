@@ -14,13 +14,13 @@
         android:orientation="horizontal"
         >
         <View
-            android:layout_width="5dp"
-            android:layout_height="13dp"
-            android:background="#496cef"
+            android:layout_width="2dp"
+            android:layout_height="10dp"
             android:layout_marginTop="2dp"
-            ></View>
+            android:background="@drawable/line_blue"></View>
         <TextView style="@style/text.normalSmaller"
             android:layout_marginLeft="11dp"
+            android:textSize="14sp"
             android:text="城市通讯覆盖率"
             android:textColor="@color/textDark"/>
     </LinearLayout>
@@ -29,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_margin="10dp"
         android:layout_height="0.4dp"
-        android:background="#aaaaaa" />
+        android:background="@color/split_view" />
 
 
     <com.github.mikephil.charting.charts.BarChart

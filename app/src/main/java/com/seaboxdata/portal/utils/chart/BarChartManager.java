@@ -2,7 +2,6 @@ package com.seaboxdata.portal.utils.chart;
 
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.util.Log;
 
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.BarChart;
@@ -86,6 +85,7 @@ public class BarChartManager {
         xAxis.setCenterAxisLabels(true);
         //保证Y轴从0开始，不然会上移一点
         leftAxis.setAxisMinimum(0f);
+        leftAxis.setDrawGridLines(false);
         rightAxis.setAxisMinimum(0f);
         // 线跟数据都不显示
         rightAxis.setEnabled(false); //右侧Y轴不显示
@@ -115,17 +115,37 @@ public class BarChartManager {
         ArrayList<IBarDataSet> dataSets = new ArrayList<>();
         dataSets.add(barDataSet);
         BarData data = new BarData(dataSets);
-        data.setBarWidth(0.5f);
+        data.setBarWidth(0.3f);
         //设置X轴的刻度数
 
         String[] xValues = {"东城", "西城", "朝阳", "丰台", "石景山", "海淀区", "房山区"};
+        String[] yValues = {"91%", "92%", "93%", "94%", "95%", "96%"};
         xAxis.setLabelCount(xAxisValues.size()+1, true);
         xAxis.setDrawLabels(true);
         IAxisValueFormatter xAxisFormatter = new XAxisValueFormatter(xValues);
         xAxis.setValueFormatter(xAxisFormatter);
         xAxis.setTextColor(Color.parseColor("#a1a1a1"));
+//        IAxisValueFormatter custom = new MyYAxisValueFormatter(yValues);
+//        leftAxis.setValueFormatter(custom);
+        leftAxis.setLabelCount(6);
         mBarChart.setData(data);
     }
+
+
+    public class MyYAxisValueFormatter implements IAxisValueFormatter {
+
+        private String[] xValues;
+
+        public MyYAxisValueFormatter(String[] yValues) {
+            xValues = yValues;
+        }
+
+        @Override
+        public String getFormattedValue(float value, AxisBase axis) {
+            return xValues[(int) value];
+        }
+    }
+
 
     public class XAxisValueFormatter implements IAxisValueFormatter {
 

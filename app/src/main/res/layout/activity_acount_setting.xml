@@ -15,7 +15,10 @@
         android:orientation="vertical"
         android:visibility="gone"></LinearLayout>
     <include layout="@layout/info_title_common"></include>
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:background="@color/split_view"></View>
     <RelativeLayout
         android:id="@+id/setting_modiff_password"
         android:layout_width="match_parent"
@@ -35,7 +38,7 @@
         android:layout_height="0.4dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="#aaaaaa"></View>
+        android:background="@color/split_view"></View>
     <RelativeLayout
         android:id="@+id/setting_modiff_email"
         android:layout_width="match_parent"
@@ -55,7 +58,7 @@
         android:layout_height="0.4dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="#aaaaaa"></View>
+        android:background="@color/split_view"></View>
 
     <RelativeLayout
         android:id="@+id/setting_modiff_phone"

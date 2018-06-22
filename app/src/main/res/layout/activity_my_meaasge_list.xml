@@ -21,6 +21,7 @@
         android:background="#aaaaaa" />
 
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="58dp"
         android:gravity="center_vertical"
@@ -47,7 +48,7 @@
                     android:layout_marginLeft="10dp"
                     android:text="小秘书"
                     android:textColor="#222222"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -62,7 +63,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="7dp">
+                android:layout_marginTop="@dimen/info_title_content_spantop">
 
                 <TextView
                     android:id="@+id/message_dot"
@@ -96,9 +97,9 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="0.4dp"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="60dp"
         android:layout_marginRight="15dp"
-        android:background="#aaaaaa" />
+        android:background="@color/split_view" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -127,7 +128,7 @@
                     android:layout_marginLeft="10dp"
                     android:text="气象预警"
                     android:textColor="#222222"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -142,7 +143,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="7dp">
+                android:layout_marginTop="@dimen/info_title_content_spantop">
 
                 <TextView
                     android:id="@+id/message_dot1"
@@ -177,9 +178,9 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="0.4dp"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="60dp"
         android:layout_marginRight="15dp"
-        android:background="#aaaaaa" />
+        android:background="@color/split_view" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -208,7 +209,7 @@
                     android:layout_marginLeft="10dp"
                     android:text="出行提示"
                     android:textColor="#222222"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -223,7 +224,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="7dp">
+                android:layout_marginTop="@dimen/info_title_content_spantop">
 
                 <TextView
                     android:id="@+id/message_dot2"
@@ -257,7 +258,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="0.4dp"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="60dp"
         android:layout_marginRight="15dp"
-        android:background="#aaaaaa" />
+        android:background="@color/split_view" />
 </LinearLayout>

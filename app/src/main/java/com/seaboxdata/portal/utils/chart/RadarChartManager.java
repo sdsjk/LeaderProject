@@ -14,7 +14,6 @@ import com.github.mikephil.charting.data.RadarDataSet;
 import com.github.mikephil.charting.data.RadarEntry;
 import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 import com.github.mikephil.charting.interfaces.datasets.IRadarDataSet;
-import com.seaboxdata.portal.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,19 +39,21 @@ public class RadarChartManager {
 
     private void initRadarChart() {
         // 绘制线条宽度，圆形向外辐射的线条
-        mRadarChart.setWebLineWidth(1.5f);
+        mRadarChart.setWebLineWidth(1.0f);
         // 内部线条宽度，外面的环状线条
         mRadarChart.setWebLineWidthInner(1.0f);
         // 所有线条WebLine透明度
         mRadarChart.setWebAlpha(100);
         //取消图标右下角的描述
         mRadarChart.getDescription().setEnabled(false);
+        mRadarChart.setExtraOffsets(0, 8, 80, 8);
         //点击点弹出的标签
 //        RadarMarkerView mv = new RadarMarkerView(mContext, R.layout.radar_marker_view);
 //        mRadarChart.setMarkerView(mv);
         XAxis xAxis = mRadarChart.getXAxis();
         // X坐标值字体大小
         xAxis.setTextSize(8f);
+        xAxis.setGridColor(Color.parseColor("#a1a1a1"));
         // Y坐标值字体样式
 
         // Y坐标值标签个数
@@ -64,18 +65,24 @@ public class RadarChartManager {
         yAxis.setEnabled(false);
         yAxis.setDrawLabels(false);
         yAxis.setDrawTopYLabelEntry(false);
+        yAxis.setGridColor(Color.parseColor("#a1a1a1"));
         xAxis.setDrawLimitLinesBehindData(false);
         //设置X上的显示labal
         xAxis.setDrawLabels(true);
         Legend l = mRadarChart.getLegend();
         // 图例位置
-        l.setPosition(Legend.LegendPosition.RIGHT_OF_CHART);
+//        l.setPosition(Legend.LegendPosition.RIGHT_OF_CHART);
+        l.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
+        l.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
+        l.setOrientation(Legend.LegendOrientation.VERTICAL);
         // 图例X间距
         l.setXEntrySpace(1f);
         // 图例Y间距
         l.setTextSize(12f);
         l.setTextColor(Color.parseColor("#a1a1a1"));
-        l.setYEntrySpace(4f);
+        l.setYEntrySpace(1f);
+        l.setYOffset(1f);
+        l.setXOffset(10f);
     }
 
     public void showRadarChart(final List<String> xData, List<List<Float>> yDatas, List<String> names, List<Integer> colors) {

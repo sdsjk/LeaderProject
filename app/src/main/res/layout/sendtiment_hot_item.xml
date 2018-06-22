@@ -16,11 +16,13 @@
         android:orientation="horizontal">
 
         <TextView
+            android:layout_marginTop="3dp"
             android:id="@+id/home_yq_icon"
-            android:layout_width="4dp"
-            android:layout_height="13dp"
+            android:layout_width="2dp"
+            android:layout_height="10dp"
             android:layout_marginLeft="10dp"
-            android:background="#4a6def" />
+
+            android:background="@drawable/line_blue" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -29,7 +31,7 @@
             android:layout_marginLeft="11dp"
             android:text="舆情信息"
             android:textColor="#222222"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:clickable="true"
@@ -45,10 +47,10 @@
     </RelativeLayout>
     <View
         android:layout_width="match_parent"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginRight="10dp"
         android:layout_height="0.4dp"
-        android:background="#aaaaaa" />
+        android:background="@color/split_view" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -57,8 +59,8 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="14dp"
-            android:layout_height="14dp"
+            android:layout_width="@dimen/rect_width_height"
+            android:layout_height="@dimen/rect_width_height"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="17dp"
             android:background="@drawable/sendtimend_bk"
@@ -79,16 +81,16 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="16dp"
                 android:paddingRight="10dp"
-                android:text="顾雏军:政府让我救科龙 当时最高检办案动机不纯"
+                android:text="亚非球队难逆袭"
                 android:textColor="#222222"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/item_list_content"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="@dimen/info_title_content_spantop"
                 android:ellipsize="end"
                 android:paddingLeft="16dp"
                 android:paddingRight="10dp"
@@ -100,7 +102,7 @@
         <ImageView
             android:layout_marginLeft="10dp"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="36dp"
             android:src="@drawable/hotup"
             />
     </LinearLayout>
@@ -111,7 +113,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="#a1a1a1"></View>
+        android:background="@color/split_view"></View>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -120,8 +122,8 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="14dp"
-            android:layout_height="14dp"
+            android:layout_width="@dimen/rect_width_height"
+            android:layout_height="@dimen/rect_width_height"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="17dp"
             android:background="#f95a04"
@@ -141,15 +143,15 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="16dp"
                 android:paddingRight="10dp"
-                android:text="顾雏军:政府让我救科龙 当时最高检办案动机不纯"
+                android:text="可就是爱你没理由"
                 android:textColor="#222222"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="@dimen/info_title_content_spantop"
                 android:ellipsize="end"
                 android:paddingLeft="16dp"
                 android:paddingRight="10dp"
@@ -161,7 +163,7 @@
         <ImageView
             android:layout_marginLeft="10dp"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="36dp"
             android:src="@drawable/hotdown"
             />
     </LinearLayout>
@@ -172,7 +174,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="#a1a1a1"></View>
+        android:background="@color/split_view"></View>
 
 
     <LinearLayout
@@ -182,8 +184,8 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="14dp"
-            android:layout_height="14dp"
+            android:layout_width="@dimen/rect_width_height"
+            android:layout_height="@dimen/rect_width_height"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="17dp"
             android:background="#f4af09"
@@ -203,15 +205,16 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="16dp"
                 android:paddingRight="10dp"
-                android:text="顾雏军:政府让我救科龙 当时最高检办案动机不纯"
+                android:text="河南学校栏杆断裂"
                 android:textColor="#222222"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <TextView
+                android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="@dimen/info_title_content_spantop"
                 android:ellipsize="end"
                 android:paddingLeft="16dp"
                 android:paddingRight="10dp"
@@ -223,7 +226,7 @@
         <ImageView
             android:layout_marginLeft="10dp"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="36dp"
             android:src="@drawable/hotup"
             />
     </LinearLayout>
@@ -234,7 +237,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="#a1a1a1"></View>
+        android:background="@color/split_view"></View>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -243,8 +246,8 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="14dp"
-            android:layout_height="14dp"
+            android:layout_width="@dimen/rect_width_height"
+            android:layout_height="@dimen/rect_width_height"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="17dp"
             android:background="#d2d2d1"
@@ -264,15 +267,15 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="16dp"
                 android:paddingRight="10dp"
-                android:text="顾雏军:政府让我救科龙 当时最高检办案动机不纯"
+                android:text="为阿根廷可惜但不值得为他们哭泣"
                 android:textColor="#222222"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="@dimen/info_title_content_spantop"
                 android:ellipsize="end"
                 android:paddingLeft="16dp"
                 android:paddingRight="10dp"
@@ -284,7 +287,7 @@
         <ImageView
             android:layout_marginLeft="10dp"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="36dp"
             android:src="@drawable/hotup"
             />
     </LinearLayout>
@@ -295,6 +298,6 @@
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="#a1a1a1"></View>
+        android:background="@color/split_view"></View>
 
 </LinearLayout>

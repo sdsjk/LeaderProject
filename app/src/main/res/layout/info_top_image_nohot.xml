@@ -86,7 +86,69 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="外媒:特朗普与新加坡总统李显龙举行会晤，共进晚餐"
+                android:text="谁才是阿根廷惨败的罪魁祸首？一人需为失利埋单"
+                android:textSize="16sp"
+                android:textColor="#222222"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/info_title_content_spantop"
+                android:layout_marginBottom="10dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="热点问题"
+                    android:textColor="#a1a1a1"
+                    android:textSize="@dimen/size12"
+                    />
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2018-05-28"
+                    android:textColor="#a1a1a1"
+                    android:textSize="@dimen/size12"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:layout_width="93dp"
+            android:layout_height="71dp"
+            android:background="@drawable/info_newinfo_icon"
+            android:layout_marginRight="10dp"
+            />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="0.4dp"
+        android:background="@color/split_view" />
+
+    <RelativeLayout
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        >
+        <LinearLayout
+
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="滴滴载孕妇遭围堵的最新相关信息"
                 android:textSize="16sp"
                 android:textColor="#222222"
                 />
@@ -148,7 +210,69 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="外媒:特朗普与新加坡总统李显龙举行会晤，共进晚餐"
+                android:text="娜扎晒自拍比V的最新相关信息,喊话粉丝超可爱"
+                android:textSize="16sp"
+                android:textColor="#222222"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/info_title_content_spantop"
+                android:layout_marginBottom="10dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="热点问题"
+                    android:textColor="#a1a1a1"
+                    android:textSize="@dimen/size12"
+                    />
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2018-05-28"
+                    android:textColor="#a1a1a1"
+                    android:textSize="@dimen/size12"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:layout_width="93dp"
+            android:layout_height="71dp"
+            android:background="@drawable/info_newinfo_icon"
+            android:layout_marginRight="10dp"
+            />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="0.4dp"
+        android:background="@color/split_view" />
+
+    <RelativeLayout
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        >
+        <LinearLayout
+
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="阿根廷创世界杯N大耻辱纪录！60年来最大惨案"
                 android:textSize="16sp"
                 android:textColor="#222222"
                 />
@@ -210,7 +334,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="外媒:特朗普与新加坡总统李显龙举行会晤，共进晚餐"
+                android:text="订婚后的姚笛重回颜值巅峰 穿格纹西装漫步巴黎街头"
                 android:textSize="16sp"
                 android:textColor="#222222"
                 />
@@ -244,131 +368,7 @@
             android:layout_alignParentRight="true"
             android:layout_width="93dp"
             android:layout_height="71dp"
-            android:background="@drawable/info_newinfo_icon_nohot"
-            android:layout_marginRight="10dp"
-            />
-    </RelativeLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_height="0.4dp"
-        android:background="@color/split_view" />
-
-    <RelativeLayout
-        android:layout_marginTop="6dp"
-        android:layout_marginBottom="6dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="20dp"
-        >
-        <LinearLayout
-
-            android:layout_width="220dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="外媒:特朗普与新加坡总统李显龙举行会晤，共进晚餐"
-                android:textSize="16sp"
-                android:textColor="#222222"
-                />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="@dimen/info_title_content_spantop"
-                android:layout_marginBottom="10dp"
-                >
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="热点问题"
-                    android:textColor="#a1a1a1"
-                    android:textSize="@dimen/size12"
-                    />
-
-                <TextView
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="2018-05-28"
-                    android:textColor="#a1a1a1"
-                    android:textSize="@dimen/size12"
-                    />
-            </LinearLayout>
-
-        </LinearLayout>
-        <ImageView
-            android:layout_alignParentRight="true"
-            android:layout_width="93dp"
-            android:layout_height="71dp"
-            android:background="@drawable/info_newinfo_icon_nohot"
-            android:layout_marginRight="10dp"
-            />
-    </RelativeLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_height="0.4dp"
-        android:background="@color/split_view" />
-
-    <RelativeLayout
-        android:layout_marginTop="6dp"
-        android:layout_marginBottom="6dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="20dp"
-        >
-        <LinearLayout
-
-            android:layout_width="220dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="外媒:特朗普与新加坡总统李显龙举行会晤，共进晚餐"
-                android:textSize="16sp"
-                android:textColor="#222222"
-                />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="@dimen/info_title_content_spantop"
-                android:layout_marginBottom="10dp"
-                >
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="热点问题"
-                    android:textColor="#a1a1a1"
-                    android:textSize="@dimen/size12"
-                    />
-
-                <TextView
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="2018-05-28"
-                    android:textColor="#a1a1a1"
-                    android:textSize="@dimen/size12"
-                    />
-            </LinearLayout>
-
-        </LinearLayout>
-        <ImageView
-            android:layout_alignParentRight="true"
-            android:layout_width="93dp"
-            android:layout_height="71dp"
-            android:background="@drawable/info_newinfo_icon_nohot"
+            android:background="@drawable/info_newinfo_icon"
             android:layout_marginRight="10dp"
             />
     </RelativeLayout>

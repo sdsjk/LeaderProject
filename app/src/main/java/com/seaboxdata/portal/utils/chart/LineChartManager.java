@@ -85,13 +85,20 @@ public class LineChartManager {
             xAxis.setGranularity(1f);
             // 不绘制网格线
             xAxis.setDrawGridLines(false);
+        //设置最后和第一个标签不超出x轴
+            xAxis.setAvoidFirstLastClipping(true);
+//        设置线的宽度
+            xAxis.setAxisLineWidth(1.0f);
+            xAxis.setAxisLineColor(Color.parseColor("#d5d5d5"));
 
-            xAxis.setAxisLineWidth(2.0f);
             //保证Y轴从0开始，不然会上移一点
             leftAxis.setAxisMinimum(0f);
             // 显示数字但不显示线
             leftAxis.setDrawAxisLine(true);
+            leftAxis.setTextColor(Color.parseColor("#d5d5d5"));
 
+            leftAxis.setDrawGridLines(false);
+            leftAxis.setAxisLineColor(Color.parseColor("#d5d5d5"));
             rightAxis.setAxisMinimum(0f);
 
             // 线跟数据都不显示
@@ -125,7 +132,7 @@ public class LineChartManager {
 //        lineDataSet.setFormLineWidth(2f);
 //        lineDataSet.setFormSize(15.f);
         //线模式为圆滑曲线（默认折线）
-//        lineDataSet.setMode(LineDataSet.Mode.CUBIC_BEZIER);
+        lineDataSet.setMode(LineDataSet.Mode.CUBIC_BEZIER);
     }
 
     /**
@@ -162,9 +169,10 @@ public class LineChartManager {
         dataSets.add(lineDataSet);
         LineData data = new LineData(dataSets);
         //设置X轴的刻度数
-        xAxis.setLabelCount(xAxisValues.size(), false);
+//        xAxis.setLabelCount(xAxisValues.size(), false);
         xAxis.setTextColor(Color.parseColor("#a1a1a1"));
-        xAxis.setLabelRotationAngle(-45);
+        //文字倾斜度
+//        xAxis.setLabelRotationAngle(-45);
         xAxis.setValueFormatter(new IAxisValueFormatter() {
                                     @Override
                                     public String getFormattedValue(float value, AxisBase axis) {

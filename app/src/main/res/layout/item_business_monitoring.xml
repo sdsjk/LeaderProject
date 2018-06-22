@@ -39,15 +39,16 @@
         android:layout_marginRight="@dimen/medium_big_margin"
         android:src="@drawable/selector_business_monitoring_check" />
     <TextView
+        android:id="@+id/tab_index"
         android:layout_alignParentRight="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
         android:text="1"
         android:gravity="right"
-        android:paddingRight="10dp"
-        android:paddingTop="5dp"
+        android:paddingRight="8dp"
+        android:paddingTop="4dp"
         android:textColor="#ffffff"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:background="@drawable/my_icon_shap"
         />
 </RelativeLayout>

@@ -39,18 +39,20 @@ public class BusinessMonitoringAdapter extends RecyclerView.Adapter<BusinessMoni
         if(info == null)
             return;
         holder.tvTitle.setText(info.get("name").getAsString());
+        holder.tab_index.setText(position+1+"");
 
         holder.rootView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                boolean  isSelected= v.isSelected();
                 // 判断当前数据是否已经选中
 
                 // 需要对数据做处理
                 // 直接对源数据进行处理
 //                mlist.get(position)
 
-                holder.rootView.setSelected(true);
+                holder.rootView.setSelected(!isSelected);
+                isSelected=!isSelected;
 
 
 
@@ -92,9 +94,11 @@ public class BusinessMonitoringAdapter extends RecyclerView.Adapter<BusinessMoni
 
         View rootView;
         TextView    tvTitle;
+        TextView tab_index;
         public HeadHolder(View itemView) {
             super(itemView);
             tvTitle = (TextView) itemView.findViewById(R.id.search_service_name);
+            tab_index = (TextView) itemView.findViewById(R.id.tab_index);
             rootView = itemView.findViewById(R.id.item_monitoring_root_view);
         }
     }

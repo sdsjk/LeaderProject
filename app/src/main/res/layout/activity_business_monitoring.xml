@@ -38,7 +38,7 @@
             tl:tl_indicator_corner_radius="2.5dp"
             tl:tl_indicator_height="2.5dp"
             tl:tl_textSelectColor="@color/textDark"
-            tl:tl_indicator_width="15dp"
+            tl:tl_indicator_width="30dp"
             tl:tl_textUnselectColor="@color/textGrey"
             tl:tl_tab_space_equal="false"
             tl:tl_textsize="@dimen/normal_text"></com.flyco.tablayout.SlidingTabLayout>

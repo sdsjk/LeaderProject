@@ -10,11 +10,13 @@ import android.widget.LinearLayout;
 
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.charts.RadarChart;
 import com.seaboxdata.portal.R;
 import com.seaboxdata.portal.common.CommonFragment;
 import com.seaboxdata.portal.utils.chart.BarChartManager;
 import com.seaboxdata.portal.utils.chart.LineChartManager;
+import com.seaboxdata.portal.utils.chart.PieChartManager;
 import com.seaboxdata.portal.utils.chart.RadarChartManager;
 
 import java.util.ArrayList;
@@ -132,7 +134,7 @@ public class HomeContentFragment extends CommonFragment {
         View lineChartView = layoutInflater.inflate(R.layout.item_content_linechart, mContentHomeView, false);
         LineChart mLineChart = (LineChart) lineChartView.findViewById(R.id.lineChart);
         LineChartManager lineChartManager = new LineChartManager(mLineChart);
-        lineChartManager.showLineChart(xValues, y1Value, "", Color.parseColor("#5ad2b3"));
+        lineChartManager.showLineChart(xValues, y1Value, "", Color.parseColor("#4798e7"));
         lineChartManager.setDescription("");
         mContentHomeView.addView(lineChartView);
 
@@ -151,7 +153,7 @@ public class HomeContentFragment extends CommonFragment {
         BarChart barChart1 = (BarChart) barChartView.findViewById(R.id.barChart);
 
         BarChartManager barChartManager1 = new BarChartManager(barChart1);
-        barChartManager1.showBarChart(xValuesbarChart, y3Value, "", Color.parseColor("#6785f2"));
+        barChartManager1.showBarChart(xValuesbarChart, y3Value, "", Color.parseColor("#fbd06a"));
         barChartManager1.setDescription("");
         mContentHomeView.addView(barChartView);
         // 饼图
@@ -160,6 +162,26 @@ public class HomeContentFragment extends CommonFragment {
 
         // 饼图
         View pieChartView = layoutInflater.inflate(R.layout.item_content_piechart, mContentHomeView, false);
+        PieChart pieChart2= (PieChart) pieChartView.findViewById(R.id.home_chart2);
+        PieChartManager pieChartManager=new PieChartManager(pieChart2);
+        List<String> name=new ArrayList<>();
+        name.add("通讯网");
+        name.add("供电线路");
+        name.add("公路");
+        name.add("供水线路");
+        List<Float> num=new ArrayList<>();
+        num.add(70.0f);
+        num.add(20.0f);
+        num.add(10.0f);
+        num.add(10.0f);
+        List<Integer> color=new ArrayList<>();
+        color.add(Color.parseColor("#fbd06a"));
+        color.add(Color.parseColor("#f6993f"));
+        color.add(Color.parseColor("#e71f19"));
+        color.add(Color.parseColor("#ff5d52"));
+
+        pieChartManager.setHomeSolidPieChart(name,num,color);
+
         mContentHomeView.addView(pieChartView);
 
 
@@ -194,12 +216,12 @@ public class HomeContentFragment extends CommonFragment {
             yDatas.add(nData);
         }
 
-        colors.add(Color.parseColor("#a5d22a"));
-        colors.add(Color.parseColor("#f1722c"));
-        colors.add(Color.parseColor("#755cf2"));
-        colors.add(Color.parseColor("#eecc44"));
-        colors.add(Color.parseColor("#f5a658"));
-        colors.add(Color.parseColor("#6785f2"));
+        colors.add(Color.parseColor("#fbd06a"));
+        colors.add(Color.parseColor("#f69a40"));
+        colors.add(Color.parseColor("#ff5d52"));
+        colors.add(Color.parseColor("#e71f19"));
+        colors.add(Color.parseColor("#ff9b43"));
+        colors.add(Color.parseColor("#8eb9fb"));
         radarChartManager.showRadarChart(xData,yDatas,names,colors);
 
         mContentHomeView.addView(scatterChartView);

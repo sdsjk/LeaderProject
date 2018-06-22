@@ -15,7 +15,10 @@
         android:visibility="gone"></LinearLayout>
 
     <include layout="@layout/info_title_common"></include>
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:background="@color/split_view"></View>
     <!-- 验证方式-->
     <LinearLayout
         android:id="@+id/verification_view"
@@ -54,7 +57,7 @@
             android:layout_height="0.4dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:background="#aaaaaa"></View>
+            android:background="@color/split_view"></View>
 
         <RelativeLayout
             android:id="@+id/verification_email"

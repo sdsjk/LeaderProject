@@ -89,9 +89,9 @@ public class SenTimentActivity extends CommonActivity implements View.OnClickLis
         num.add(20.0f);
         num.add(10.0f);
         List<Integer> color = new ArrayList<>();
-        color.add(Color.parseColor("#6785f2"));
-        color.add(Color.parseColor("#c363fa"));
-        color.add(Color.parseColor("#6f3ded"));
+        color.add(Color.parseColor("#fbd06a"));
+        color.add(Color.parseColor("#f6993f"));
+        color.add(Color.parseColor("#e71f19"));
 
         pieChartManager.setSolidPieChart(name, num, color);
 
@@ -111,11 +111,11 @@ public class SenTimentActivity extends CommonActivity implements View.OnClickLis
         PieChart pie_chart_with_line = (PieChart) findViewById(R.id.home_chart1);
         PieChartManager pieChartManagers = new PieChartManager(pie_chart_with_line);
         List<String> names = new ArrayList<>();
-        names.add("电子信息");
-        names.add("汽车零件");
-        names.add("生物医药");
-        names.add("先进制造");
-        names.add("其他");
+        names.add("医患关系");
+        names.add("司法公正");
+        names.add("校园暴力");
+        names.add("公共安全");
+        names.add("警民关系");
         List<Float> nums = new ArrayList<>();
         nums.add(30.0f);
         nums.add(40.0f);
@@ -123,11 +123,11 @@ public class SenTimentActivity extends CommonActivity implements View.OnClickLis
         nums.add(60.0f);
         nums.add(70.0f);
         List<Integer> colors = new ArrayList<>();
-        colors.add(Color.parseColor("#c363fa"));
-        colors.add(Color.parseColor("#f5a658"));
-        colors.add(Color.parseColor("#755af2"));
-        colors.add(Color.parseColor("#496cef"));
-        colors.add(Color.parseColor("#eecc44"));
+        colors.add(Color.parseColor("#fbd16d"));
+        colors.add(Color.parseColor("#ff3f60"));
+        colors.add(Color.parseColor("#ff990a"));
+        colors.add(Color.parseColor("#c3dd68"));
+        colors.add(Color.parseColor("#fb8041"));
         pieChartManagers.setPieChart(names, nums, colors);
 
     }

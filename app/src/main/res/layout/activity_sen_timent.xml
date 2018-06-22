@@ -19,14 +19,14 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="0.4dp"
-        android:background="#a1a1a1"></View>
+        android:background="@color/split_view"></View>
 
 
     <include layout="@layout/sendtimeent_choose_item"></include>
     <View
         android:layout_width="match_parent"
         android:layout_height="0.4dp"
-        android:background="#a1a1a1"></View>
+        android:background="@color/split_view"></View>
 
     <ScrollView
         android:layout_width="match_parent"

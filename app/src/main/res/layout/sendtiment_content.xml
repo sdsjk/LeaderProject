@@ -13,7 +13,7 @@
         android:layout_marginTop="14dp"
         android:text="舆情概览"
         android:textColor="#222222"
-        android:textSize="16sp" />
+        android:textSize="@dimen/home_title_size" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -31,11 +31,12 @@
         android:layout_marginTop="22dp"
         android:text="(一)信息来源统计"
         android:textColor="#222222"
-        android:textSize="16sp" />
+        android:textSize="14sp" />
 
     <LinearLayout
+        android:layout_marginTop="15dp"
         android:layout_width="284dp"
-        android:layout_height="130dp"
+        android:layout_height="150dp"
         android:layout_marginLeft="30dp"
         >
 
@@ -53,37 +54,37 @@
         android:layout_marginTop="22dp"
         android:text="(二)媒体活跃度"
         android:textColor="#222222"
-        android:textSize="16sp" />
+        android:textSize="14sp" />
 
     <LinearLayout
         android:layout_width="330dp"
-        android:layout_height="160dp"
+        android:layout_height="180dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
-        >
+        android:layout_marginTop="20dp">
+
         <com.seaboxdata.portal.module.home.DoubleLineChatView
             android:id="@+id/line_chat_one"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="15dp"
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
             app:chatview_animation_duration="1000"
-            app:chatview_left_background_color="#6785f2"
-            app:chatview_left_text_data_color="#6785f2"
-            app:chatview_line_big_distance="15dp"
-            app:chatview_line_small_distance="3dp"
-            app:chatview_line_width="15dp"
+            app:chatview_left_background_color="#f5615c"
+            app:chatview_left_text_data_color="#f5615c"
+            app:chatview_line_big_distance="18dp"
+            app:chatview_line_small_distance="9dp"
+            app:chatview_line_width="8dp"
             app:chatview_right_background_color="#8c77f5"
             app:chatview_right_text_data_color="#8c77f5"
             app:chatview_show_arrow="false"
-            app:isshowone="true"
             app:chatview_show_y_interval="false"
             app:chatview_text_data_size="10sp"
-            app:chatview_text_xy_color="#a1a1a1"
+            app:chatview_text_xy_color="#d5d5d5"
             app:chatview_text_xy_size="10sp"
-            app:chatview_x_distance="40dp"
+            app:chatview_x_distance="30dp"
             app:chatview_y_distance="30dp"
-            />
+            app:isshowone="true" />
+
     </LinearLayout>
 
 
@@ -97,8 +98,9 @@
         android:textSize="16sp" />
 
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:layout_width="284dp"
-        android:layout_height="130dp"
+        android:layout_height="167dp"
         android:layout_marginLeft="30dp"
         >
 
@@ -134,6 +136,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:background="#ffffff"
@@ -142,110 +145,155 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#222222"
             android:text="主要舆情"
             android:textSize="16sp" />
+
 
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="9dp"
-            android:stretchColumns="*">
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="19dp"
+            android:background="@drawable/tablayout_border"
+            android:stretchColumns="1">
 
             <TableRow>
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:height="28dp"
+                    android:background="@drawable/tablayout_border"
+                    android:gravity="center"
+                    android:padding="5dp"
                     android:text="序列"
-                    android:textColor="#222222"
-                    android:textSize="14sp" />
+                    android:textColor="#222222" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-1dp"
+                    android:height="28dp"
+                    android:background="@drawable/tablayout_border"
+                    android:gravity="center"
+                    android:padding="5dp"
                     android:text="标题"
                     android:textColor="#222222"
                     android:textSize="14sp" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-1dp"
+                    android:height="28dp"
+                    android:background="@drawable/tablayout_border"
+                    android:gravity="center"
+                    android:padding="5dp"
                     android:text="日期来源"
                     android:textColor="#222222"
                     android:textSize="14sp" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-1dp"
+                    android:height="28dp"
+                    android:background="@drawable/tablayout_border"
+                    android:gravity="center"
+                    android:padding="5dp"
                     android:text="属性"
                     android:textColor="#222222"
                     android:textSize="14sp" />
 
             </TableRow>
 
-            <TableRow android:layout_marginTop="22dp">
+            <TableRow>
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-1dp"
+                    android:height="50dp"
+                    android:background="@drawable/tablayout_border"
+                    android:gravity="center"
+                    android:padding="5dp"
                     android:text="1"
                     android:textColor="#222222"
                     android:textSize="14sp" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-1dp"
+                    android:layout_marginTop="-1dp"
+                    android:height="50dp"
+                    android:background="@drawable/tablayout_border"
+                    android:gravity="center"
+                    android:padding="5dp"
                     android:text="魏则西事件"
                     android:textColor="#222222"
                     android:textSize="14sp" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="02/08\n最新网"
+                    android:layout_marginLeft="-1dp"
+                    android:layout_marginTop="-1dp"
+                    android:height="50dp"
+                    android:background="@drawable/tablayout_border"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="02/08最新网"
                     android:textColor="#222222"
                     android:textSize="14sp" />
 
+
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-1dp"
+                    android:layout_marginTop="-1dp"
+                    android:height="50dp"
+                    android:background="@drawable/tablayout_border"
+                    android:gravity="center"
+                    android:padding="5dp"
                     android:text="非敏感"
                     android:textColor="#222222"
                     android:textSize="14sp" />
 
             </TableRow>
 
-            <TableRow android:layout_marginTop="22dp"
-                android:layout_marginBottom="20dp"
-                >
+            <TableRow>
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-1dp"
+                    android:height="50dp"
+                    android:background="@drawable/tablayout_border"
+                    android:gravity="center"
+                    android:padding="5dp"
                     android:text="2"
                     android:textColor="#222222"
                     android:textSize="14sp" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="全国300名学术精英\n聚商丘研讨'和谐医患关系'"
+                    android:layout_marginLeft="-1dp"
+                    android:layout_marginTop="-1dp"
+                    android:height="50dp"
+                    android:background="@drawable/tablayout_border"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="全国300名学术"
                     android:textColor="#222222"
                     android:textSize="14sp" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="02/08\n最新网"
+                    android:layout_marginLeft="-1dp"
+                    android:layout_marginTop="-1dp"
+                    android:height="50dp"
+                    android:background="@drawable/tablayout_border"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="02/08最新网"
                     android:textColor="#222222"
                     android:textSize="14sp" />
 
+
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-1dp"
+                    android:layout_marginTop="-1dp"
+                    android:height="50dp"
+                    android:background="@drawable/tablayout_border"
+                    android:gravity="center"
+                    android:padding="5dp"
                     android:text="非敏感"
                     android:textColor="#222222"
                     android:textSize="14sp" />
+
             </TableRow>
         </TableLayout>
     </LinearLayout>

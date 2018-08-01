@@ -5,7 +5,7 @@
 
     <!--间距-->
     <dimen name="small_margin">4dp</dimen>
-    <dimen name="normal_margin">8dp</dimen>
+    <dimen name="normal_margin">7dp</dimen>
     <dimen name="medium_margin">12dp</dimen>
     <dimen name="medium_big_margin">16dp</dimen>
     <dimen name="big_margin">20dp</dimen>
@@ -14,7 +14,7 @@
 
     <!--字号-->
     <dimen name="micro_text">10dp</dimen>
-    <dimen name="small_text">12dp</dimen>
+    <dimen name="small_text">12sp</dimen>
     <dimen name="normal_smaller_text">12sp</dimen>
     <dimen name="normal_text">14dp</dimen>
     <dimen name="medium_text">15dp</dimen>
@@ -84,4 +84,6 @@
     <dimen name="size12">12sp</dimen>
     <dimen name="info_title_content_spantop">4dp</dimen>
     <dimen name="rect_width_height">22dp</dimen>
+    <dimen name="lendsize" >8dp</dimen>
+    <dimen name="lend_paddingtop">4dp</dimen>
 </resources>

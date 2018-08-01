@@ -12,7 +12,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="190dp"
+        android:layout_height="180dp"
         android:layout_centerVertical="true"
         android:background="@drawable/banner"
         android:orientation="vertical">
@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="12dp"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -43,14 +43,14 @@
                     android:layout_gravity="center"
                     android:text="5.0"
                     android:textColor="@color/colorWhite"
-                    android:textSize="30sp"
+                    android:textSize="29sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="48dp"
                     android:layout_height="18dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="13dp"
+                    android:layout_marginTop="9dp"
                     android:background="@drawable/shape_ghost_white_bg"
                     android:gravity="center"
                     android:text="拥挤"
@@ -75,7 +75,6 @@
             android:layout_marginRight="@dimen/medium_margin"
             android:layout_marginTop="20dp"
             android:orientation="horizontal"
-            android:paddingBottom="10dp"
             >
 
             <LinearLayout

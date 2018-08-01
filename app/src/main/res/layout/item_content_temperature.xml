@@ -5,6 +5,7 @@
     android:layout_marginTop="@dimen/normal_margin"
     android:background="@color/colorWhite"
     android:orientation="vertical"
+    android:layout_marginBottom="30dp"
     android:paddingLeft="@dimen/medium_margin"
     android:paddingTop="@dimen/medium_margin">
 
@@ -23,7 +24,7 @@
             style="@style/text.normalSmaller"
             android:textSize="14sp"
             android:layout_marginLeft="8dp"
-            android:text="城市拥堵指数"
+            android:text="温度湿度指数"
             android:textColor="@color/textDark" />
     </LinearLayout>
 
@@ -37,7 +38,7 @@
 
 
     <com.github.mikephil.charting.charts.LineChart
-        android:id="@+id/lineChart"
+        android:id="@+id/lineChartdouble"
         android:layout_width="match_parent"
         android:layout_height="200dp"></com.github.mikephil.charting.charts.LineChart>
 

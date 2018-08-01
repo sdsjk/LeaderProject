@@ -3,8 +3,25 @@
 android:layout_width="wrap_content"
 android:layout_height="wrap_content">
     <TextView
-        android:id="@+id/text_keyword"
+        android:visibility="gone"
         android:textColor="#222222"
         style="@style/searchLabel"
         android:text="热门标签" />
+
+    <TextView
+        android:button="@null"
+        android:id="@+id/text_keyword"
+        android:layout_width="84dp"
+        android:layout_height="34dp"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/medium_margin"
+        android:paddingRight="@dimen/medium_margin"
+        android:gravity="center"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@drawable/selector_classify_text_ra"
+        android:background="@drawable/selector_classify_bg"
+        android:text="全部" />
 </LinearLayout>

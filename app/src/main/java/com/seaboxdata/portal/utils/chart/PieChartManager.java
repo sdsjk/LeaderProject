@@ -169,6 +169,7 @@ public class PieChartManager {
 
 
     /**
+     *
      * 设实心饼状图
      *
      * @param name   饼状图分类的名字
@@ -181,6 +182,39 @@ public class PieChartManager {
         pieChart.setTransparentCircleRadius(0);// 半透明圈
         pieChart.setDrawCenterText(false);//饼状图中间不可以添加文字
 
+        List<PieEntry> yValue = new ArrayList<>();
+        for (int i = 0; i < date.size(); i++) {
+            PieEntry entry = new PieEntry(date.get(i), name.get(i));
+            yValue.add(entry);
+        }
+        PieDataSet set = new PieDataSet(yValue, "");
+        set.setDrawValues(true);
+        set.setValueTextSize(12);
+        set.setColors(colors);
+
+        set.setValueTextColor(Color.WHITE);
+        set.setValueLinePart1OffsetPercentage(80f);//数据连接线距图形片内部边界的距离，为百分数
+        set.setValueLinePart1Length(0.3f);
+        set.setValueLinePart2Length(0.4f);
+        set.setValueLineColor(Color.parseColor("#a1a1a1"));//设置连接线的颜色
+        set.setYValuePosition(PieDataSet.ValuePosition.OUTSIDE_SLICE);
+        PieData pieData = new PieData(set);
+        pieData.setValueFormatter(new PercentFormatter());
+        pieData.setValueTextSize(11f);
+        pieData.setValueTextColor(Color.DKGRAY);
+        pieChart.setData(pieData);
+        pieChart.invalidate(); // refresh
+    }
+
+
+    public void setTrafficSolidPieChart(List<String> name, List<Float> date, List<Integer> colors) {
+        pieChart.setHoleRadius(40f);//半径
+        pieChart.setExtraOffsets(10, 5, 70, 15);
+        pieChart.setHoleRadius(0);//实心圆
+        pieChart.setTransparentCircleRadius(0);// 半透明圈
+        pieChart.setDrawCenterText(false);//饼状图中间不可以添加文字
+
+        legend.setYOffset(15f);
         List<PieEntry> yValue = new ArrayList<>();
         for (int i = 0; i < date.size(); i++) {
             PieEntry entry = new PieEntry(date.get(i), name.get(i));

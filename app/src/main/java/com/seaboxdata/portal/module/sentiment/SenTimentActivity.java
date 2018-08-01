@@ -38,7 +38,7 @@ public class SenTimentActivity extends CommonActivity implements View.OnClickLis
     RelativeLayout choose_time, choose_hot, choose_kind;
     ImageView time_icon, hot_icon, kind_icon, infomation_back;
     boolean timeFlag, hotFlag, kindFlag;
-    TextView info_title_common, info_title_common_commit,sendtimend_more;
+    TextView info_title_common, info_title_common_commit, sendtimend_more;
     PopupWindow timePopupWindow = null;
     PopupWindow hotPopupWindow = null;
     PopupWindow kindPopupWindow = null;
@@ -60,7 +60,7 @@ public class SenTimentActivity extends CommonActivity implements View.OnClickLis
         choose_time = (RelativeLayout) findViewById(R.id.choose_time);
         choose_hot = (RelativeLayout) findViewById(R.id.choose_hot);
         choose_kind = (RelativeLayout) findViewById(R.id.choose_kind);
-        sendtimend_more= (TextView) findViewById(R.id.sendtimend_more);
+        sendtimend_more = (TextView) findViewById(R.id.sendtimend_more);
         sendtimend_more.setOnClickListener(this);
         choose_time.setOnClickListener(this);
         choose_hot.setOnClickListener(this);
@@ -162,20 +162,20 @@ public class SenTimentActivity extends CommonActivity implements View.OnClickLis
         }
         if (v == choose_kind) {
             showkindWindow();
-            }
+        }
         if (v == infomation_back) {
 
 //            finish();
 //                startActivity(new Intent(this,SentimetSearcheActivity.class));
-                startActivity(new Intent(this,SentimedtAnalysisActivity.class));
+            startActivity(new Intent(this, SentimedtAnalysisActivity.class));
 
         }
         if (v == info_title_common_commit) {
 //            Toast.makeText(SenTimentActivity.this, "制作简报", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(this,BriefMakeActivity.class));
+            startActivity(new Intent(this, BriefMakeActivity.class));
         }
-        if(v==sendtimend_more){
-            startActivity(new Intent(this,SentimentMoreActivity.class));
+        if (v == sendtimend_more) {
+            startActivity(new Intent(this, SentimentMoreActivity.class));
         }
     }
 
@@ -220,7 +220,7 @@ public class SenTimentActivity extends CommonActivity implements View.OnClickLis
             @Override
             public void onClick(View v) {
 //                Toast.makeText(SenTimentActivity.this, "更多热词搜索", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(SenTimentActivity.this,SentimentHotWordActivity.class));
+                startActivity(new Intent(SenTimentActivity.this, SentimentHotWordActivity.class));
                 hotPopupWindow.dismiss();
                 setBackgroundAlpha(1);
             }
@@ -240,20 +240,21 @@ public class SenTimentActivity extends CommonActivity implements View.OnClickLis
         list.add("赵旭日为C罗颁奖");
         list.add("北京高考阅卷过半");
 
-        showHotKeyword(list,autoFixViewGroup);
+        showHotKeyword(list, autoFixViewGroup);
         //设置popupwindow背景
         hotPopupWindow.setBackgroundDrawable(new ColorDrawable());
         hotPopupWindow.showAsDropDown(choose_time);
         setBackgroundAlpha(0.5f);
 
     }
+
     private void showHotKeyword(List<String> list, AutoFixViewGroup autoFixViewGroup) {
-        if(list==null||list.size()==0){
+        if (list == null || list.size() == 0) {
             return;
         }
 
         LayoutInflater layoutInflater = LayoutInflater.from(this);
-        for(final String item:list){
+        for (final String item : list) {
             View view = layoutInflater.inflate(R.layout.item_hot, autoFixViewGroup, false);
             TextView textView = (TextView) view.findViewById(R.id.hot_keyword);
             textView.setText(item);

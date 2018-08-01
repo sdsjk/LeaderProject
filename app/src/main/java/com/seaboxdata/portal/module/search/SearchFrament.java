@@ -69,51 +69,52 @@ public class SearchFrament extends CommonFragment {
         View cityTrafficView = layoutInflater.inflate(layoutId, mContentHomeView, false);
         mContentHomeView.addView(cityTrafficView);
 
-        if(mIndex==0){
+        if (mIndex == 0) {
             AutoFixViewGroup autoFixViewGroup = (AutoFixViewGroup) cityTrafficView.findViewById(R.id.viewgroup_keywor_list);
             AutoFixViewGroup viewgroup_keywor_list_last = (AutoFixViewGroup) cityTrafficView.findViewById(R.id.viewgroup_keywor_list_last);
-            ListView search_info_list= (ListView) cityTrafficView.findViewById(R.id.search_info_list);
-            List<String> allData=new ArrayList<>();
+            ListView search_info_list = (ListView) cityTrafficView.findViewById(R.id.search_info_list);
+            List<String> allData = new ArrayList<>();
             allData.add("89岁的妈妈整宿整宿不睡觉 ");
             allData.add("60岁的儿子一夜一夜陪护她");
             allData.add("杜应征画的母亲 杜应征供图");
             allData.add("边画画边陪伴母亲 杜应征供图");
             allData.add("边画画边陪伴母亲 杜应征供图");
 
-            search_info_list.setAdapter(new ArrayAdapter(getActivity(),R.layout.search_new,allData));
+            search_info_list.setAdapter(new ArrayAdapter(getActivity(), R.layout.search_new, allData));
 
             List<String> list = new ArrayList<>();
-            list.add("北京流动人口");
-            list.add("高新企业流动人数");
-            showHotKeyword(list,autoFixViewGroup);
-            showHotKeyword(list,viewgroup_keywor_list_last);
-        }else if(mIndex==1) {
+            list.add("梅西");
+            list.add("阿根廷");
+            list.add("小组出线");
+            showHotKeyword(list, autoFixViewGroup);
+            showHotKeyword(list, viewgroup_keywor_list_last);
+        } else if (mIndex == 1) {
             AutoFixViewGroup viewgroup_keywor_list_zb = (AutoFixViewGroup) cityTrafficView.findViewById(R.id.viewgroup_keywor_list_zb);
             List<String> list = new ArrayList<>();
             list.add("交通指数");
             list.add("北京流动人口");
             list.add("高新企业从业人数");
-            showHotKeyword(list,viewgroup_keywor_list_zb);
+            showHotKeyword(list, viewgroup_keywor_list_zb);
 
-        }else if(mIndex==2||mIndex==3||mIndex==4){
-            List<String> allData=new ArrayList<>();
+        } else if (mIndex == 2 || mIndex == 3 || mIndex == 4) {
+            List<String> allData = new ArrayList<>();
             allData.add("89岁的妈妈整宿整宿不睡觉,60岁的儿子一夜一夜陪护她 ");
             allData.add("杜应征画的母亲 杜应征供图");
             allData.add("边画画边陪伴母亲 杜应征供图");
             allData.add("边画画边陪伴母亲 杜应征供图");
-            MyListView search_info_list_data= (MyListView) cityTrafficView.findViewById(R.id.search_info_list_data);
-            search_info_list_data.setAdapter(new ArrayAdapter(getActivity(),R.layout.search_new,allData));
+            MyListView search_info_list_data = (MyListView) cityTrafficView.findViewById(R.id.search_info_list_data);
+            search_info_list_data.setAdapter(new ArrayAdapter(getActivity(), R.layout.search_new, allData));
         }
 
     }
 
     private void showHotKeyword(List<String> list, AutoFixViewGroup autoFixViewGroup) {
-        if(list==null||list.size()==0){
+        if (list == null || list.size() == 0) {
             return;
         }
 
         LayoutInflater layoutInflater = LayoutInflater.from(mContext);
-        for(final String item:list){
+        for (final String item : list) {
             View view = layoutInflater.inflate(R.layout.item_search_hot, autoFixViewGroup, false);
             TextView textView = (TextView) view.findViewById(R.id.text_keyword);
             textView.setText(item);

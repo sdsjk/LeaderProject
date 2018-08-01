@@ -87,6 +87,7 @@ public class BarChartManager {
         leftAxis.setAxisMinimum(0f);
         leftAxis.setDrawGridLines(false);
         rightAxis.setAxisMinimum(0f);
+        leftAxis.setTextColor(Color.parseColor("#d5d5d5"));
         // 线跟数据都不显示
         rightAxis.setEnabled(false); //右侧Y轴不显示
     }
@@ -124,10 +125,12 @@ public class BarChartManager {
         xAxis.setDrawLabels(true);
         IAxisValueFormatter xAxisFormatter = new XAxisValueFormatter(xValues);
         xAxis.setValueFormatter(xAxisFormatter);
-        xAxis.setTextColor(Color.parseColor("#a1a1a1"));
+        xAxis.setTextColor(Color.parseColor("#d5d5d5"));
+        xAxis.setAxisLineColor(Color.parseColor("#d5d5d5"));
 //        IAxisValueFormatter custom = new MyYAxisValueFormatter(yValues);
 //        leftAxis.setValueFormatter(custom);
         leftAxis.setLabelCount(6);
+        leftAxis.setAxisLineColor(Color.parseColor("#d5d5d5"));
         mBarChart.setData(data);
     }
 

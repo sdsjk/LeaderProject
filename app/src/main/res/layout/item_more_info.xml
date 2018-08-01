@@ -10,15 +10,15 @@
 
         <TextView
             android:id="@+id/item_list_index"
-            android:layout_width="14dp"
-            android:layout_height="14dp"
+            android:layout_width="@dimen/rect_width_height"
+            android:layout_height="@dimen/rect_width_height"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="17dp"
             android:background="@drawable/sendtimend_bk"
             android:gravity="center"
             android:text="1"
-            android:textSize="12sp"
-            android:textColor="#ffffff" />
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
 
         <LinearLayout
             android:layout_marginTop="10dp"
@@ -32,16 +32,16 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="16dp"
                 android:paddingRight="10dp"
-                android:text="顾雏军:政府让我救科龙 当时最高检办案动机不纯"
+                android:text="亚非球队难逆袭"
                 android:textColor="#222222"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/item_list_content"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="@dimen/info_title_content_spantop"
                 android:ellipsize="end"
                 android:paddingLeft="16dp"
                 android:paddingRight="10dp"
@@ -54,7 +54,7 @@
             android:id="@+id/item_list_icon"
             android:layout_marginLeft="10dp"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="36dp"
             android:src="@drawable/hotup"
             />
     </LinearLayout>
@@ -65,5 +65,5 @@
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="#a1a1a1"></View>
+        android:background="@color/split_view"></View>
 </LinearLayout>

@@ -2,9 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginTop="@dimen/normal_margin"
     android:background="@color/colorWhite"
     android:orientation="vertical"
+    android:layout_marginBottom="30dp"
     android:paddingLeft="@dimen/medium_margin"
     android:paddingTop="@dimen/medium_margin">
 
@@ -23,7 +25,7 @@
             style="@style/text.normalSmaller"
             android:textSize="14sp"
             android:layout_marginLeft="8dp"
-            android:text="城市拥堵指数"
+            android:text="实时空气质量指数"
             android:textColor="@color/textDark" />
     </LinearLayout>
 
@@ -35,11 +37,27 @@
         android:layout_marginRight="10dp"
         android:background="@color/split_view" />
 
-
-    <com.github.mikephil.charting.charts.LineChart
-        android:id="@+id/lineChart"
+    <com.seaboxdata.portal.utils.view.segmentedbar.SegmentedBarView
+        android:id="@+id/slider_type_bar_view_oil3"
         android:layout_width="match_parent"
-        android:layout_height="200dp"></com.github.mikephil.charting.charts.LineChart>
-
+        android:layout_height="wrap_content"
+        app:sbv_bar_height="20dp"
+        app:sbv_segment_rule="scale"
+        app:sbv_descriptionAlign="Both"
+        app:sbv_descriptionTopAlign="Center"
+        app:sbv_description_text_color="#a1a1a1"
+        app:sbv_description_text_size="14sp"
+        app:sbv_segment_bg="false"
+        app:sbv_segment_gap_width="0dp"
+        app:sbv_show_description_text="true"
+        app:sbv_show_description_top_text="false"
+        app:sbv_show_segment_text="false"
+        app:sbv_side_style="rounded"
+        app:sbv_side_text_style="oneSided"
+        app:sbv_value_sign_height="30dp"
+        app:sbv_value_sign_round="8dp"
+        app:sbv_value_sign_width="60dp"
+        android:layout_marginRight="10dp"
+        />
 
 </LinearLayout>

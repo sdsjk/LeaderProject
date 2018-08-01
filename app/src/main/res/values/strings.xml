@@ -18,4 +18,7 @@
 
     <string name="activity_business_monitoring_title">业务监测指标设置</string>
 
+    <!-- 分段显示 -->
+    <string name="sbv_empty">Empty</string>
+    <string name="sbv_value_segment">Current Value</string>
 </resources>
